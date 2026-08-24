@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Handle — Free TikTok Username Generator with Availability Check</title>
+  <meta name="description" content="Generate unique TikTok username ideas and check live availability on TikTok. Free, no signup, no limits.">
+  <meta name="keywords" content="tiktok name generator, tiktok username generator, tiktok name ideas, aesthetic tiktok names, tiktok names for girls, tiktok username availability checker, tiktok name suggestions, tiktok name fonts, unique tiktok names">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Handle — Free TikTok Username Generator">
+  <meta property="og:description" content="Generate unique TikTok username ideas and check live availability on TikTok. Free, no signup, no limits.">
+  <meta property="og:image" content="/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/og-image.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!--
+    Content-Security-Policy via meta tag. The static-host platform
+    appends a small analytics block to the served HTML. The block has
+    no src attribute (it's fully inline) so we can't block it by
+    origin. Instead we whitelist our OWN inline script by SHA-256
+    hash; the platform's inline script has different content, so its
+    hash will never match ours, and the browser refuses to execute it.
+
+    The hash covers the route-detection + DOM-strip script below.
+    To rebuild after any change: see the rebuild note beside that
+    script.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com; frame-ancestors 'none'">
+
+  <!--
+    Inline style at the very top of head. Runs before the platform's
+    appended style block is parsed, so the suppress rule is in force
+    from first paint. No flash of attribution.
+  -->
+  <style>
+    #minimax-floating-ball, [class*="minimax-"] { display: none !important; }
+  </style>
+
+  <!-- SoftwareApplication schema for the tool -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Handle — TikTok Username Generator",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "description": "Free TikTok username generator that produces handle ideas following TikTok's current rules and checks live availability on TikTok. Verdicts read 'Likely available', 'Likely taken', or 'Unknown' — never a confident 'Available'.",
+    "url": "/generator",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": [
+      "Generate TikTok username ideas from a keyword, niche, and vibe",
+      "Live availability check on TikTok with honest Likely available / Likely taken / Unknown verdicts",
+      "Unicode font converter for stylish bio text",
+      "Enforces current TikTok username rules: 2-24 characters, letters/numbers/period/underscore"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!--
+    The static host serves this same index.html for every path, so we
+    set the right section synchronously in the head, before the
+    browser paints, to avoid a flash of the wrong page. We also strip
+    the platform-injected "Created by MiniMax Agent" floating ball
+    here, synchronously, before it can be rendered. This script's
+    SHA-256 hash is whitelisted in the meta CSP above; the platform's
+    inline script (different content, different hash) is blocked.
+  -->
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var route = (path === '/generator' || path === '/generator/') ? 'generator'
+                : (path === '/faq'       || path === '/faq/')       ? 'faq'
+                : (path === '/about'     || path === '/about/')     ? 'about'
+                : (path === '/privacy'   || path === '/privacy/')   ? 'privacy'
+                : (path === '/terms'     || path === '/terms/')     ? 'terms'
+                : 'home';
+      document.documentElement.setAttribute('data-route', route);
+
+      // Strip the platform-injected "Created by MiniMax Agent" ball
+      // from the DOM as early as possible. CSS hides it visually; this
+      // also removes it from the accessibility tree and tab order.
+      function strip() {
+        try {
+          var el = document.getElementById('minimax-floating-ball');
+          if (el && el.parentNode) el.parentNode.removeChild(el);
+        } catch (e) {}
+      }
+      strip();
+
+      // Catch late injection: the platform's script (if it ever runs)
+      // may try to re-attach the ball or create a fresh one. Watch
+      // for it for a few seconds, then disconnect.
+      try {
+        var mo = new MutationObserver(function (muts) {
+          for (var i = 0; i < muts.length; i++) {
+            var n = muts[i].addedNodes;
+            for (var j = 0; j < n.length; j++) {
+              var x = n[j];
+              if (!x || x.nodeType !== 1) continue;
+              var id = (x.id || '');
+              if (id.indexOf('minimax') !== -1) { x.parentNode && x.parentNode.removeChild(x); }
+            }
+          }
+        });
+        mo.observe(document.documentElement, { childList: true, subtree: true });
+        setTimeout(function () { mo.disconnect(); }, 8000);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-route="home">
+  <a href="#main" class="sr-only">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="Handle — home">
+        <span class="mark" aria-hidden="true">H</span>
+        <span>Handle</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/" data-nav="home" class="is-active">Home</a>
+        <a href="/generator" data-nav="generator">Generator</a>
+        <a href="/faq" data-nav="faq">FAQ</a>
+        <a href="/about" data-nav="about">About</a>
+      </nav>
+      <a class="nav-cta" href="/generator" data-nav="generator">Open the tool</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================================================================== HOME -->
+    <section data-page-section="home">
+      <div class="hero">
+        <h1>Find a TikTok username that's actually yours.</h1>
+        <p class="lede">Type a keyword, pick a niche and a vibe, get 10–20 handles that follow TikTok's rules — and see which are still free. No signup, no limits.</p>
+        <div class="toolbar">
+          <a class="btn-primary" href="/generator" data-nav="generator">Generate TikTok names →</a>
+          <a class="btn-ghost" href="#how-it-works" data-nav="home">How it works</a>
+        </div>
+        <p class="affiliation-note" role="note">Handle is not affiliated with, endorsed by, or sponsored by TikTok or ByteDance Ltd. "TikTok" is a trademark of ByteDance Ltd.</p>
+      </div>
+
+      <section class="section" id="how-it-works">
+        <h2>How it works</h2>
+        <p>Type a keyword, pick a niche and a vibe. Handle applies TikTok's current rules (2–24 characters, letters, numbers, periods, underscores — no leading or trailing period, no consecutive periods) and runs each generated name through a live availability check on TikTok, with a timestamp.</p>
+        <p>The verdict reads "Likely available," "Likely taken," or "Unknown" — never a confident "Available" — because availability changes between check and click. If the check can't reach TikTok, you see a direct link to verify it yourself.</p>
+      </section>
+
+      <section class="section">
+        <h2>Why Handle</h2>
+        <div class="callout">
+          <h3>Three things the other generators skip</h3>
+          <p>Most TikTok name generators stop at the list. You copy a name, open TikTok, and find out it's taken. Then you do it again. Then again. Handle closes that loop.</p>
+          <ul>
+            <li><strong>Live availability check.</strong> Each generated handle is checked against TikTok's own profile endpoint before you see it.</li>
+            <li><strong>Honest verdicts.</strong> "Likely available" with a timestamp beats a confident "Available" that's wrong by the time you click.</li>
+            <li><strong>Rules enforced up front.</strong> Every name follows TikTok's current character rules before it reaches you — no copying a 25-char handle just to find out TikTok won't accept it.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>What's coming</h2>
+        <p>Coming up: a TikTok creator blog, programmatic niche pages, the cross-platform check (Instagram, YouTube, X), a weekly name-drop email, and social channels for name picks. Plan and trade-offs in the README.</p>
+      </section>
+    </section>
+
+    <!-- ============================================================== GENERATOR -->
+    <section data-page-section="generator">
+      <h1>TikTok username generator</h1>
+      <p class="lede">Type a keyword, pick a niche and a vibe, and Handle returns 10–20 handle ideas that respect TikTok's current username rules. Each one is checked live for availability on TikTok — so you don't waste time on names that are already taken.</p>
+      <p class="affiliation-note" role="note">Handle is not affiliated with, endorsed by, or sponsored by TikTok or ByteDance Ltd. "TikTok" is a trademark of ByteDance Ltd.</p>
+
+      <section class="tool" id="tool" aria-label="Username generator">
+        <div class="field">
+          <label for="keyword">Keyword or name</label>
+          <input type="text" id="keyword" name="keyword" placeholder="e.g. fitness, mia, bookishvibes" autocomplete="off" maxlength="24" pattern="[a-zA-Z0-9._]{0,24}" inputmode="text" required>
+          <span class="help">Up to 24 characters: letters, numbers, period, underscore. This is the same limit TikTok enforces, so anything you type here is what you'll see in the suggestions.</span>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="category">Niche / category</label>
+            <select id="category" name="category">
+              <option value="general">General</option>
+              <option value="fitness">Fitness</option>
+              <option value="food">Food</option>
+              <option value="beauty">Beauty</option>
+              <option value="fashion">Fashion</option>
+              <option value="gaming">Gaming</option>
+              <option value="tech">Tech / dev</option>
+              <option value="travel">Travel</option>
+              <option value="pets">Pets</option>
+              <option value="dance">Dance</option>
+              <option value="comedy">Comedy</option>
+              <option value="music">Music</option>
+              <option value="art">Art</option>
+              <option value="education">Education</option>
+              <option value="finance">Finance</option>
+              <option value="parenting">Parenting</option>
+              <option value="business">Business</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="count">How many</label>
+            <select id="count" name="count">
+              <option value="10">10 names</option>
+              <option value="12" selected>12 names</option>
+              <option value="16">16 names</option>
+              <option value="20">20 names</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Vibe</label>
+          <div class="vibes" id="vibes" role="radiogroup" aria-label="Vibe">
+            <span class="vibe-chip" data-vibe="aesthetic" tabindex="0" role="radio" aria-checked="false">aesthetic</span>
+            <span class="vibe-chip" data-vibe="funny" tabindex="0" role="radio" aria-checked="false">funny</span>
+            <span class="vibe-chip" data-vibe="professional" tabindex="0" role="radio" aria-checked="false">professional</span>
+            <span class="vibe-chip" data-vibe="edgy" tabindex="0" role="radio" aria-checked="false">edgy</span>
+            <span class="vibe-chip" data-vibe="cute" tabindex="0" role="radio" aria-checked="false">cute</span>
+            <span class="vibe-chip" data-vibe="mysterious" tabindex="0" role="radio" aria-checked="false">mysterious</span>
+            <span class="vibe-chip is-active" data-vibe="cool" tabindex="0" role="radio" aria-checked="true">cool</span>
+            <span class="vibe-chip" data-vibe="chill" tabindex="0" role="radio" aria-checked="false">chill</span>
+            <span class="vibe-chip" data-vibe="smart" tabindex="0" role="radio" aria-checked="false">smart</span>
+            <span class="vibe-chip" data-vibe="romantic" tabindex="0" role="radio" aria-checked="false">romantic</span>
+            <span class="vibe-chip" data-vibe="powerful" tabindex="0" role="radio" aria-checked="false">powerful</span>
+            <span class="vibe-chip" data-vibe="gaming" tabindex="0" role="radio" aria-checked="false">gaming</span>
+            <span class="vibe-chip" data-vibe="techy" tabindex="0" role="radio" aria-checked="false">techy</span>
+            <span class="vibe-chip" data-vibe="spooky" tabindex="0" role="radio" aria-checked="false">spooky</span>
+            <span class="vibe-chip" data-vibe="retro" tabindex="0" role="radio" aria-checked="false">retro</span>
+            <span class="vibe-chip" data-vibe="wholesome" tabindex="0" role="radio" aria-checked="false">wholesome</span>
+            <span class="vibe-chip" data-vibe="fantasy" tabindex="0" role="radio" aria-checked="false">fantasy</span>
+            <span class="vibe-chip vibe-chip-mode" data-vibe="none" tabindex="0" role="radio" aria-checked="false">none</span>
+            <span class="vibe-chip vibe-chip-mode" data-vibe="random" tabindex="0" role="radio" aria-checked="false">random</span>
+            <span class="vibe-chip vibe-chip-mode" data-vibe="unique" tabindex="0" role="radio" aria-checked="false">unique</span>
+          </div>
+          <span class="help">Themed vibes shift the prefix/suffix word pools. <strong>none</strong> uses no themed pool, <strong>random</strong> mixes them per candidate, <strong>unique</strong> biases toward structural patterns (vowel-drop, doubled, leet).</span>
+        </div>
+
+        <div class="toolbar">
+          <button class="btn-primary" id="generate-btn" type="button">Generate usernames</button>
+          <button class="btn-ghost" id="recheck-btn" type="button" disabled>Re-check availability</button>
+          <span class="spacer"></span>
+          <span class="free-tag" aria-label="Free to use">Free · no signup · no limit</span>
+          <span id="status-text" aria-live="polite" class="status-text"></span>
+        </div>
+
+        <div class="results-summary" id="results-summary" hidden></div>
+        <div class="disclaimer" id="disclaimer" hidden></div>
+
+        <div class="results" id="results" aria-live="polite"></div>
+      </section>
+
+      <section class="section" id="font-converter">
+        <h2>Bonus: stylish text for your TikTok bio</h2>
+        <p>Type a word or phrase and get it back in fancy Unicode styles you can paste straight into your TikTok display name or bio. Try it once the names above are picked — pick a style that matches the vibe of the handle.</p>
+        <div class="font-converter">
+          <div class="field">
+            <label for="font-input">Your text</label>
+            <input type="text" id="font-input" maxlength="60" placeholder="e.g. miabakes" autocomplete="off">
+            <span class="help">Up to 60 characters. The output keeps the same character count, so a 6-letter input gives a 6-letter bio.</span>
+          </div>
+          <div class="font-grid" id="font-grid"></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ==================================================================== FAQ -->
+    <section data-page-section="faq">
+      <h1>Frequently asked questions</h1>
+      <p class="lede">PLACEHOLDER — long-form FAQ copy goes here. Write in your own voice; the structure below is a working scaffold. (Note: the live availability check is currently TikTok-only; the cross-platform check for Instagram, YouTube, and X is on the roadmap in "What's coming".)</p>
+
+      <section class="section">
+        <div class="faq-item">
+          <h3>What are the current TikTok username rules?</h3>
+          <p>PLACEHOLDER. Use this section to explain the 2–24 character limit, allowed characters (letters, numbers, periods, underscores), no leading/trailing period, no consecutive periods, 30-day change cooldown, and case-insensitivity. Re-verify against TikTok's official help center before launch — rules can change.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How does the availability check work?</h3>
+          <p>PLACEHOLDER. Explain that the check is pluggable, currently uses TikTok's oEmbed endpoint first and falls back to a direct profile probe, with a 5-minute cache. Note that "Likely available" is not a guarantee — the user should still click through to confirm.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Why does it say "Likely available" instead of just "Available"?</h3>
+          <p>PLACEHOLDER. Explain that availability can change between the moment we check and the moment you click. We don't want to be the reason someone builds a brand on a name that was claimed in the time it took to read this paragraph.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Does the generator work for other platforms too?</h3>
+          <p>PLACEHOLDER. Today the live check covers TikTok only. The generation rules are tuned for TikTok. Instagram, YouTube, and X are on the roadmap in "What's coming". For now, after picking a TikTok handle, manually verify it on the other platforms before claiming.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I use the names Handle generates commercially?</h3>
+          <p>PLACEHOLDER. Add a trademark disclaimer. Handle doesn't check trademarks — a name can be available on TikTok and still infringe a registered trademark in your category. Recommend a USPTO / EUIPO search before going public with a brand.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is Handle free?</h3>
+          <p>PLACEHOLDER. Yes. No signup, no credit card, no usage limits. If we add a paid tier later, the free tier stays free.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do you make money?</h3>
+          <p>PLACEHOLDER. Short answer: ads and (eventually) affiliate. Long answer: see the README and the public plan.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is Handle affiliated with TikTok?</h3>
+          <p>No. Handle is an independent tool. "TikTok" is a trademark of ByteDance Ltd. Handle is not affiliated with, endorsed by, or sponsored by TikTok or ByteDance Ltd. See the full <a href="/terms" data-nav="terms">Terms</a> for the legal details.</p>
+        </div>
+      </section>
+    </section>
+
+    <!-- =================================================================== ABOUT -->
+    <section data-page-section="about">
+      <h1>About Handle</h1>
+      <p class="lede">PLACEHOLDER — long-form About / origin story copy goes here. Suggested beats: who built it, why the gap in the market, what the project roadmap looks like, how to reach the team.</p>
+
+      <section class="section">
+        <h2>What this is</h2>
+        <p>PLACEHOLDER. A free TikTok username generator. The interesting bit is the availability check: every name the tool returns is run through a live probe of TikTok, so you see "Likely available" or "Likely taken" with a timestamp before you invest in a handle.</p>
+      </section>
+
+      <section class="section">
+        <h2>What this isn't</h2>
+        <p>PLACEHOLDER. Not affiliated with TikTok (see <a href="/terms" data-nav="terms">Terms</a>). Not a trademark search. Not a guarantee — the verdicts are honest, the words are "Likely" on purpose. If the check can't reach TikTok, you'll see "Unknown" with a direct link to TikTok so you can confirm yourself.</p>
+      </section>
+
+      <section class="section">
+        <h2>How it works under the hood</h2>
+        <p>PLACEHOLDER. Generation is a wordlist + pattern engine that runs in milliseconds and enforces TikTok's current rules (2–24 characters, allowed set, no leading/trailing period, no consecutive periods) before a candidate ever reaches you. The availability check is pluggable — the README documents the interface, the backends that ship today, and how to drop in a new one.</p>
+      </section>
+
+      <section class="section">
+        <h2>Roadmap</h2>
+        <ul>
+          <li>Long-form TikTok creator guides on the blog (placeholder for now).</li>
+          <li>Programmatic niche landing pages for long-tail SEO (e.g. <code>/tiktok-username-ideas/aesthetic-fitness</code>).</li>
+          <li>Cross-platform availability check (Instagram, YouTube, X) — the architecture is ready, just needs the per-platform checkers.</li>
+          <li>Email-capture for a weekly name-drop newsletter.</li>
+          <li>TikTok and YouTube channels showing weekly name picks.</li>
+          <li>An affiliate layer pointing creators at Linktree, Namecheap, Canva Pro, and similar tools.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Contact</h2>
+        <p>PLACEHOLDER. Add an email address, a Twitter/X handle, or a contact form. The form is fine as a link to a hosted form service for now.</p>
+      </section>
+    </section>
+
+    <!-- ================================================================ PRIVACY -->
+    <section data-page-section="privacy">
+      <h1>Privacy Policy</h1>
+      <p class="lede">Last updated 24 August 2026. This is a working draft; replace with your reviewed version before going public.</p>
+
+      <section class="section">
+        <h2>What this site does</h2>
+        <p>Handle is a free TikTok username generator. You type a keyword, pick a niche and a vibe, and the site returns a list of handle ideas that follow TikTok's username rules. Each handle is then checked against TikTok's own profile endpoint so you can see whether it's likely available, likely taken, or unknown (the check could not be completed).</p>
+      </section>
+
+      <section class="section">
+        <h2>What we collect</h2>
+        <p><strong>Nothing directly identifying.</strong> The generator is client-side: the keyword, niche, vibe, and result list never leave your browser in a way that identifies you. The availability check is a server-side request to TikTok's public profile/oEmbed endpoint, initiated by your click. The checked handle is not associated with a user profile on our side.</p>
+        <p><strong>Server logs.</strong> Like most web servers, our host records IP address, user-agent, request path, and timestamp in standard access logs, retained for 30 days for security and abuse prevention.</p>
+        <p><strong>Cookies and local storage.</strong> The core tool sets no cookies. The site stores one value in your browser's <code>localStorage</code> — a flag recording that you dismissed the cookie consent banner — so the banner doesn't reappear on every visit. That value is <code>handle.cookieConsent.v1 = "accepted"</code>. It is never sent to our server, never read by any third party, and you can clear it at any time via your browser's developer tools or by clearing site data.</p>
+      </section>
+
+      <section class="section">
+        <h2>Third parties</h2>
+        <p><strong>TikTok / ByteDance.</strong> The availability check makes a request to TikTok's public oEmbed endpoint and profile URL. TikTok sees the request from our server's IP, the handle being checked, and the standard HTTP headers (including our User-Agent). TikTok's own privacy policy governs what they do with that request.</p>
+        <p><strong>Hosting and CDN.</strong> Our static site is served via a CDN; static requests route through edge nodes that log IP/UA/path for their own abuse-prevention purposes.</p>
+        <p><strong>Advertising (planned, not yet live).</strong> If we enable Google AdSense, Google will set cookies and read identifiers to deliver and measure ads. You'll see a clear notice and consent flow before this happens. We will update this policy to list the specific Google cookies and how to opt out before the integration is enabled.</p>
+      </section>
+
+      <section class="section">
+        <h2>Children's privacy</h2>
+        <p>The site is not directed at children under 13 and we do not knowingly collect information from them. If you believe a child has provided information through the site, contact us so we can delete it.</p>
+      </section>
+
+      <section class="section">
+        <h2>Your rights</h2>
+        <p>If you're in the EEA, UK, or California, you have the right to request access to, correction of, or deletion of any personal data we hold about you. Since we don't collect personal data beyond standard server logs, the practical effect is usually a "we have nothing on you" response — but the right stands and you can exercise it. Contact: PLACEHOLDER.</p>
+      </section>
+
+      <section class="section">
+        <h2>Changes to this policy</h2>
+        <p>If we make material changes, we'll bump the "Last updated" date at the top of this page. For changes that broaden the data we collect or change how we use it, we'll add a more prominent notice on the home page for at least 30 days.</p>
+      </section>
+    </section>
+
+    <!-- ================================================================== TERMS -->
+    <section data-page-section="terms">
+      <h1>Terms of Service</h1>
+      <p class="lede">Last updated 24 August 2026. This is a working draft; replace with your lawyer-reviewed version before going public.</p>
+
+      <section class="section">
+        <h2>What Handle is</h2>
+        <p>Handle is a free, public web tool that helps you brainstorm TikTok usernames and check whether a candidate is likely available. The output is a set of handle suggestions plus an availability verdict (likely available, likely taken, or unknown).</p>
+      </section>
+
+      <section class="section">
+        <h2>No affiliation with TikTok</h2>
+        <p>Handle is an independent project. It is not affiliated with, endorsed by, sponsored by, or in any way associated with TikTok, ByteDance Ltd., or any of their subsidiaries. "TikTok" is a trademark of ByteDance Ltd. All references to TikTok on this site are for descriptive purposes only (the tool checks usernames on TikTok) and are made under fair use.</p>
+        <p>If you are a rights holder and believe a page on this site uses your mark in a way that is not fair use, contact us and we will address it promptly.</p>
+      </section>
+
+      <section class="section">
+        <h2>No warranty on availability verdicts</h2>
+        <p>The availability check is a best-effort probe of public TikTok endpoints. Verdicts can be wrong, can be out of date the moment they are issued, and can be affected by TikTok-side rate limits, regional blocks, or service incidents. "Likely available" is not a guarantee. You are responsible for confirming availability on TikTok itself before you build a brand on a handle.</p>
+      </section>
+
+      <section class="section">
+        <h2>No trademark search</h2>
+        <p>Handle does not check registered trademarks. A handle can be free on TikTok and still infringe a registered mark in your industry. Before you commit to a handle for a public brand, run a trademark search (USPTO TESS in the US, EUIPO in the EU, or a local equivalent) and consider talking to a lawyer.</p>
+      </section>
+
+      <section class="section">
+        <h2>Acceptable use</h2>
+        <p>You agree not to use Handle to:</p>
+        <ul>
+          <li>Probe TikTok at a rate that would trigger their anti-abuse systems. The site enforces a 60-checks-per-minute-per-IP rate limit; please respect it.</li>
+          <li>Generate content that is illegal, infringing, or harassing.</li>
+          <li>Attempt to circumvent rate limits, scrape the site at industrial scale, or otherwise interfere with the service.</li>
+          <li>Misrepresent the tool as being affiliated with TikTok.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Intellectual property</h2>
+        <p>The Handle name, the site's code, and the original word lists / pattern rules are owned by us. You may use the generated names however you like — they're suggestions, not our property once handed to you. TikTok's trademarks, the TikTok logo, and TikTok's username rules are TikTok's. The Unicode glyphs in the font converter are the property of the Unicode Consortium and the original type designers.</p>
+      </section>
+
+      <section class="section">
+        <h2>Disclaimer of warranties</h2>
+        <p>The site is provided "as is" and "as available." To the maximum extent permitted by law, we disclaim all warranties, express or implied, including the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the site will be uninterrupted, error-free, or that the availability verdicts will be accurate.</p>
+      </section>
+
+      <section class="section">
+        <h2>Limitation of liability</h2>
+        <p>To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the site, including lost profits, lost data, or business interruption, even if we have been advised of the possibility of such damages.</p>
+      </section>
+
+      <section class="section">
+        <h2>Changes to these terms</h2>
+        <p>If we make material changes, we'll bump the "Last updated" date and, for changes that broaden what we can do with your data or how we limit your rights, we'll add a more prominent notice on the home page for at least 30 days.</p>
+      </section>
+
+      <section class="section">
+        <h2>Governing law</h2>
+        <p>PLACEHOLDER. Pick the jurisdiction before going public — typically the state/country where you (or the operating company) are based. Common choices: Delaware, USA; England &amp; Wales; Singapore.</p>
+      </section>
+
+      <section class="section">
+        <h2>Contact</h2>
+        <p>PLACEHOLDER. Add an email address or contact form for legal notices.</p>
+      </section>
+    </section>
+
+    <!-- =================================================================== 404 -->
+    <section data-page-section="404">
+      <div class="hero">
+        <h1>404 — page not found</h1>
+        <p class="lede">That URL doesn't match any of our pages. It might be a typo, or a link that points to an old version of the site.</p>
+        <div class="toolbar">
+          <a class="btn-primary" href="/" data-nav="home">Go home →</a>
+          <a class="btn-ghost" href="/generator" data-nav="generator">Open the generator</a>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2>Looking for one of these?</h2>
+        <ul>
+          <li><a href="/" data-nav="home">Home</a></li>
+          <li><a href="/generator" data-nav="generator">TikTok username generator</a></li>
+          <li><a href="/faq" data-nav="faq">FAQ</a></li>
+          <li><a href="/about" data-nav="about">About</a></li>
+          <li><a href="/privacy" data-nav="privacy">Privacy Policy</a></li>
+          <li><a href="/terms" data-nav="terms">Terms of Service</a></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Handle</span>
+      <span class="spacer"></span>
+      <a href="/faq" data-nav="faq">FAQ</a>
+      <a href="/about" data-nav="about">About</a>
+      <a href="/privacy" data-nav="privacy">Privacy</a>
+      <a href="/terms" data-nav="terms">Terms</a>
+      <a href="/generator" data-nav="generator">Generator</a>
+    </div>
+    <div class="footer-legal">
+      Handle is not affiliated with, endorsed by, or sponsored by TikTok or ByteDance Ltd. "TikTok" is a trademark of ByteDance Ltd.
+    </div>
+  </footer>
+
+  <script src="/js/client-shim.js"></script>
+  <script src="/js/router.js"></script>
+  <script src="/js/fonts.js"></script>
+  <script src="/js/generator.js"></script>
+  <script src="/js/consent.js"></script>
+</body>
+</html>
