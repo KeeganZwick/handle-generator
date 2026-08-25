@@ -1,0 +1,6 @@
+# robots.txt for Handle
+User-agent: *
+Allow: /
+
+# Submit all language versions
+Sitemap: https://handle.name/sitemap.xml
