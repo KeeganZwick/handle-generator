@@ -274,7 +274,7 @@ FAQ_A_ES = {
         "tenemos ningn acceso privilegiado a los datos de TikTok, y los veredictos que devolvemos son sondeos del tipo mejor-esfuerzo, "
         "no autoritativos. La disponibilidad de nombres TikTok y los resultados \"Likely available\" / \"Likely taken\" que produce la "
         "herramienta son instantneas honestas, no garantas. Si eres titular de derechos en TikTok o ByteDance y crees que una pgina "
-        "en este sitio usa tu marca de una manera que no es fair use, escribe a legal@handle.name y lo abordaremos con prontitud."
+        "en este sitio usa tu marca de una manera que no es fair use, escribe a legal@gethandlenames.com y lo abordaremos con prontitud."
     ),
 }
 
@@ -547,7 +547,7 @@ FAQ_A_DE = {
         "Abfragen, nicht autoritativ. Die TikTok-Namensverfuegbarkeit und die \"Likely available\" / \"Likely taken\"-Ergebnisse, "
         "die das Tool produziert, sind ehrliche Momentaufnahmen, keine Garantien. Wenn du Rechteinhaber bei TikTok oder "
         "ByteDance bist und glaubst, dass eine Seite auf dieser Website deine Marke in einer Weise verwendet, die nicht Fair "
-        "Use ist, schreibe an legal@handle.name und wir werden es umgehend adressieren."
+        "Use ist, schreibe an legal@gethandlenames.com und wir werden es umgehend adressieren."
     ),
 }
 
@@ -772,7 +772,7 @@ FAQ_A_FR = {
         "nos propres IPs de serveur (US et UE) avec notre propre User-Agent (HandleBot/0.1), et TikTok les voit comme des requêtes "
         "d'un tiers. Nous n'avons pas d'accès privilégié aux données de TikTok, et les verdicts que nous renvoyons sont des sondages "
         "au mieux, non autoritatifs. Si tu es titulaire de droits chez TikTok ou ByteDance et que tu crois qu'une page sur ce site "
-        "utilise ta marque d'une manière qui n'est pas du fair use, écris à legal@handle.name et nous nous en occuperons rapidement."
+        "utilise ta marque d'une manière qui n'est pas du fair use, écris à legal@gethandlenames.com et nous nous en occuperons rapidement."
     ),
 }
 
@@ -987,7 +987,7 @@ FAQ_A_IT = {
         "di TikTok; le richieste sono fatte dalle nostre IP di server (US e UE) con il nostro User-Agent (HandleBot/0.1), e TikTok le "
         "vede come richieste di una terza parte. Non abbiamo accesso privilegiato ai dati di TikTok, e i verdetti che restituiamo sono "
         "sonde al meglio delle possibilità, non autorevoli. Se sei un titolare di diritti in TikTok o ByteDance e credi che una pagina "
-        "su questo sito usi il tuo marchio in un modo che non è fair use, scrivi a legal@handle.name e ci occuperemo rapidamente."
+        "su questo sito usi il tuo marchio in un modo che non è fair use, scrivi a legal@gethandlenames.com e ci occuperemo rapidamente."
     ),
 }
 
@@ -1203,7 +1203,7 @@ FAQ_A_PT = {
         "próprio User-Agent (HandleBot/0.1), e o TikTok as vê como requisições de terceiros. Não temos acesso privilegiado aos dados "
         "do TikTok, e os vereditos que retornamos são sondagens de melhor esforço, não autoritativas. Se você é um titular de direitos "
         "no TikTok ou ByteDance e acredita que uma página neste site usa sua marca de uma maneira que não é uso justo, escreva para "
-        "legal@handle.name e trataremos rapidamente."
+        "legal@gethandlenames.com e trataremos rapidamente."
     ),
 }
 
@@ -1415,7 +1415,7 @@ FAQ_A_NL = {
         "User-Agent (HandleBot/0.1), en TikTok ziet ze als verzoeken van een derde partij. We hebben geen bevoorrechte toegang tot "
         "TikToks gegevens, en de oordelen die we teruggeven zijn best-effort sonderingen, niet autoritair. Als je een rechthebbende "
         "bent bij TikTok of ByteDance en gelooft dat een pagina op deze site je merk op een manier gebruikt die geen fair use is, "
-        "schrijf dan naar legal@handle.name en we zullen het snel oppakken."
+        "schrijf dan naar legal@gethandlenames.com en we zullen het snel oppakken."
     ),
 }
 
@@ -1628,7 +1628,7 @@ FAQ_A_PL = {
         "User-Agent (HandleBot/0.1), a TikTok widzi je jako żądania strony trzeciej. Nie mamy uprzywilejowanego dostępu do danych "
         "TikTok, a werdykty, które zwracamy, są sondowaniami w najlepszym razie, nie autorytatywnymi. Jeśli jesteś posiadaczem praw w "
         "TikTok lub ByteDance i uważasz, że strona na tej witrynie używa twojego znaku towarowego w sposób, który nie jest fair use, "
-        "napisz na legal@handle.name, a zajmiemy się tym szybko."
+        "napisz na legal@gethandlenames.com, a zajmiemy się tym szybko."
     ),
 }
 
@@ -1845,7 +1845,7 @@ FAQ_A_RU = {
         "(HandleBot/0.1), и TikTok видит их как запросы третьей стороны. У нас нет привилегированного доступа к данным TikTok, и "
         "вердикты, которые мы возвращаем, являются зондами в лучшем случае, не авторитетными. Если вы правообладатель в TikTok или "
         "ByteDance и считаете, что страница на этом сайте использует ваш товарный знак способом, который не является fair use, "
-        "напишите на legal@handle.name, и мы быстро займёмся этим."
+        "напишите на legal@gethandlenames.com, и мы быстро займёмся этим."
     ),
 }
 
@@ -2000,7 +2000,7 @@ FAQ_A_ZH = {
         "家航空公司而不与其中任何一家有关联一样。Handle 的免费 TikTok 名字检查器向 TikTok 的公开个人资料和 oEmbed 端点发出请求;请"
         "求从我们自己的服务器 IP(美国和欧盟)发出,使用我们自己的 User-Agent(HandleBot/0.1),TikTok 将它们视为第三方的请求。我们对 "
         "TikTok 的数据没有特权访问,我们返回的判定是尽力而为的探测,不是权威性的。如果你是 TikTok 或 ByteDance 的权利人,并且认为本"
-        "网站上的某个页面以不属于合理使用的方式使用你的商标,请写信至 legal@handle.name,我们将迅速处理。"
+        "网站上的某个页面以不属于合理使用的方式使用你的商标,请写信至 legal@gethandlenames.com,我们将迅速处理。"
     ),
 }
 
@@ -2207,7 +2207,7 @@ FAQ_A_VI = {
         "chính chúng tôi (HandleBot/0.1), và TikTok nhìn chúng như các yêu cầu của bên thứ ba. Chúng tôi không có quyền truy cập đặc "
         "quyền vào dữ liệu của TikTok, và các phán quyết chúng tôi trả về là các cuộc thăm dò nỗ lực tốt nhất, không có tính chất phán "
         "quyết. Nếu bạn là chủ sở hữu quyền tại TikTok hoặc ByteDance và tin rằng một trang trên trang web này sử dụng nhãn hiệu của "
-        "bạn theo cách không phải sử dụng hợp lý, hãy viết thư cho legal@handle.name và chúng tôi sẽ giải quyết nhanh chóng."
+        "bạn theo cách không phải sử dụng hợp lý, hãy viết thư cho legal@gethandlenames.com và chúng tôi sẽ giải quyết nhanh chóng."
     ),
 }
 
@@ -2414,7 +2414,7 @@ FAQ_A_ID = {
         "oEmbed publik TikTok; permintaan dibuat dari IP server kami sendiri (AS dan UE) dengan User-Agent kami sendiri (HandleBot/0.1), "
         "dan TikTok melihatnya sebagai permintaan pihak ketiga. Kami tidak memiliki akses istimewa ke data TikTok, dan putusan yang kami "
         "kembalikan adalah probe upaya terbaik, tidak otoritatif. Jika Anda adalah pemilik hak di TikTok atau ByteDance dan percaya bahwa "
-        "halaman di situs ini menggunakan merek dagang Anda dengan cara yang bukan penggunaan wajar, tulis ke legal@handle.name dan kami "
+        "halaman di situs ini menggunakan merek dagang Anda dengan cara yang bukan penggunaan wajar, tulis ke legal@gethandlenames.com dan kami "
         "akan menanganinya dengan cepat."
     ),
 }
@@ -2628,7 +2628,7 @@ FAQ_A_MS = {
         "dan TikTok melihatnya sebagai permintaan pihak ketiga. Kami tidak mempunyai akses istimewa kepada data TikTok, dan keputusan "
         "yang kami pulangkan adalah siasatan usaha terbaik, tidak autoritatif. Jika anda adalah pemilik hak di TikTok atau ByteDance dan "
         "percaya bahawa halaman di tapak ini menggunakan tanda dagangan anda dengan cara yang bukan penggunaan wajar, tulis kepada "
-        "legal@handle.name dan kami akan menanganinya dengan segera."
+        "legal@gethandlenames.com dan kami akan menanganinya dengan segera."
     ),
 }
 
@@ -2862,7 +2862,7 @@ FAQ_A_TL = {
         "ng TikTok ang mga ito bilang mga kahilingan ng isang third party. Wala kaming privileged na access sa data ng TikTok, at "
         "ang mga hatol na ibinabalik namin ay best-effort na mga probe, hindi authoritative. Kung ikaw ay isang may-ari ng karapatan "
         "sa TikTok o ByteDance at naniniwala na ang isang pahina sa site na ito ay gumagamit ng iyong trademark sa isang paraan na "
-        "hindi fair use, sumulat sa legal@handle.name at aming aasikasuhin ito nang mabilis."
+        "hindi fair use, sumulat sa legal@gethandlenames.com at aming aasikasuhin ito nang mabilis."
     ),
 }
 
@@ -3064,7 +3064,7 @@ FAQ_A_HI = {
         "के साथ किए जाते हैं, और TikTok उन्हें तीसरे पक्ष के अनुरोधों के रूप में देखता है। हमारे पास TikTok के डेटा तक कोई विशेषाधिकार "
         "प्राप्त पहुँच नहीं है, और हम जो फ़ैसले लौटाते हैं वे सर्वश्रेष्ठ प्रयास प्रोब हैं, अधिकृत नहीं। यदि आप TikTok या ByteDance में एक "
         "अधिकार धारक हैं और मानते हैं कि इस साइट पर कोई पृष्ठ आपके ट्रेडमार्क का ऐसे तरीके से उपयोग करता है जो उचित उपयोग नहीं है, तो "
-        "legal@handle.name पर लिखें और हम इस पर तेज़ी से कार्रवाई करेंगे।"
+        "legal@gethandlenames.com पर लिखें और हम इस पर तेज़ी से कार्रवाई करेंगे।"
     ),
 }
 
@@ -3269,7 +3269,7 @@ FAQ_A_BN = {
         "অনুরোধ করে; অনুরোধগুলি আমাদের নিজস্ব সার্ভার IP (US এবং EU) থেকে আমাদের নিজস্ব User-Agent (HandleBot/0.1) সহ করা হয়, এবং TikTok "
         "সেগুলিকে তৃতীয় পক্ষের অনুরোধ হিসাবে দেখে। আমাদের TikTok-এর ডেটাতে কোনো বিশেষাধিকারপ্রাপ্ত অ্যাক্সেস নেই, এবং আমরা যে রায় ফেরত "
         "দিই সেগুলি সর্বোত্তম প্রচেষ্টার প্রোব, কর্তৃত্ববিহীন। আপনি যদি TikTok বা ByteDance-এ একজন অধিকারের মালিক হন এবং বিশ্বাস করেন যে এই "
-        "সাইটের একটি পৃষ্ঠা আপনার ট্রেডমার্ক এমনভাবে ব্যবহার করছে যা ন্যায্য ব্যবহার নয়, তাহলে legal@handle.name-এ লিখুন এবং আমরা দ্রুত এটি "
+        "সাইটের একটি পৃষ্ঠা আপনার ট্রেডমার্ক এমনভাবে ব্যবহার করছে যা ন্যায্য ব্যবহার নয়, তাহলে legal@gethandlenames.com-এ লিখুন এবং আমরা দ্রুত এটি "
         "সমাধান করব।"
     ),
 }
@@ -3459,7 +3459,7 @@ FAQ_A_UR = {
         "EU) سے ہمارے اپنے User-Agent (HandleBot/0.1) کے ساتھ کی جاتی ہیں، اور TikTok انہیں تیسرے فریق کی درخواستوں کے طور پر دیکھتا ہے۔ ہمارے پاس "
         "TikTok کے ڈیٹا تک کوئی مراعات یافتہ رسائی نہیں ہے، اور جو فیصلے ہم واپس کرتے ہیں وہ بہترین کوشش کے پروب ہیں، اتھارٹیٹو نہیں۔ اگر آپ TikTok "
         "یا ByteDance میں حقوق کے مالک ہیں اور مانتے ہیں کہ اس سائٹ کا کوئی صفحہ آپ کے ٹریڈ مارک کو ایسے انداز میں استعمال کر رہا ہے جو منصفانہ "
-        "استعمال نہیں ہے، تو legal@handle.name پر لکھیں اور ہم اسے تیزی سے سنبھالیں گے۔"
+        "استعمال نہیں ہے، تو legal@gethandlenames.com پر لکھیں اور ہم اسے تیزی سے سنبھالیں گے۔"
     ),
 }
 
@@ -3631,7 +3631,7 @@ FAQ_A_AR = {
         "TikTok المجاني من Handle بتقديم طلبات إلى نقاط نهاية الملف الشخصي وoEmbed العامة لـ TikTok؛ يتم تقديم الطلبات من عناوين IP الخاصة بخوادمنا "
         "(الولايات المتحدة والاتحاد الأوروبي) مع User-Agent الخاص بنا (HandleBot/0.1)، ويرى TikTok هذه الطلبات كطلبات من طرف ثالث. ليس لدينا وصول "
         "مميز إلى بيانات TikTok، والأحكام التي نُرجعها هي استكشافات بأفضل جهد، وليست ذات سلطة. إذا كنت صاحب حقوق في TikTok أو ByteDance وتعتقد أن "
-        "أي صفحة في هذا الموقع تستخدم علامتك التجارية بطريقة لا تشكل استخدامًا عادلًا، فاكتب إلى legal@handle.name وسنتعامل معها بسرعة."
+        "أي صفحة في هذا الموقع تستخدم علامتك التجارية بطريقة لا تشكل استخدامًا عادلًا، فاكتب إلى legal@gethandlenames.com وسنتعامل معها بسرعة."
     ),
 }
 

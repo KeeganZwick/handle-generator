@@ -1032,7 +1032,7 @@ def localize(html, lang, loc, tr, is_tier1):
         )
     if tr.get('about_contact_p'):
         out = out.replace(
-            'Found a bug, want to suggest a feature, or just want to say hi? Write to us at <strong>hello@handle.name</strong> — we read everything and aim to respond within a week. For formal legal notices, takedown requests, or data-subject rights under GDPR/CCPA, write to <strong>legal@handle.name</strong> instead.',
+            'Found a bug, want to suggest a feature, or just want to say hi? Write to us at <strong>hello@gethandlenames.com</strong> — we read everything and aim to respond within a week. For formal legal notices, takedown requests, or data-subject rights under GDPR/CCPA, write to <strong>legal@gethandlenames.com</strong> instead.',
             tr['about_contact_p'],
             1,
         )
@@ -1152,7 +1152,7 @@ def localize(html, lang, loc, tr, is_tier1):
         ('privacy_p_changes_p1', "If we make material changes, we will update the \"Last updated\" date at the top of this page. For changes that broaden the data we collect, change how we use it, or change the third parties we share with, we will add a more prominent notice on the home page for at least 30 days before the change takes effect. The previous version of this policy is available on request."),
         # Contact
         ('privacy_p_contact_h2', 'Contact', 'h2'),
-        ('privacy_p_contact_p1', "For privacy questions, data-subject requests, CCPA requests, copyright notices, and any other legal matter, write to <strong>privacy@handle.name</strong>. We aim to respond within 14 days for privacy requests and within 30 days for data-subject requests as required by the GDPR."),
+        ('privacy_p_contact_p1', "For privacy questions, data-subject requests, CCPA requests, copyright notices, and any other legal matter, write to <strong>privacy@gethandlenames.com</strong>. We aim to respond within 14 days for privacy requests and within 30 days for data-subject requests as required by the GDPR."),
     ]
     for entry in privacy_blocks:
         if len(entry) == 3:
@@ -1205,7 +1205,7 @@ def localize(html, lang, loc, tr, is_tier1):
         ('terms_liability_p', "To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the site, including lost profits, lost data, or business interruption, even if we have been advised of the possibility of such damages."),
         ('terms_changes_p', "If we make material changes, we'll bump the \"Last updated\" date and, for changes that broaden what we can do with your data or how we limit your rights, we'll add a more prominent notice on the home page for at least 30 days."),
         ('terms_governing_p', "These terms are governed by the laws of the State of Delaware, United States of America, without regard to its conflict-of-laws provisions. Any dispute arising out of or related to these terms will be resolved in the state or federal courts located in Delaware, and you consent to the personal jurisdiction of those courts."),
-        ('terms_contact_p', "For legal notices, takedown requests, and any other formal correspondence, write to <strong>legal@handle.name</strong>. We aim to respond within 14 days. Casual feedback and bug reports can go to the same address — we read everything — but formal legal notices must follow this channel."),
+        ('terms_contact_p', "For legal notices, takedown requests, and any other formal correspondence, write to <strong>legal@gethandlenames.com</strong>. We aim to respond within 14 days. Casual feedback and bug reports can go to the same address — we read everything — but formal legal notices must follow this channel."),
         ('terms_lede_p', "Last updated 25 August 2026. By using Handle you agree to these terms. They cover what Handle is, who owns what, what you can and can't do with the tool, and what happens if something goes wrong."),
     ]
     for entry in terms_blocks:

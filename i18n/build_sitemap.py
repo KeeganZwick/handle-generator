@@ -17,7 +17,7 @@ ALL_LANGS = ['en'] + LANG_ORDER  # 18 total
 
 # Canonical base URL — change this to your live domain.
 # Trailing slash for home, no trailing slash for other routes.
-BASE_URL = 'https://handle.name'
+BASE_URL = 'https://gethandlenames.com'
 
 # Output
 SITEMAP_PATH = Path(__file__).parent.parent / 'public' / 'sitemap.xml'

@@ -101,12 +101,12 @@ PRIVACY['es'] = {
     'privacy_p_changes_p1': 'Si hacemos cambios materiales, actualizaremos la fecha de "Última actualización" en la parte superior de esta página. Para cambios que amplíen los datos que recogemos, cambien cómo los usamos o cambien los terceros con los que los compartimos, añadiremos un aviso más prominente en la página de inicio durante al menos 30 días antes de que el cambio entre en vigor. La versión anterior de esta política está disponible bajo petición.',
 
     'privacy_p_contact_h2': 'Contacto',
-    'privacy_p_contact_p1': 'Para preguntas de privacidad, solicitudes de interesado, solicitudes de la CCPA, avisos de copyright y cualquier otro asunto legal, escribe a <strong>privacy@handle.name</strong>. Nuestro objetivo es responder en un plazo de 14 días para solicitudes de privacidad y de 30 días para solicitudes de interesado, según exige el RGPD.',
+    'privacy_p_contact_p1': 'Para preguntas de privacidad, solicitudes de interesado, solicitudes de la CCPA, avisos de copyright y cualquier otro asunto legal, escribe a <strong>privacy@gethandlenames.com</strong>. Nuestro objetivo es responder en un plazo de 14 días para solicitudes de privacidad y de 30 días para solicitudes de interesado, según exige el RGPD.',
 }
 
 TERMS['es'] = {
     'terms_governing_p': 'Estos términos se rigen por las leyes del Estado de Delaware, Estados Unidos de América, sin atender a sus disposiciones sobre conflictos de leyes. Cualquier disputa que surja de o esté relacionada con estos términos se resolverá en los tribunales estatales o federales ubicados en Delaware, y tú consientes a la jurisdicción personal de dichos tribunales.',
-    'terms_contact_p': 'Para avisos legales, solicitudes de retirada y cualquier otra correspondencia formal, escribe a <strong>legal@handle.name</strong>. Nuestro objetivo es responder en un plazo de 14 días. Los comentarios casuales y los reportes de errores pueden ir a la misma dirección — lo leemos todo — pero los avisos legales formales deben seguir este canal.',
+    'terms_contact_p': 'Para avisos legales, solicitudes de retirada y cualquier otra correspondencia formal, escribe a <strong>legal@gethandlenames.com</strong>. Nuestro objetivo es responder en un plazo de 14 días. Los comentarios casuales y los reportes de errores pueden ir a la misma dirección — lo leemos todo — pero los avisos legales formales deben seguir este canal.',
     'terms_lede_p': 'Última actualización: 25 de agosto de 2026. Al usar Handle aceptas estos términos. Cubren qué es Handle, quién posee qué, qué puedes y qué no puedes hacer con la herramienta, y qué ocurre si algo sale mal.',
 }
 
@@ -173,12 +173,12 @@ PRIVACY['de'] = {
     'privacy_p_changes_p1': 'Wenn wir wesentliche Änderungen vornehmen, aktualisieren wir das Datum "Letzte Aktualisierung" oben auf dieser Seite. Für Änderungen, die die erhobenen Daten erweitern, ihre Verwendung ändern oder die Dritten ändern, mit denen wir sie teilen, werden wir mindestens 30 Tage vor Inkrafttreten der Änderung einen deutlicheren Hinweis auf der Startseite anbringen. Die vorherige Version dieser Richtlinie ist auf Anfrage erhältlich.',
 
     'privacy_p_contact_h2': 'Kontakt',
-    'privacy_p_contact_p1': 'Für Datenschutzfragen, Anträge auf Auskunft, CCPA-Anfragen, Urheberrechtshinweise und andere rechtliche Angelegenheiten schreibe an <strong>privacy@handle.name</strong>. Wir antworten innerhalb von 14 Tagen auf Datenschutzanfragen und innerhalb von 30 Tagen auf Anträge auf Auskunft, wie es die DSGVO verlangt.',
+    'privacy_p_contact_p1': 'Für Datenschutzfragen, Anträge auf Auskunft, CCPA-Anfragen, Urheberrechtshinweise und andere rechtliche Angelegenheiten schreibe an <strong>privacy@gethandlenames.com</strong>. Wir antworten innerhalb von 14 Tagen auf Datenschutzanfragen und innerhalb von 30 Tagen auf Anträge auf Auskunft, wie es die DSGVO verlangt.',
 }
 
 TERMS['de'] = {
     'terms_governing_p': 'Diese Bedingungen unterliegen den Gesetzen des Staates Delaware, Vereinigte Staaten von Amerika, ohne Berücksichtigung seiner Kollisionsnormen. Jede Streitigkeit, die sich aus oder im Zusammenhang mit diesen Bedingungen ergibt, wird vor den Staats- oder Bundesgerichten in Delaware beigelegt, und du willigst in die persönliche Zuständigkeit dieser Gerichte ein.',
-    'terms_contact_p': 'Für rechtliche Hinweise, Takedown-Anfragen und andere formelle Korrespondenz schreibe an <strong>legal@handle.name</strong>. Wir antworten innerhalb von 14 Tagen. Informelles Feedback und Fehlermeldungen können an dieselbe Adresse gehen — wir lesen alles — aber formelle rechtliche Hinweise müssen diesen Kanal nutzen.',
+    'terms_contact_p': 'Für rechtliche Hinweise, Takedown-Anfragen und andere formelle Korrespondenz schreibe an <strong>legal@gethandlenames.com</strong>. Wir antworten innerhalb von 14 Tagen. Informelles Feedback und Fehlermeldungen können an dieselbe Adresse gehen — wir lesen alles — aber formelle rechtliche Hinweise müssen diesen Kanal nutzen.',
     'terms_lede_p': 'Letzte Aktualisierung: 25. August 2026. Durch die Nutzung von Handle stimmst du diesen Bedingungen zu. Sie decken ab, was Handle ist, wem was gehört, was du mit dem Werkzeug tun kannst und was nicht, und was passiert, wenn etwas schiefgeht.',
 }
 
@@ -245,12 +245,12 @@ PRIVACY['fr'] = {
     'privacy_p_changes_p1': 'Si nous apportons des modifications substantielles, nous mettrons à jour la date de « Dernière mise à jour » en haut de cette page. Pour les modifications qui élargissent les données que nous collectons, changent la façon dont nous les utilisons ou changent les tiers avec lesquels nous les partageons, nous ajouterons un avis plus visible sur la page d\'accueil pendant au moins 30 jours avant l\'entrée en vigueur de la modification. La version précédente de cette politique est disponible sur demande.',
 
     'privacy_p_contact_h2': 'Contact',
-    'privacy_p_contact_p1': 'Pour les questions de confidentialité, les demandes d\'accès, les demandes CCPA, les avis de droit d\'auteur et toute autre question juridique, écrivez à <strong>privacy@handle.name</strong>. Nous nous efforçons de répondre dans les 14 jours pour les demandes de confidentialité et dans les 30 jours pour les demandes d\'accès, comme l\'exige le RGPD.',
+    'privacy_p_contact_p1': 'Pour les questions de confidentialité, les demandes d\'accès, les demandes CCPA, les avis de droit d\'auteur et toute autre question juridique, écrivez à <strong>privacy@gethandlenames.com</strong>. Nous nous efforçons de répondre dans les 14 jours pour les demandes de confidentialité et dans les 30 jours pour les demandes d\'accès, comme l\'exige le RGPD.',
 }
 
 TERMS['fr'] = {
     'terms_governing_p': 'Ces conditions sont régies par les lois de l\'État du Delaware, États-Unis d\'Amérique, sans tenir compte de ses dispositions en matière de conflits de lois. Tout litige découlant de ou lié à ces conditions sera tranché par les tribunaux étatiques ou fédéraux situés dans le Delaware, et vous consentez à la juridiction personnelle de ces tribunaux.',
-    'terms_contact_p': 'Pour les avis juridiques, les demandes de retrait et toute autre correspondance formelle, écrivez à <strong>legal@handle.name</strong>. Nous nous efforçons de répondre dans les 14 jours. Les retours informels et les rapports de bugs peuvent aller à la même adresse — nous lisons tout — mais les avis juridiques formels doivent passer par ce canal.',
+    'terms_contact_p': 'Pour les avis juridiques, les demandes de retrait et toute autre correspondance formelle, écrivez à <strong>legal@gethandlenames.com</strong>. Nous nous efforçons de répondre dans les 14 jours. Les retours informels et les rapports de bugs peuvent aller à la même adresse — nous lisons tout — mais les avis juridiques formels doivent passer par ce canal.',
     'terms_lede_p': 'Dernière mise à jour : 25 août 2026. En utilisant Handle, vous acceptez ces conditions. Elles couvrent ce qu\'est Handle, à qui appartient quoi, ce que vous pouvez et ne pouvez pas faire avec l\'outil, et ce qui se passe en cas de problème.',
 }
 
@@ -317,12 +317,12 @@ PRIVACY['it'] = {
     'privacy_p_changes_p1': 'Se apportiamo modifiche sostanziali, aggiorneremo la data "Ultimo aggiornamento" in cima a questa pagina. Per modifiche che ampliano i dati che raccogliamo, cambiano come li usiamo o cambiano le terze parti con cui li condividiamo, aggiungeremo un avviso più visibile sulla home page per almeno 30 giorni prima che la modifica entri in vigore. La versione precedente di questa informativa è disponibile su richiesta.',
 
     'privacy_p_contact_h2': 'Contatti',
-    'privacy_p_contact_p1': 'Per domande sulla privacy, richieste degli interessati, richieste CCPA, avvisi di copyright e qualsiasi altra questione legale, scrivi a <strong>privacy@handle.name</strong>. Miriamo a rispondere entro 14 giorni per le richieste sulla privacy ed entro 30 giorni per le richieste degli interessati, come richiesto dal GDPR.',
+    'privacy_p_contact_p1': 'Per domande sulla privacy, richieste degli interessati, richieste CCPA, avvisi di copyright e qualsiasi altra questione legale, scrivi a <strong>privacy@gethandlenames.com</strong>. Miriamo a rispondere entro 14 giorni per le richieste sulla privacy ed entro 30 giorni per le richieste degli interessati, come richiesto dal GDPR.',
 }
 
 TERMS['it'] = {
     'terms_governing_p': 'Questi termini sono regolati dalle leggi dello Stato del Delaware, Stati Uniti d\'America, senza riferimento alle sue norme sui conflitti di leggi. Qualsiasi controversia derivante da o relativa a questi termini sarà risolta nei tribunali statali o federali situati in Delaware, e acconsenti alla giurisdizione personale di tali tribunali.',
-    'terms_contact_p': 'Per avvisi legali, richieste di rimozione e qualsiasi altra corrispondenza formale, scrivi a <strong>legal@handle.name</strong>. Miriamo a rispondere entro 14 giorni. Feedback informale e segnalazioni di bug possono andare allo stesso indirizzo — leggiamo tutto — ma gli avvisi legali formali devono seguire questo canale.',
+    'terms_contact_p': 'Per avvisi legali, richieste di rimozione e qualsiasi altra corrispondenza formale, scrivi a <strong>legal@gethandlenames.com</strong>. Miriamo a rispondere entro 14 giorni. Feedback informale e segnalazioni di bug possono andare allo stesso indirizzo — leggiamo tutto — ma gli avvisi legali formali devono seguire questo canale.',
     'terms_lede_p': 'Ultimo aggiornamento: 25 agosto 2026. Utilizzando Handle accetti questi termini. Coprono cos\'è Handle, a chi appartiene cosa, cosa puoi e cosa non puoi fare con lo strumento, e cosa succede se qualcosa va storto.',
 }
 
@@ -389,12 +389,12 @@ PRIVACY['pt'] = {
     'privacy_p_changes_p1': 'Se fizermos alterações materiais, atualizaremos a data "Última atualização" no topo desta página. Para alterações que ampliem os dados que coletamos, mudem a forma como os usamos, ou mudem terceiros com os quais os compartilhamos, adicionaremos um aviso mais proeminente na página inicial por pelo menos 30 dias antes da alteração entrar em vigor. A versão anterior desta política está disponível sob pedido.',
 
     'privacy_p_contact_h2': 'Contato',
-    'privacy_p_contact_p1': 'Para dúvidas de privacidade, solicitações de titular, solicitações CCPA, avisos de direitos autorais e qualquer outra questão jurídica, escreva para <strong>privacy@handle.name</strong>. Nosso objetivo é responder em 14 dias para solicitações de privacidade e em 30 dias para solicitações de titular, conforme exigido pelo GDPR.',
+    'privacy_p_contact_p1': 'Para dúvidas de privacidade, solicitações de titular, solicitações CCPA, avisos de direitos autorais e qualquer outra questão jurídica, escreva para <strong>privacy@gethandlenames.com</strong>. Nosso objetivo é responder em 14 dias para solicitações de privacidade e em 30 dias para solicitações de titular, conforme exigido pelo GDPR.',
 }
 
 TERMS['pt'] = {
     'terms_governing_p': 'Estes termos são regidos pelas leis do Estado de Delaware, Estados Unidos da América, sem consideração às suas disposições sobre conflitos de leis. Qualquer disputa decorrente de ou relacionada a estes termos será resolvida nos tribunais estaduais ou federais localizados em Delaware, e você consente com a jurisdição pessoal desses tribunais.',
-    'terms_contact_p': 'Para avisos legais, solicitações de remoção e qualquer outra correspondência formal, escreva para <strong>legal@handle.name</strong>. Nosso objetivo é responder em 14 dias. Feedback informal e relatórios de bugs podem ir para o mesmo endereço — lemos tudo — mas avisos legais formais devem seguir este canal.',
+    'terms_contact_p': 'Para avisos legais, solicitações de remoção e qualquer outra correspondência formal, escreva para <strong>legal@gethandlenames.com</strong>. Nosso objetivo é responder em 14 dias. Feedback informal e relatórios de bugs podem ir para o mesmo endereço — lemos tudo — mas avisos legais formais devem seguir este canal.',
     'terms_lede_p': 'Última atualização: 25 de agosto de 2026. Ao usar o Handle, você concorda com estes termos. Eles cobrem o que é o Handle, a quem pertence o quê, o que você pode e não pode fazer com a ferramenta, e o que acontece se algo der errado.',
 }
 
@@ -461,12 +461,12 @@ PRIVACY['nl'] = {
     'privacy_p_changes_p1': 'Als we materiële wijzigingen aanbrengen, werken we de datum "Laatst bijgewerkt" bovenaan deze pagina bij. Voor wijzigingen die de gegevens die we verzamelen verbreden, veranderen hoe we ze gebruiken, of derden met wie we ze delen veranderen, voegen we minstens 30 dagen voordat de wijziging van kracht wordt een meer opvallende melding toe op de startpagina. De vorige versie van dit beleid is op verzoek beschikbaar.',
 
     'privacy_p_contact_h2': 'Contact',
-    'privacy_p_contact_p1': 'Voor privacyvragen, verzoeken van betrokkenen, CCPA-verzoeken, auteursrechtsmeldingen en andere juridische zaken, schrijf naar <strong>privacy@handle.name</strong>. We streven ernaar binnen 14 dagen te reageren op privacyverzoeken en binnen 30 dagen op verzoeken van betrokkenen zoals vereist door de AVG.',
+    'privacy_p_contact_p1': 'Voor privacyvragen, verzoeken van betrokkenen, CCPA-verzoeken, auteursrechtsmeldingen en andere juridische zaken, schrijf naar <strong>privacy@gethandlenames.com</strong>. We streven ernaar binnen 14 dagen te reageren op privacyverzoeken en binnen 30 dagen op verzoeken van betrokkenen zoals vereist door de AVG.',
 }
 
 TERMS['nl'] = {
     'terms_governing_p': 'Deze voorwaarden worden beheerst door de wetten van de staat Delaware, Verenigde Staten van Amerika, zonder rekening te houden met de conflictregels daarvan. Elk geschil dat voortvloeit uit of verband houdt met deze voorwaarden wordt beslecht door de staats- of federale rechtbanken in Delaware, en je stemt in met de persoonlijke jurisdictie van die rechtbanken.',
-    'terms_contact_p': 'Voor juridische kennisgevingen, verzoeken tot verwijdering en andere formele correspondentie, schrijf naar <strong>legal@handle.name</strong>. We streven ernaar binnen 14 dagen te reageren. Informele feedback en bugrapporten mogen naar hetzelfde adres — we lezen alles — maar formele juridische kennisgevingen moeten via dit kanaal lopen.',
+    'terms_contact_p': 'Voor juridische kennisgevingen, verzoeken tot verwijdering en andere formele correspondentie, schrijf naar <strong>legal@gethandlenames.com</strong>. We streven ernaar binnen 14 dagen te reageren. Informele feedback en bugrapporten mogen naar hetzelfde adres — we lezen alles — maar formele juridische kennisgevingen moeten via dit kanaal lopen.',
     'terms_lede_p': 'Laatst bijgewerkt: 25 augustus 2026. Door Handle te gebruiken ga je akkoord met deze voorwaarden. Ze behandelen wat Handle is, van wie wat is, wat je wel en niet met de tool kunt doen, en wat er gebeurt als er iets misgaat.',
 }
 
@@ -533,12 +533,12 @@ PRIVACY['pl'] = {
     'privacy_p_changes_p1': 'Jeśli wprowadzimy istotne zmiany, zaktualizujemy datę "Ostatnia aktualizacja" na górze tej strony. W przypadku zmian, które poszerzają zbierane przez nas dane, zmieniają sposób ich wykorzystania lub zmieniają strony trzecie, którym je udostępniamy, dodamy bardziej widoczne powiadomienie na stronie głównej przez co najmniej 30 dni przed wejściem zmiany w życie. Poprzednia wersja tej polityki jest dostępna na żądanie.',
 
     'privacy_p_contact_h2': 'Kontakt',
-    'privacy_p_contact_p1': 'W sprawach dotyczących prywatności, żądań osoby, której dane dotyczą, żądań CCPA, zawiadomień o prawach autorskich i wszelkich innych kwestii prawnych pisz na <strong>privacy@handle.name</strong>. Staramy się odpowiadać w ciągu 14 dni na żądania dotyczące prywatności i w ciągu 30 dni na żądania osoby, której dane dotyczą, zgodnie z wymogami RODO.',
+    'privacy_p_contact_p1': 'W sprawach dotyczących prywatności, żądań osoby, której dane dotyczą, żądań CCPA, zawiadomień o prawach autorskich i wszelkich innych kwestii prawnych pisz na <strong>privacy@gethandlenames.com</strong>. Staramy się odpowiadać w ciągu 14 dni na żądania dotyczące prywatności i w ciągu 30 dni na żądania osoby, której dane dotyczą, zgodnie z wymogami RODO.',
 }
 
 TERMS['pl'] = {
     'terms_governing_p': 'Niniejsze warunki podlegają prawu stanu Delaware, Stany Zjednoczone Ameryki, bez uwzględnienia jego przepisów kolizyjnych. Wszelkie spory wynikające z lub związane z niniejszymi warunkami będą rozstrzygane przez sądy stanowe lub federalne zlokalizowane w Delaware, a Ty wyrażasz zgodę na osobistą jurysdykcję tych sądów.',
-    'terms_contact_p': 'W sprawie zawiadomień prawnych, żądań usunięcia i wszelkiej innej formalnej korespondencji pisz na <strong>legal@handle.name</strong>. Staramy się odpowiadać w ciągu 14 dni. Nieformalne opinie i zgłoszenia błędów mogą być kierowane na ten sam adres — czytamy wszystko — ale formalne zawiadomienia prawne muszą iść tym kanałem.',
+    'terms_contact_p': 'W sprawie zawiadomień prawnych, żądań usunięcia i wszelkiej innej formalnej korespondencji pisz na <strong>legal@gethandlenames.com</strong>. Staramy się odpowiadać w ciągu 14 dni. Nieformalne opinie i zgłoszenia błędów mogą być kierowane na ten sam adres — czytamy wszystko — ale formalne zawiadomienia prawne muszą iść tym kanałem.',
     'terms_lede_p': 'Ostatnia aktualizacja: 25 sierpnia 2026 r. Korzystając z Handle, zgadzasz się na niniejsze warunki. Obejmują one, czym jest Handle, do kogo należy co, co możesz, a czego nie możesz robić z narzędziem, oraz co się dzieje, gdy coś pójdzie nie tak.',
 }
 
@@ -605,12 +605,12 @@ PRIVACY['ru'] = {
     'privacy_p_changes_p1': 'Если мы вносим существенные изменения, мы обновим дату «Последнее обновление» в верхней части этой страницы. При изменениях, которые расширяют собираемые нами данные, меняют способ их использования или третьих лиц, которым мы их передаём, мы добавим более заметное уведомление на главной странице как минимум за 30 дней до вступления изменений в силу. Предыдущая версия этой политики доступна по запросу.',
 
     'privacy_p_contact_h2': 'Контакты',
-    'privacy_p_contact_p1': 'По вопросам конфиденциальности, запросам субъекта данных, запросам CCPA, уведомлениям об авторских правах и любым другим юридическим вопросам пишите на <strong>privacy@handle.name</strong>. Мы стремимся отвечать в течение 14 дней на запросы о конфиденциальности и в течение 30 дней на запросы субъекта данных, как требует GDPR.',
+    'privacy_p_contact_p1': 'По вопросам конфиденциальности, запросам субъекта данных, запросам CCPA, уведомлениям об авторских правах и любым другим юридическим вопросам пишите на <strong>privacy@gethandlenames.com</strong>. Мы стремимся отвечать в течение 14 дней на запросы о конфиденциальности и в течение 30 дней на запросы субъекта данных, как требует GDPR.',
 }
 
 TERMS['ru'] = {
     'terms_governing_p': 'Настоящие условия регулируются законами штата Делавэр, Соединённые Штаты Америки, без учёта его коллизионных норм. Любой спор, возникающий в связи с настоящими условиями, разрешается в судах штата или федеральных судах, расположенных в Делавэре, и вы соглашаетесь с личной юрисдикцией этих судов.',
-    'terms_contact_p': 'По юридическим уведомлениям, запросам на удаление и любой другой официальной переписке пишите на <strong>legal@handle.name</strong>. Мы стремимся отвечать в течение 14 дней. Неформальные отзывы и сообщения об ошибках можно направлять на тот же адрес — мы читаем всё — но официальные юридические уведомления должны идти по этому каналу.',
+    'terms_contact_p': 'По юридическим уведомлениям, запросам на удаление и любой другой официальной переписке пишите на <strong>legal@gethandlenames.com</strong>. Мы стремимся отвечать в течение 14 дней. Неформальные отзывы и сообщения об ошибках можно направлять на тот же адрес — мы читаем всё — но официальные юридические уведомления должны идти по этому каналу.',
     'terms_lede_p': 'Последнее обновление: 25 августа 2026 г. Используя Handle, вы соглашаетесь с этими условиями. В них описано, что такое Handle, кому что принадлежит, что можно и нельзя делать с инструментом, и что произойдёт, если что-то пойдёт не так.',
 }
 
@@ -677,12 +677,12 @@ PRIVACY['zh'] = {
     'privacy_p_changes_p1': '如果我们做出重大变更,我们会更新本页顶部的"最后更新"日期。对于扩大我们收集的数据范围、改变我们使用方式,或改变我们与之共享数据的第三方的变更,我们会在变更生效前至少 30 天在主页上添加更醒目的提示。本政策以前的版本可应要求提供。',
 
     'privacy_p_contact_h2': '联系方式',
-    'privacy_p_contact_p1': '如有隐私问题、数据主体请求、CCPA 请求、版权通知和任何其他法律事宜,请写信至 <strong>privacy@handle.name</strong>。我们力争在 14 天内回复隐私请求,在 30 天内回复数据主体请求,符合 GDPR 的要求。',
+    'privacy_p_contact_p1': '如有隐私问题、数据主体请求、CCPA 请求、版权通知和任何其他法律事宜,请写信至 <strong>privacy@gethandlenames.com</strong>。我们力争在 14 天内回复隐私请求,在 30 天内回复数据主体请求,符合 GDPR 的要求。',
 }
 
 TERMS['zh'] = {
     'terms_governing_p': '本条款受美利坚合众国特拉华州法律管辖,不适用其法律冲突规则。因本条款引起或与之相关的任何争议,将由位于特拉华州的州法院或联邦法院解决,你同意接受这些法院的属人管辖。',
-    'terms_contact_p': '如有法律通知、删除请求和任何其他正式通信,请写信至 <strong>legal@handle.name</strong>。我们力争在 14 天内回复。随意反馈和错误报告可以发到同一邮箱——我们都会阅读——但正式法律通知必须通过此渠道。',
+    'terms_contact_p': '如有法律通知、删除请求和任何其他正式通信,请写信至 <strong>legal@gethandlenames.com</strong>。我们力争在 14 天内回复。随意反馈和错误报告可以发到同一邮箱——我们都会阅读——但正式法律通知必须通过此渠道。',
     'terms_lede_p': '最后更新于 2026 年 8 月 25 日。使用 Handle 即表示你同意这些条款。它们涵盖 Handle 是什么、各项内容的归属、你可以和不可以使用该工具做什么,以及如果出现问题会发生什么。',
 }
 
@@ -749,12 +749,12 @@ PRIVACY['vi'] = {
     'privacy_p_changes_p1': 'Nếu chúng tôi thực hiện các thay đổi quan trọng, chúng tôi sẽ cập nhật ngày "Cập nhật lần cuối" ở đầu trang này. Đối với những thay đổi mở rộng dữ liệu chúng tôi thu thập, thay đổi cách chúng tôi sử dụng, hoặc thay đổi các bên thứ ba mà chúng tôi chia sẻ, chúng tôi sẽ thêm thông báo nổi bật hơn trên trang chủ trong ít nhất 30 ngày trước khi thay đổi có hiệu lực. Phiên bản trước của chính sách này có sẵn theo yêu cầu.',
 
     'privacy_p_contact_h2': 'Liên hệ',
-    'privacy_p_contact_p1': 'Đối với các câu hỏi về quyền riêng tư, yêu cầu của chủ thể dữ liệu, yêu cầu CCPA, thông báo bản quyền và bất kỳ vấn đề pháp lý nào khác, vui lòng viết thư cho <strong>privacy@handle.name</strong>. Chúng tôi hướng đến việc phản hồi trong vòng 14 ngày cho các yêu cầu về quyền riêng tư và trong vòng 30 ngày cho các yêu cầu của chủ thể dữ liệu theo yêu cầu của GDPR.',
+    'privacy_p_contact_p1': 'Đối với các câu hỏi về quyền riêng tư, yêu cầu của chủ thể dữ liệu, yêu cầu CCPA, thông báo bản quyền và bất kỳ vấn đề pháp lý nào khác, vui lòng viết thư cho <strong>privacy@gethandlenames.com</strong>. Chúng tôi hướng đến việc phản hồi trong vòng 14 ngày cho các yêu cầu về quyền riêng tư và trong vòng 30 ngày cho các yêu cầu của chủ thể dữ liệu theo yêu cầu của GDPR.',
 }
 
 TERMS['vi'] = {
     'terms_governing_p': 'Các điều khoản này được điều chỉnh bởi luật pháp của Bang Delaware, Hợp chúng quốc Hoa Kỳ, không tính đến các quy định về xung đột pháp luật. Mọi tranh chấp phát sinh từ hoặc liên quan đến các điều khoản này sẽ được giải quyết tại các tòa án bang hoặc liên bang đặt tại Delaware, và bạn đồng ý với thẩm quyền cá nhân của các tòa án đó.',
-    'terms_contact_p': 'Đối với các thông báo pháp lý, yêu cầu gỡ bỏ và bất kỳ thư từ chính thức nào khác, vui lòng viết thư cho <strong>legal@handle.name</strong>. Chúng tôi hướng đến việc phản hồi trong vòng 14 ngày. Phản hồi không chính thức và báo cáo lỗi có thể gửi tới cùng địa chỉ — chúng tôi đọc tất cả — nhưng các thông báo pháp lý chính thức phải đi theo kênh này.',
+    'terms_contact_p': 'Đối với các thông báo pháp lý, yêu cầu gỡ bỏ và bất kỳ thư từ chính thức nào khác, vui lòng viết thư cho <strong>legal@gethandlenames.com</strong>. Chúng tôi hướng đến việc phản hồi trong vòng 14 ngày. Phản hồi không chính thức và báo cáo lỗi có thể gửi tới cùng địa chỉ — chúng tôi đọc tất cả — nhưng các thông báo pháp lý chính thức phải đi theo kênh này.',
     'terms_lede_p': 'Cập nhật lần cuối: ngày 25 tháng 8 năm 2026. Bằng việc sử dụng Handle, bạn đồng ý với các điều khoản này. Chúng bao gồm Handle là gì, cái gì thuộc về ai, bạn có thể và không thể làm gì với công cụ, và điều gì xảy ra nếu có sự cố.',
 }
 
@@ -821,12 +821,12 @@ PRIVACY['id'] = {
     'privacy_p_changes_p1': 'Jika kami membuat perubahan material, kami akan memperbarui tanggal "Pembaruan terakhir" di bagian atas halaman ini. Untuk perubahan yang memperluas data yang kami kumpulkan, mengubah cara kami menggunakannya, atau mengubah pihak ketiga yang kami bagikan, kami akan menambahkan pemberitahuan yang lebih menonjol di halaman beranda setidaknya 30 hari sebelum perubahan berlaku. Versi sebelumnya dari kebijakan ini tersedia berdasarkan permintaan.',
 
     'privacy_p_contact_h2': 'Kontak',
-    'privacy_p_contact_p1': 'Untuk pertanyaan privasi, permintaan subjek data, permintaan CCPA, pemberitahuan hak cipta, dan masalah hukum lainnya, tulislah ke <strong>privacy@handle.name</strong>. Kami bertujuan untuk merespons dalam 14 hari untuk permintaan privasi dan dalam 30 hari untuk permintaan subjek data sebagaimana disyaratkan oleh GDPR.',
+    'privacy_p_contact_p1': 'Untuk pertanyaan privasi, permintaan subjek data, permintaan CCPA, pemberitahuan hak cipta, dan masalah hukum lainnya, tulislah ke <strong>privacy@gethandlenames.com</strong>. Kami bertujuan untuk merespons dalam 14 hari untuk permintaan privasi dan dalam 30 hari untuk permintaan subjek data sebagaimana disyaratkan oleh GDPR.',
 }
 
 TERMS['id'] = {
     'terms_governing_p': 'Syarat-syarat ini diatur oleh hukum Negara Bagian Delaware, Amerika Serikat, tanpa memperhatikan ketentuan konflik hukumnya. Setiap sengketa yang timbul dari atau terkait dengan syarat-syarat ini akan diselesaikan di pengadilan negara bagian atau federal yang berlokasi di Delaware, dan Anda menyetujui yurisdiksi pribadi pengadilan tersebut.',
-    'terms_contact_p': 'Untuk pemberitahuan hukum, permintaan penghapusan, dan korespondensi formal lainnya, tulislah ke <strong>legal@handle.name</strong>. Kami bertujuan merespons dalam 14 hari. Umpan balik informal dan laporan bug dapat dikirim ke alamat yang sama — kami membaca semuanya — tetapi pemberitahuan hukum formal harus mengikuti saluran ini.',
+    'terms_contact_p': 'Untuk pemberitahuan hukum, permintaan penghapusan, dan korespondensi formal lainnya, tulislah ke <strong>legal@gethandlenames.com</strong>. Kami bertujuan merespons dalam 14 hari. Umpan balik informal dan laporan bug dapat dikirim ke alamat yang sama — kami membaca semuanya — tetapi pemberitahuan hukum formal harus mengikuti saluran ini.',
     'terms_lede_p': 'Pembaruan terakhir: 25 Agustus 2026. Dengan menggunakan Handle, Anda menyetujui syarat-syarat ini. Syarat-syarat ini mencakup apa itu Handle, siapa memiliki apa, apa yang boleh dan tidak boleh Anda lakukan dengan alat ini, dan apa yang terjadi jika terjadi kesalahan.',
 }
 
@@ -893,12 +893,12 @@ PRIVACY['ms'] = {
     'privacy_p_changes_p1': 'Jika kami membuat perubahan material, kami akan mengemas kini tarikh "Kemas kini terakhir" di bahagian atas halaman ini. Untuk perubahan yang meluaskan data yang kami kumpulkan, menukar cara kami menggunakannya, atau menukar pihak ketiga yang kami berkongsi, kami akan menambah notis yang lebih menonjol di halaman utama selama sekurang-kurangnya 30 hari sebelum perubahan itu berkuat kuasa. Versi terdahulu dasar ini tersedia atas permintaan.',
 
     'privacy_p_contact_h2': 'Hubungan',
-    'privacy_p_contact_p1': 'Untuk soalan privasi, permintaan subjek data, permintaan CCPA, notis hak cipta, dan sebarang perkara undang-undang lain, tulis kepada <strong>privacy@handle.name</strong>. Kami menyasarkan untuk memberi respons dalam 14 hari untuk permintaan privasi dan dalam 30 hari untuk permintaan subjek data seperti yang dikehendaki oleh GDPR.',
+    'privacy_p_contact_p1': 'Untuk soalan privasi, permintaan subjek data, permintaan CCPA, notis hak cipta, dan sebarang perkara undang-undang lain, tulis kepada <strong>privacy@gethandlenames.com</strong>. Kami menyasarkan untuk memberi respons dalam 14 hari untuk permintaan privasi dan dalam 30 hari untuk permintaan subjek data seperti yang dikehendaki oleh GDPR.',
 }
 
 TERMS['ms'] = {
     'terms_governing_p': 'Terma-terma ini ditadbir oleh undang-undang Negeri Delaware, Amerika Syarikat, tanpa menghiraukan peruntukan konflik undang-undangnya. Sebarang pertikaian yang timbul daripada atau berkaitan dengan terma-terma ini akan diselesaikan di mahkamah negeri atau persekutuan yang terletak di Delaware, dan anda bersetuju dengan bidang kuasa peribadi mahkamah tersebut.',
-    'terms_contact_p': 'Untuk notis undang-undang, permintaan penanggalan, dan sebarang surat-menyurat rasmi lain, tulis kepada <strong>legal@handle.name</strong>. Kami menyasarkan untuk memberi respons dalam 14 hari. Maklum balas tidak rasmi dan laporan pepijat boleh dihantar ke alamat yang sama — kami membaca semua — tetapi notis undang-undang rasmi mesti melalui saluran ini.',
+    'terms_contact_p': 'Untuk notis undang-undang, permintaan penanggalan, dan sebarang surat-menyurat rasmi lain, tulis kepada <strong>legal@gethandlenames.com</strong>. Kami menyasarkan untuk memberi respons dalam 14 hari. Maklum balas tidak rasmi dan laporan pepijat boleh dihantar ke alamat yang sama — kami membaca semua — tetapi notis undang-undang rasmi mesti melalui saluran ini.',
     'terms_lede_p': 'Kemas kini terakhir: 25 Ogos 2026. Dengan menggunakan Handle, anda bersetuju dengan terma-terma ini. Ia merangkumi apa itu Handle, siapa memiliki apa, apa yang anda boleh dan tidak boleh lakukan dengan alat tersebut, dan apa yang berlaku jika ada masalah.',
 }
 
@@ -965,12 +965,12 @@ PRIVACY['tl'] = {
     'privacy_p_changes_p1': 'Kung gagawa kami ng mga materyal na pagbabago, ia-update namin ang petsa ng "Huling na-update" sa tuktok ng pahinang ito. Para sa mga pagbabago na magpapalawak sa data na kinokolekta namin, magpapalit sa kung paano namin ito ginagamit, o magpapalit sa mga third party na aming ibinabahagi, magdadagdag kami ng mas kapansin-pansin na abiso sa home page sa loob ng hindi bababa sa 30 araw bago magkabisa ang pagbabago. Ang nakaraang bersyon ng patakarang ito ay available kapag hiniling.',
 
     'privacy_p_contact_h2': 'Kontak',
-    'privacy_p_contact_p1': 'Para sa mga tanong sa privacy, mga kahilingan ng data subject, mga kahilingan sa CCPA, mga abiso sa copyright, at anumang iba pang legal na bagay, sumulat sa <strong>privacy@handle.name</strong>. Layunin naming tumugon sa loob ng 14 araw para sa mga kahilingan sa privacy at sa loob ng 30 araw para sa mga kahilingan ng data subject ayon sa kinakailangan ng GDPR.',
+    'privacy_p_contact_p1': 'Para sa mga tanong sa privacy, mga kahilingan ng data subject, mga kahilingan sa CCPA, mga abiso sa copyright, at anumang iba pang legal na bagay, sumulat sa <strong>privacy@gethandlenames.com</strong>. Layunin naming tumugon sa loob ng 14 araw para sa mga kahilingan sa privacy at sa loob ng 30 araw para sa mga kahilingan ng data subject ayon sa kinakailangan ng GDPR.',
 }
 
 TERMS['tl'] = {
     'terms_governing_p': 'Ang mga termino na ito ay pinangangasiwaan ng mga batas ng Estado ng Delaware, Estados Unidos ng Amerika, nang walang pagsasaalang-alang sa mga probisyon nito sa salungatan ng mga batas. Ang anumang alitan na magmumula sa o kaugnay ng mga termino na ito ay malulutas sa mga state o federal na korte na matatagpuan sa Delaware, at sumasang-ayon ka sa personal na hurisdiksyon ng mga korte na iyon.',
-    'terms_contact_p': 'Para sa mga legal na abiso, mga kahilingan sa pagtanggal, at anumang iba pang pormal na sulat, sumulat sa <strong>legal@handle.name</strong>. Layunin naming tumugon sa loob ng 14 araw. Ang impormal na feedback at mga ulat ng bug ay maaaring pumunta sa parehong address — nababasa namin lahat — ngunit ang mga pormal na legal na abiso ay dapat sumunod sa channel na ito.',
+    'terms_contact_p': 'Para sa mga legal na abiso, mga kahilingan sa pagtanggal, at anumang iba pang pormal na sulat, sumulat sa <strong>legal@gethandlenames.com</strong>. Layunin naming tumugon sa loob ng 14 araw. Ang impormal na feedback at mga ulat ng bug ay maaaring pumunta sa parehong address — nababasa namin lahat — ngunit ang mga pormal na legal na abiso ay dapat sumunod sa channel na ito.',
     'terms_lede_p': 'Huling na-update: 25 Agosto 2026. Sa paggamit ng Handle, sumasang-ayon ka sa mga termino na ito. Sinasaklaw nila kung ano ang Handle, kanino ang ano, ano ang maaari at hindi mo maaaring gawin sa tool, at kung ano ang mangyayari kung may problema.',
 }
 
@@ -1037,12 +1037,12 @@ PRIVACY['hi'] = {
     'privacy_p_changes_p1': 'यदि हम महत्वपूर्ण परिवर्तन करते हैं, तो हम इस पृष्ठ के शीर्ष पर "अंतिम अद्यतन" तिथि को अद्यतन करेंगे। उन परिवर्तनों के लिए जो हमारे द्वारा एकत्र किए जाने वाले डेटा का विस्तार करते हैं, उसके उपयोग के तरीके को बदलते हैं, या जिन तृतीय पक्षों के साथ हम इसे साझा करते हैं उन्हें बदलते हैं, हम परिवर्तन लागू होने से कम से कम 30 दिन पहले होम पेज पर एक अधिक प्रमुख सूचना जोड़ेंगे। इस नीति का पिछला संस्करण अनुरोध पर उपलब्ध है।',
 
     'privacy_p_contact_h2': 'संपर्क',
-    'privacy_p_contact_p1': 'गोपनीयता प्रश्नों, डेटा-विषयक अनुरोधों, CCPA अनुरोधों, कॉपीराइट नोटिस, और किसी भी अन्य कानूनी मामले के लिए, <strong>privacy@handle.name</strong> पर लिखें। हम GDPR की आवश्यकता के अनुसार गोपनीयता अनुरोधों के लिए 14 दिनों के भीतर और डेटा-विषयक अनुरोधों के लिए 30 दिनों के भीतर उत्तर देने का लक्ष्य रखते हैं।',
+    'privacy_p_contact_p1': 'गोपनीयता प्रश्नों, डेटा-विषयक अनुरोधों, CCPA अनुरोधों, कॉपीराइट नोटिस, और किसी भी अन्य कानूनी मामले के लिए, <strong>privacy@gethandlenames.com</strong> पर लिखें। हम GDPR की आवश्यकता के अनुसार गोपनीयता अनुरोधों के लिए 14 दिनों के भीतर और डेटा-विषयक अनुरोधों के लिए 30 दिनों के भीतर उत्तर देने का लक्ष्य रखते हैं।',
 }
 
 TERMS['hi'] = {
     'terms_governing_p': 'ये शर्तें संयुक्त राज्य अमेरिका के डेलावेयर राज्य के कानूनों द्वारा शासित होती हैं, बिना उनके कानून-संघर्ष प्रावधानों के। इन शर्तों से उत्पन्न या संबंधित कोई भी विवाद डेलावेयर में स्थित राज्य या संघीय न्यायालयों में निपटाया जाएगा, और आप उन न्यायालयों के व्यक्तिगत अधिकार क्षेत्र के लिए सहमति देते हैं।',
-    'terms_contact_p': 'कानूनी नोटिस, हटाने के अनुरोध, और किसी अन्य औपचारिक पत्राचार के लिए, <strong>legal@handle.name</strong> पर लिखें। हम 14 दिनों के भीतर उत्तर देने का लक्ष्य रखते हैं। अनौपचारिक प्रतिक्रिया और बग रिपोर्ट उसी पते पर भेजी जा सकती हैं — हम सब कुछ पढ़ते हैं — लेकिन औपचारिक कानूनी नोटिस इसी चैनल का पालन करेंगे।',
+    'terms_contact_p': 'कानूनी नोटिस, हटाने के अनुरोध, और किसी अन्य औपचारिक पत्राचार के लिए, <strong>legal@gethandlenames.com</strong> पर लिखें। हम 14 दिनों के भीतर उत्तर देने का लक्ष्य रखते हैं। अनौपचारिक प्रतिक्रिया और बग रिपोर्ट उसी पते पर भेजी जा सकती हैं — हम सब कुछ पढ़ते हैं — लेकिन औपचारिक कानूनी नोटिस इसी चैनल का पालन करेंगे।',
     'terms_lede_p': 'अंतिम अद्यतन: 25 अगस्त 2026। Handle का उपयोग करके आप इन शर्तों से सहमत होते हैं। ये बताती हैं कि Handle क्या है, किसका क्या है, आप इस टूल के साथ क्या कर सकते हैं और क्या नहीं, और यदि कुछ गलत होता है तो क्या होगा।',
 }
 
@@ -1109,12 +1109,12 @@ PRIVACY['bn'] = {
     'privacy_p_changes_p1': 'আমরা যদি উল্লেখযোগ্য পরিবর্তন করি, আমরা এই পৃষ্ঠার শীর্ষে "সর্বশেষ আপডেট" তারিখ আপডেট করব। যেসব পরিবর্তন আমরা যে ডেটা সংগ্রহ করি তা প্রসারিত করে, আমরা কীভাবে এটি ব্যবহার করি তা পরিবর্তন করে, বা আমরা যে তৃতীয় পক্ষগুলির সাথে শেয়ার করি তাদের পরিবর্তন করে, সেগুলির জন্য পরিবর্তন কার্যকর হওয়ার অন্তত ৩০ দিন আগে আমরা হোমপেজে আরও বিশিষ্ট একটি বিজ্ঞপ্তি যোগ করব। এই নীতির পূর্ববর্তী সংস্করণ অনুরোধে পাওয়া যায়।',
 
     'privacy_p_contact_h2': 'যোগাযোগ',
-    'privacy_p_contact_p1': 'গোপনীয়তা প্রশ্ন, ডেটা-সাবজেক্ট অনুরোধ, CCPA অনুরোধ, কপিরাইট বিজ্ঞপ্তি এবং অন্য যেকোনো আইনি বিষয়ের জন্য, <strong>privacy@handle.name</strong>-এ লিখুন। GDPR-এর প্রয়োজন অনুযায়ী আমরা গোপনীয়তা অনুরোধের জন্য ১৪ দিনের মধ্যে এবং ডেটা-সাবজেক্ট অনুরোধের জন্য ৩০ দিনের মধ্যে উত্তর দেওয়ার লক্ষ্য রাখি।',
+    'privacy_p_contact_p1': 'গোপনীয়তা প্রশ্ন, ডেটা-সাবজেক্ট অনুরোধ, CCPA অনুরোধ, কপিরাইট বিজ্ঞপ্তি এবং অন্য যেকোনো আইনি বিষয়ের জন্য, <strong>privacy@gethandlenames.com</strong>-এ লিখুন। GDPR-এর প্রয়োজন অনুযায়ী আমরা গোপনীয়তা অনুরোধের জন্য ১৪ দিনের মধ্যে এবং ডেটা-সাবজেক্ট অনুরোধের জন্য ৩০ দিনের মধ্যে উত্তর দেওয়ার লক্ষ্য রাখি।',
 }
 
 TERMS['bn'] = {
     'terms_governing_p': 'এই শর্তাবলী মার্কিন যুক্তরাষ্ট্রের ডেলাওয়্যার রাজ্যের আইন দ্বারা নিয়ন্ত্রিত হবে, তার সংঘাত-আইন বিধানগুলি বিবেচনা না করেই। এই শর্তাবলী থেকে বা এর সাথে সম্পর্কিত যেকোনো বিরোধ ডেলাওয়্যারে অবস্থিত রাজ্য বা ফেডারেল আদালতে সমাধান করা হবে, এবং আপনি সেই আদালতগুলির ব্যক্তিগত এখতিয়ারে সম্মতি দেন।',
-    'terms_contact_p': 'আইনি বিজ্ঞপ্তি, অপসারণ অনুরোধ এবং অন্য যেকোনো আনুষ্ঠানিক যোগাযোগের জন্য, <strong>legal@handle.name</strong>-এ লিখুন। আমরা ১৪ দিনের মধ্যে উত্তর দেওয়ার লক্ষ্য রাখি। অনানুষ্ঠানিক প্রতিক্রিয়া এবং বাগ রিপোর্ট একই ঠিকানায় যেতে পারে — আমরা সব কিছু পড়ি — কিন্তু আনুষ্ঠানিক আইনি বিজ্ঞপ্তি অবশ্যই এই চ্যানেল অনুসরণ করবে।',
+    'terms_contact_p': 'আইনি বিজ্ঞপ্তি, অপসারণ অনুরোধ এবং অন্য যেকোনো আনুষ্ঠানিক যোগাযোগের জন্য, <strong>legal@gethandlenames.com</strong>-এ লিখুন। আমরা ১৪ দিনের মধ্যে উত্তর দেওয়ার লক্ষ্য রাখি। অনানুষ্ঠানিক প্রতিক্রিয়া এবং বাগ রিপোর্ট একই ঠিকানায় যেতে পারে — আমরা সব কিছু পড়ি — কিন্তু আনুষ্ঠানিক আইনি বিজ্ঞপ্তি অবশ্যই এই চ্যানেল অনুসরণ করবে।',
     'terms_lede_p': 'সর্বশেষ আপডেট: ২৫ আগস্ট ২০২৬। Handle ব্যবহার করে আপনি এই শর্তাবলীতে সম্মত হচ্ছেন। এগুলি কভার করে Handle কী, কার কী মালিকানা, আপনি টুলটি দিয়ে কী করতে পারবেন এবং কী করতে পারবেন না, এবং কিছু ভুল হলে কী হবে।',
 }
 
@@ -1181,12 +1181,12 @@ PRIVACY['ur'] = {
     'privacy_p_changes_p1': 'اگر ہم موادی تبدیلیاں کرتے ہیں تو ہم اس صفحے کے اوپر "آخری تازہ کاری" کی تاریخ اپ ڈیٹ کریں گے۔ ایسی تبدیلیوں کے لیے جو ہمارے جمع کردہ ڈیٹا کو بڑھاتی ہیں، اسے استعمال کرنے کا طریقہ بدلتی ہیں، یا جن تیسرے فریقوں کے ساتھ ہم شیئر کرتے ہیں انہیں بدلتی ہیں، تبدیلی کے نافذ ہونے سے کم از کم 30 دن پہلے ہم ہوم پیج پر زیادہ نمایاں نوٹس شامل کریں گے۔ اس پالیسی کا پچھلا ورژن درخواست پر دستیاب ہے۔',
 
     'privacy_p_contact_h2': 'رابطہ',
-    'privacy_p_contact_p1': 'رازداری کے سوالات، ڈیٹا سبجیکٹ درخواستوں، CCPA درخواستوں، کاپی رائٹ نوٹس، اور دیگر قانونی معاملات کے لیے <strong>privacy@handle.name</strong> پر لکھیں۔ ہم GDPR کی ضرورت کے مطابق رازداری کی درخواستوں کے لیے 14 دنوں کے اندر اور ڈیٹا سبجیکٹ درخواستوں کے لیے 30 دنوں کے اندر جواب دینے کے لیے پرعزم ہیں۔',
+    'privacy_p_contact_p1': 'رازداری کے سوالات، ڈیٹا سبجیکٹ درخواستوں، CCPA درخواستوں، کاپی رائٹ نوٹس، اور دیگر قانونی معاملات کے لیے <strong>privacy@gethandlenames.com</strong> پر لکھیں۔ ہم GDPR کی ضرورت کے مطابق رازداری کی درخواستوں کے لیے 14 دنوں کے اندر اور ڈیٹا سبجیکٹ درخواستوں کے لیے 30 دنوں کے اندر جواب دینے کے لیے پرعزم ہیں۔',
 }
 
 TERMS['ur'] = {
     'terms_governing_p': 'یہ شرائط ریاستہائے متحدہ امریکہ کی ریاست ڈیلاویئر کے قوانین کے ذریعے منظم ہوں گی، اس کے قانونی تصادم کی دفعات کو نظر انداز کرتے ہوئے۔ ان شرائط سے پیدا ہونے والا یا اس سے متعلق کوئی بھی تنازع ڈیلاویئر میں واقع ریاستی یا وفاقی عدالتوں میں حل کیا جائے گا، اور آپ ان عدالتوں کی ذاتی دائرہ اختیار سے اتفاق کرتے ہیں۔',
-    'terms_contact_p': 'قانونی نوٹس، ہٹانے کی درخواستوں، اور دیگر رسمی خط و کتابت کے لیے <strong>legal@handle.name</strong> پر لکھیں۔ ہم 14 دنوں کے اندر جواب دینے کے لیے پرعزم ہیں۔ غیر رسمی تاثرات اور بگ رپورٹس اسی ایڈریس پر جا سکتی ہیں — ہم سب کچھ پڑھتے ہیں — لیکن رسمی قانونی نوٹس کو اسی چینل کی پیروی کرنی چاہیے۔',
+    'terms_contact_p': 'قانونی نوٹس، ہٹانے کی درخواستوں، اور دیگر رسمی خط و کتابت کے لیے <strong>legal@gethandlenames.com</strong> پر لکھیں۔ ہم 14 دنوں کے اندر جواب دینے کے لیے پرعزم ہیں۔ غیر رسمی تاثرات اور بگ رپورٹس اسی ایڈریس پر جا سکتی ہیں — ہم سب کچھ پڑھتے ہیں — لیکن رسمی قانونی نوٹس کو اسی چینل کی پیروی کرنی چاہیے۔',
     'terms_lede_p': 'آخری تازہ کاری: 25 اگست 2026۔ Handle استعمال کر کے آپ ان شرائط سے اتفاق کرتے ہیں۔ یہ اس بارے میں ہیں کہ Handle کیا ہے، کس کی ملکیت کیا ہے، آپ ٹول کے ساتھ کیا کر سکتے ہیں اور کیا نہیں کر سکتے، اور اگر کچھ غلط ہو جائے تو کیا ہوگا۔',
 }
 
@@ -1253,11 +1253,11 @@ PRIVACY['ar'] = {
     'privacy_p_changes_p1': 'إذا أجرينا تغييرات جوهرية، فسنحدّث تاريخ "آخر تحديث" في أعلى هذه الصفحة. بالنسبة للتغييرات التي توسّع البيانات التي نجمعها، أو تغيّر كيفية استخدامها، أو تغيّر الأطراف الثالثة التي نشاركها معها، سنضيف إشعارًا أكثر بروزًا على الصفحة الرئيسية لمدة 30 يومًا على الأقل قبل سريان التغيير. تتوفر النسخة السابقة من هذه السياسة عند الطلب.',
 
     'privacy_p_contact_h2': 'التواصل',
-    'privacy_p_contact_p1': 'للاستفسارات المتعلقة بالخصوصية، وطلبات أصحاب البيانات، وطلبات CCPA، وإشعارات حقوق الطبع والنشر، وأي مسألة قانونية أخرى، اكتب إلى <strong>privacy@handle.name</strong>. نهدف إلى الرد خلال 14 يومًا لطلبات الخصوصية و30 يومًا لطلبات أصحاب البيانات كما يقتضي GDPR.',
+    'privacy_p_contact_p1': 'للاستفسارات المتعلقة بالخصوصية، وطلبات أصحاب البيانات، وطلبات CCPA، وإشعارات حقوق الطبع والنشر، وأي مسألة قانونية أخرى، اكتب إلى <strong>privacy@gethandlenames.com</strong>. نهدف إلى الرد خلال 14 يومًا لطلبات الخصوصية و30 يومًا لطلبات أصحاب البيانات كما يقتضي GDPR.',
 }
 
 TERMS['ar'] = {
     'terms_governing_p': 'تخضع هذه الشروط لقوانين ولاية ديلاوير بالولايات المتحدة الأمريكية، دون النظر إلى أحكامها المتعلقة بتضارب القوانين. أي نزاع ينشأ عن هذه الشروط أو يتعلق بها سيتم البت فيه في المحاكم الولائية أو الفيدرالية الموجودة في ديلاوير، وتوافق على الولاية الشخصية لتلك المحاكم.',
-    'terms_contact_p': 'للإشعارات القانونية وطلبات الإزالة وأي مراسلات رسمية أخرى، اكتب إلى <strong>legal@handle.name</strong>. نهدف إلى الرد خلال 14 يومًا. يمكن إرسال الملاحظات غير الرسمية وتقارير الأخطاء إلى نفس العنوان — نقرأ كل شيء — لكن الإشعارات القانونية الرسمية يجب أن تتبع هذه القناة.',
+    'terms_contact_p': 'للإشعارات القانونية وطلبات الإزالة وأي مراسلات رسمية أخرى، اكتب إلى <strong>legal@gethandlenames.com</strong>. نهدف إلى الرد خلال 14 يومًا. يمكن إرسال الملاحظات غير الرسمية وتقارير الأخطاء إلى نفس العنوان — نقرأ كل شيء — لكن الإشعارات القانونية الرسمية يجب أن تتبع هذه القناة.',
     'terms_lede_p': 'آخر تحديث: 25 أغسطس 2026. باستخدام Handle فإنك توافق على هذه الشروط. وهي تغطي ما هي Handle، ومن يملك ماذا، وما يمكنك ولا يمكنك فعله بالأداة، وما يحدث إذا حدث خطأ ما.',
 }

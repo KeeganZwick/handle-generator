@@ -242,6 +242,6 @@ FAQ_A = {
         "server IPs (US and EU) with our own User-Agent (HandleBot/0.1), and TikTok sees them as requests from a third party. "
         "We don't have any privileged access to TikTok's data, and the verdicts we return are best-effort probes, not authoritative. "
         "If you are a rights holder at TikTok or ByteDance and believe a page on this site uses your mark in a way that is not "
-        "fair use, write to legal@handle.name and we will address it promptly."
+        "fair use, write to legal@gethandlenames.com and we will address it promptly."
     ),
 }
