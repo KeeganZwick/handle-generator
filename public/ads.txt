@@ -16,4 +16,4 @@
 #
 # Example (do not use as-is):
 # google.com, pub-1234567890123456, DIRECT, f08c47fecaa2a87f
-google.com, pub-0000000000000000, PLACEHOLDER, f08c47fecaa2a87f
+google.com, pub-3477009677814503, DIRECT, f08c47fec0942fa0
