@@ -204,7 +204,7 @@
     To rebuild after any change: see the rebuild note beside that
     script.
   -->
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc=' 'sha256-beKWZk8mrNoZgwKX1HLo8kd3g1sIJmMy+B+NV1xrspI=' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com; frame-ancestors 'none'">
 
   <!--
     Inline style at the very top of head. Runs before the platform's
@@ -522,6 +522,14 @@
       } catch (e) {}
     })();
   </script>
+
+  <!-- AdSense auto-ads: script is injected by /js/consent.js after the
+       user clicks the cookie-consent "Got it" button. Until then, the
+       <ins class="adsbygoogle"> slots in the body are inert (no script
+       has called (adsbygoogle = window.adsbygoogle || []).push({...})
+       on them, so AdSense won't render anything). This keeps EEA / UK
+       users' ad-personalisation data collection gated on consent. -->
+  <script>window.__handleAdSense = { client: 'ca-pub-3477009677814503' };</script>
 </head>
 <body data-route="home">
   <a href="#main" class="sr-only">Skip to content</a>
@@ -601,6 +609,16 @@
           </ul>
         </div>
       </section>
+
+      <!-- Ad slot 1: home, after "Why Handle" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Трендовые идеи никнеймов TikTok на 2026 год</h2>
@@ -749,6 +767,16 @@
           <p>Имя пользователя TikTok — это @хэндл, который идентифицирует ваш аккаунт — он уникален по всему TikTok, это то, как люди находят вас и отмечают, и он появляется в URL вашего профиля (tiktok.com/@вашХэндл). Его можно менять только каждые 30 дней, и он содержит только строчные буквы, цифры, точки и подчёркивания. Отображаемое имя TikTok (или "name") — это читаемая метка, которая появляется рядом с вашим аватаром в комментариях, сообщениях и результатах поиска. Это может быть что угодно до 30 символов — эмодзи, смешанный регистр, пробелы, что хотите. Менять его можно так часто, как хотите, без времени ожидания. Умный шаблон, который используют большинство топ-криэйторов: выберите короткий однословный хэндл ("mia", "kaito", "lee") и пусть отображаемое имя несёт эстетику — "mia ✧ soft grunge", "kaito | genshin builds", "LEE / dj sets". Так хэндл — это находимый якорь, а отображаемое имя — брендируемый слой. Конвертер шрифтов на этом сайте создан, чтобы сделать слой отображаемого имени более выразительным: вставьте своё отображаемое имя и получите его в 11 стилях Unicode, которые работают в поле отображаемого имени TikTok.</p>
         </div>
       </section>
+
+      <!-- Ad slot 2: FAQ section, after "Picking" group, before "How the availability check works" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Как работает проверка доступности</h2>

@@ -204,7 +204,7 @@
     To rebuild after any change: see the rebuild note beside that
     script.
   -->
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc=' 'sha256-beKWZk8mrNoZgwKX1HLo8kd3g1sIJmMy+B+NV1xrspI=' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com; frame-ancestors 'none'">
 
   <!--
     Inline style at the very top of head. Runs before the platform's
@@ -520,6 +520,14 @@
       } catch (e) {}
     })();
   </script>
+
+  <!-- AdSense auto-ads: script is injected by /js/consent.js after the
+       user clicks the cookie-consent "Got it" button. Until then, the
+       <ins class="adsbygoogle"> slots in the body are inert (no script
+       has called (adsbygoogle = window.adsbygoogle || []).push({...})
+       on them, so AdSense won't render anything). This keeps EEA / UK
+       users' ad-personalisation data collection gated on consent. -->
+  <script>window.__handleAdSense = { client: 'ca-pub-3477009677814503' };</script>
 </head>
 <body data-route="home">
   <a href="#main" class="sr-only">Skip to content</a>
@@ -599,6 +607,16 @@
           </ul>
         </div>
       </section>
+
+      <!-- Ad slot 1: home, after "Why Handle" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>2026 کے لیے ٹرینڈنگ TikTok یوزر نیم آئیڈیاز</h2>
@@ -747,6 +765,16 @@
           <p>ایک TikTok صارف نام وہ @ہینڈل ہے جو آپ کے اکاؤنٹ کی شناخت کرتا ہے — یہ پورے TikTok پر منفرد ہے، یہ وہ طریقہ ہے جس سے لوگ آپ کو ڈھونڈتے اور ٹیگ کرتے ہیں، اور یہ آپ کے پروفائل URL میں ظاہر ہوتا ہے (tiktok.com/@آپ کا ہینڈل)۔ اسے صرف ہر 30 دن میں تبدیل کیا جا سکتا ہے اور اس میں صرف چھوٹے حروف، اعداد، نقطے اور انڈر سکورز ہوتے ہیں۔ ایک TikTok ڈسپلے نام (یا "name") انسانی پڑھنے کے قابل لیبل ہے جو تبصیروں، پیغامات اور تلاش کے نتائج میں آپ کے اوتار کے ساتھ ظاہر ہوتا ہے۔ یہ 30 حروف تک کچھ بھی ہو سکتا ہے — ایموجی، مخلوط بڑے/چھوٹے حروف، خالی جگہیں، جو بھی آپ چاہیں۔ آپ اسے جتنی بار چاہیں تبدیل کر سکتے ہیں، بغیر کسی انتظار کے وقت کے۔ زیادہ تر ٹاپ کریئیٹرز کے ذریعے استعمال ہونے والا سمارٹ پیٹرن: ایک مختصر، ایک لفظی ہینڈل ("mia"، "kaito"، "lee") منتخب کریں اور ڈسپلے نام کو خوبصورتی اٹھانے دیں — "mia ✧ soft grunge"، "kaito | genshin builds"، "LEE / dj sets"۔ اس طرح ہینڈل قابل تلاش لنگر ہے اور ڈسپلے نام برانڈ ایبل پرت ہے۔ اس سائٹ پر فونٹ کنورٹر ڈسپلے نام کی پرت کو زیادہ اظہری بنانے کے لیے ڈیزائن کیا گیا ہے: اپنا ڈسپلے نام پیسٹ کریں اور اسے 11 یونیکوڈ اسٹائلز میں حاصل کریں جو TikTok کے ڈسپلے نام فیلڈ میں کام کرتے ہیں۔</p>
         </div>
       </section>
+
+      <!-- Ad slot 2: FAQ section, after "Picking" group, before "How the availability check works" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>دستیابی کی جانچ کیسے کام کرتی ہے</h2>

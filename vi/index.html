@@ -204,7 +204,7 @@
     To rebuild after any change: see the rebuild note beside that
     script.
   -->
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc=' 'sha256-beKWZk8mrNoZgwKX1HLo8kd3g1sIJmMy+B+NV1xrspI=' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com; frame-ancestors 'none'">
 
   <!--
     Inline style at the very top of head. Runs before the platform's
@@ -520,6 +520,14 @@
       } catch (e) {}
     })();
   </script>
+
+  <!-- AdSense auto-ads: script is injected by /js/consent.js after the
+       user clicks the cookie-consent "Got it" button. Until then, the
+       <ins class="adsbygoogle"> slots in the body are inert (no script
+       has called (adsbygoogle = window.adsbygoogle || []).push({...})
+       on them, so AdSense won't render anything). This keeps EEA / UK
+       users' ad-personalisation data collection gated on consent. -->
+  <script>window.__handleAdSense = { client: 'ca-pub-3477009677814503' };</script>
 </head>
 <body data-route="home">
   <a href="#main" class="sr-only">Skip to content</a>
@@ -599,6 +607,16 @@
           </ul>
         </div>
       </section>
+
+      <!-- Ad slot 1: home, after "Why Handle" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Ý tưởng tên TikTok đang thịnh hành cho 2026</h2>
@@ -747,6 +765,16 @@
           <p>Tên người dùng TikTok là @handle xác định tài khoản của bạn — nó là duy nhất trên toàn bộ TikTok, là cách mọi người tìm thấy và gắn thẻ bạn, và nó xuất hiện trong URL hồ sơ của bạn (tiktok.com/@handleCủaBạn). Nó chỉ có thể được thay đổi 30 ngày một lần và chỉ chứa chữ thường, số, dấu chấm và dấu gạch dưới. Tên hiển thị TikTok (hoặc "name") là nhãn có thể đọc được xuất hiện bên cạnh ảnh đại diện của bạn trong các bình luận, tin nhắn và kết quả tìm kiếm. Nó có thể là bất cứ thứ gì tối đa 30 ký tự — emoji, chữ hoa/thường hỗn hợp, dấu cách, bất cứ thứ gì bạn muốn. Bạn có thể thay đổi nó bao nhiêu lần tùy thích, không có thời gian chờ. Mẫu thông minh mà hầu hết các nhà sáng tạo hàng đầu sử dụng: chọn một handle ngắn, một từ đơn ("mia", "kaito", "lee") và để tên hiển thị mang phong cách — "mia ✧ soft grunge", "kaito | genshin builds", "LEE / dj sets". Bằng cách này, handle là neo có thể tìm thấy và tên hiển thị là lớp có thể đánh dấu thương hiệu. Trình chuyển đổi phông chữ trên trang này được thiết kế để làm cho lớp tên hiển thị biểu cảm hơn: dán tên hiển thị của bạn và nhận nó trong 11 kiểu Unicode hoạt động trong trường tên hiển thị TikTok.</p>
         </div>
       </section>
+
+      <!-- Ad slot 2: FAQ section, after "Picking" group, before "How the availability check works" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Kiểm tra tính khả dụng hoạt động thế nào</h2>

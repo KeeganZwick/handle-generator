@@ -204,7 +204,7 @@
     To rebuild after any change: see the rebuild note beside that
     script.
   -->
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc=' 'sha256-beKWZk8mrNoZgwKX1HLo8kd3g1sIJmMy+B+NV1xrspI=' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com; frame-ancestors 'none'">
 
   <!--
     Inline style at the very top of head. Runs before the platform's
@@ -520,6 +520,14 @@
       } catch (e) {}
     })();
   </script>
+
+  <!-- AdSense auto-ads: script is injected by /js/consent.js after the
+       user clicks the cookie-consent "Got it" button. Until then, the
+       <ins class="adsbygoogle"> slots in the body are inert (no script
+       has called (adsbygoogle = window.adsbygoogle || []).push({...})
+       on them, so AdSense won't render anything). This keeps EEA / UK
+       users' ad-personalisation data collection gated on consent. -->
+  <script>window.__handleAdSense = { client: 'ca-pub-3477009677814503' };</script>
 </head>
 <body data-route="home">
   <a href="#main" class="sr-only">Skip to content</a>
@@ -599,6 +607,16 @@
           </ul>
         </div>
       </section>
+
+      <!-- Ad slot 1: home, after "Why Handle" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Mga ideya ng pangalan sa TikTok na trending para sa 2026</h2>
@@ -747,6 +765,16 @@
           <p>Ang isang TikTok username ay ang @handle na nag-i-identify sa iyong account — natatangi ito sa buong TikTok, ito ang paraan ng paghahanap at pag-tag sa iyo ng mga tao, at lumilitaw ito sa iyong profile URL (tiktok.com/@iyongHandle). Maaari lang itong baguhin bawat 30 araw at naglalaman lamang ng maliliit na titik, mga numero, mga tuldok, at mga underscore. Ang isang TikTok display name (o "name") ay ang nababasang label na lumilitaw sa tabi ng iyong avatar sa mga komento, mensahe, at mga resulta ng paghahanap. Maaari itong maging anumang bagay hanggang 30 character — emoji, halo-halong malaki/maliit na titik, mga puwang, anumang nais mo. Maaari mo itong baguhin kahit gaano karaming beses, nang walang waiting time. Ang matalinong pattern na ginagamit ng karamihan sa mga nangungunang creator: pumili ng maikli, isang-salitang handle ("mia", "kaito", "lee") at hayaan ang display name na pasanin ang aesthetic — "mia ✧ soft grunge", "kaito | genshin builds", "LEE / dj sets". Sa ganitong paraan ang handle ay ang findable anchor at ang display name ay ang brandable layer. Ang font converter sa site na ito ay idinisenyo upang gawing mas expressive ang layer ng display name: i-paste ang iyong display name at tatanggapin mo ito sa 11 na estilo ng Unicode na gumagana sa display name field ng TikTok.</p>
         </div>
       </section>
+
+      <!-- Ad slot 2: FAQ section, after "Picking" group, before "How the availability check works" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Paano gumagana ang availability check</h2>
