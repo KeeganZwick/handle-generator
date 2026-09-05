@@ -29,6 +29,7 @@ import json
 import re
 import shutil
 import subprocess
+import hashlib
 from pathlib import Path
 from body_translations import FAQ_ABOUT_BODIES
 from page_strings import SEO, PAGES as PAGE_TEMPLATES, _TRANSLATIONS as PAGES_TRANSLATIONS
@@ -38,6 +39,34 @@ from per_page_seo import PER_PAGE_SEO, PAGES, url_for, LANG_ORDER
 ROOT = Path(__file__).resolve().parent.parent
 EN_PATH = ROOT / 'public' / 'index.html'
 OUT_BASE = ROOT / 'public'
+CSS_DIR = ROOT / 'public' / 'css'
+JS_DIR = ROOT / 'public' / 'js'
+
+# Files that get content-hashed filenames on every build. Each entry
+# is (absolute_path, public_url_prefix). The public URL prefix is what
+# the HTML uses; the absolute path is where minify_assets() writes the
+# fresh `.min.*` file before we hash and rename it.
+ASSETS_TO_HASH = [
+    (CSS_DIR / 'style.min.css',           '/css/'),
+    (JS_DIR  / 'client-shim.min.js',      '/js/'),
+    (JS_DIR  / 'titles.min.js',           '/js/'),
+    (JS_DIR  / 'strings.min.js',          '/js/'),
+    (JS_DIR  / 'router.min.js',           '/js/'),
+    (JS_DIR  / 'fonts.min.js',            '/js/'),
+    (JS_DIR  / 'generator.min.js',        '/js/'),
+    (JS_DIR  / 'consent.min.js',          '/js/'),
+]
+
+# Matches a content-hashed asset filename: e.g. "style.min.abc12345.css"
+# or "client-shim.min.abc12345.js". The hash is exactly 8 lowercase
+# hex chars between ".min." and the final extension.
+HASHED_FILENAME_RE = re.compile(r'^[a-z][a-z0-9-]*\.min\.[0-9a-f]{8}\.(?:css|js)$')
+
+# Matches a leftover double-minified file from a build that ran with
+# the old minify.js filter (which would re-minify the hashed files
+# and produce `*.min.{hash}.min.{ext}` debris). Defense in depth: even
+# if a future change reintroduces the bug, these files get cleaned up.
+DOUBLE_MIN_RE = re.compile(r'^[a-z][a-z0-9-]*\.min\.[0-9a-f]{8}\.min\.(?:css|js)$')
 
 # Production site URL — used for absolute hreflang and canonical URLs.
 # Update this when the production domain changes. The same value is used by
@@ -1787,9 +1816,98 @@ def minify_assets():
         print(f'  [minify] error: {e}; continuing.')
 
 
+def hash_assets():
+    """Content-hash the minified asset files and rename them, so the
+    HTML can reference filenames like `/css/style.min.abc12345.css`
+    instead of `/css/style.min.css?v=N`. With the 1-year immutable
+    cache on /css/ and /js/ (set in server.js), this means:
+
+    - Unchanged files keep their previous hash and filename, so the
+      browser's 1-year cache is still valid. No re-download.
+    - Changed files get a new hash and filename, so the browser sees
+      a brand-new URL and is forced to fetch.
+
+    IMPORTANT: this function does NOT delete old hashed files. Cleanup
+    happens at the END of main() (cleanup_old_hashed_files). The
+    reason is robustness: if the build is interrupted mid-way, the
+    old hashed files must still exist on disk so the old HTML
+    (which still references them) keeps working. Doing cleanup at
+    the start of hash_assets() means an interrupted build leaves
+    the HTML referencing hashes whose files were just deleted →
+    404 on every CSS/JS asset → unstyled page. Lesson from BATCH
+    5a's broken deploy.
+
+    Returns a dict mapping old public URL → new public URL. The build
+    loop applies this to the HTML before writing each localized file.
+    Example: {'/css/style.min.css': '/css/style.min.abc12345.css'}
+    """
+    # Step 1: hash each minified asset and rename it.
+    # Manifest: old public URL → new public URL. Used by the build
+    # loop to update HTML references.
+    manifest = {}
+    for src_path, url_prefix in ASSETS_TO_HASH:
+        if not src_path.exists():
+            print(f'  [hash] skip: {src_path.name} not found')
+            continue
+        content = src_path.read_bytes()
+        digest = hashlib.sha256(content).hexdigest()[:8]
+        # Insert the hash between `.min` and the final extension.
+        # style.min.css → style.min.abc12345.css
+        # client-shim.min.js → client-shim.min.abc12345.js
+        stem, dot_ext = src_path.name.rsplit('.', 1)
+        new_name = f'{stem}.{digest}.{dot_ext}'
+        new_path = src_path.parent / new_name
+        src_path.rename(new_path)
+        old_url = f'{url_prefix}{src_path.name}'
+        new_url = f'{url_prefix}{new_name}'
+        manifest[old_url] = new_url
+        print(f'  [hash] {src_path.name} → {new_name}')
+
+    return manifest
+
+
+def cleanup_old_hashed_files(current_manifest):
+    """Delete any hashed asset files that are no longer the current
+    build's output. Called at the END of main() so that if the build
+    is interrupted at any earlier point, the old files are still on
+    disk and the (still-unchanged) HTML continues to work.
+
+    `current_manifest` is the dict returned by hash_assets() (mapping
+    old public URL → new public URL). We compute the set of NEW
+    filenames from the manifest, then delete any hashed file that
+    isn't in that set. This avoids accidentally deleting the files
+    we just created.
+
+    Files match either HASHED_FILENAME_RE (the normal pattern)
+    or DOUBLE_MIN_RE (defense in depth, in case a future bug re-
+    introduces double-minified files).
+    """
+    # Build the set of filenames that belong to the current build.
+    # The manifest maps URL → URL, so extract just the new filename
+    # from each new URL.
+    current_filenames = set()
+    for new_url in current_manifest.values():
+        # new_url is like '/css/style.min.abc12345.css' or
+        # '/js/client-shim.min.abc12345.js'
+        current_filenames.add(new_url.rsplit('/', 1)[-1])
+
+    for asset_dir in (CSS_DIR, JS_DIR):
+        if not asset_dir.exists():
+            continue
+        for f in asset_dir.iterdir():
+            if not f.is_file():
+                continue
+            if f.name in current_filenames:
+                continue  # Keep the current build's files
+            if HASHED_FILENAME_RE.match(f.name) or DOUBLE_MIN_RE.match(f.name):
+                f.unlink()
+                print(f'  [hash] cleanup: removed orphan {f.name}')
+
+
 def main():
     print('Build starting...')
     minify_assets()
+    asset_manifest = hash_assets()
 
     if not EN_PATH.exists():
         print(f'ERROR: English template not found at {EN_PATH}', file=sys.stderr)
@@ -1800,6 +1918,29 @@ def main():
     # The English template now loads /js/titles.js for per-locale title
     # fallback. Localized files inherit this script tag automatically
     # because we read from the (already-updated) English template.
+
+    # Write the English home file as part of the build. The source
+    # public/index.html is what Railway serves for English (no /en/
+    # subfolder). The build needs to apply the asset manifest so the
+    # English version references the same hashed CSS/JS as the
+    # localized files. We do this once, here, before the per-lang
+    # loop, since English doesn't need the per-locale processing.
+    for page_name in PAGES:
+        page_url = SITE_URL + url_for('en', page_name)
+        en_page_html = re.sub(
+            r'<link rel="canonical" href="[^"]*">',
+            f'<link rel="canonical" href="{page_url}">',
+            en_html,
+            count=1,
+        )
+        for old_url, new_url in asset_manifest.items():
+            en_page_html = en_page_html.replace(old_url, new_url)
+        if page_name == 'home':
+            en_out_path = OUT_BASE / 'index.html'
+        else:
+            en_out_path = OUT_BASE / page_name / 'index.html'
+        en_out_path.parent.mkdir(parents=True, exist_ok=True)
+        en_out_path.write_text(en_page_html, encoding='utf-8')
 
     for lang, loc in LOCALES.items():
         out_dir = OUT_BASE / lang
@@ -1864,6 +2005,13 @@ def main():
                 localized,
                 count=1,
             )
+            # Apply the content-hashed asset manifest: replace each
+            # `/css/style.min.css` (and JS equivalents) with the
+            # hashed filename. This works for ALL 18 languages because
+            # the source HTML has the same asset references, and
+            # localize() preserves them.
+            for old_url, new_url in asset_manifest.items():
+                page_html = page_html.replace(old_url, new_url)
             if page_name == 'home':
                 page_out_path = OUT_BASE / lang / 'index.html'
             else:
@@ -1875,6 +2023,10 @@ def main():
         has_body = lang in FAQ_ABOUT_BODIES
         body_status = 'body' if has_body else 'no-body'
         print(f'  [{status:11}/{body_status:7}] {len(PAGES)} files @ {lang}/')
+
+    # Cleanup old hashed files at the VERY END. If anything earlier
+    # failed, the old files stay and the old HTML still works.
+    cleanup_old_hashed_files(asset_manifest)
 
 
 if __name__ == '__main__':
