@@ -71,7 +71,7 @@ app.use((req, res, next) => {
       `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`,
       `font-src 'self' https://fonts.gstatic.com`,
       `img-src 'self' data: https:`,
-      `connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net`,
+      `connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net https://*.googlesyndication.com https://pagead2.googlesyndication.com`,
       `frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com`,
       `base-uri 'self'`,
       `form-action 'self'`,
