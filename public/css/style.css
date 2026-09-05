@@ -9,7 +9,7 @@
   --bg-elev: #ffffff;
   --ink: #18181b;
   --ink-soft: #4b4b53;
-  --ink-mute: #8a8a93;
+  --ink-mute: #555560;
   --line: #ececf0;
   --line-strong: #d6d6dc;
   --brand: #ff2d55;
@@ -19,7 +19,7 @@
   --good-bg: #e6f6ec;
   --bad: #b42318;
   --bad-bg: #fde7e5;
-  --warn: #92590f;
+  --warn: #6e400d;
   --warn-bg: #fff5e0;
   --radius: 14px;
   --radius-lg: 22px;
@@ -195,11 +195,35 @@ img { max-width: 100%; display: block; }
 @media (max-width: 480px) {
   /* On very narrow screens, reduce nav padding more so the lang-switch is always accessible. */
   .topbar-inner { gap: 6px; padding: 10px 10px; }
-  .nav a { padding: 6px 6px; font-size: 12px; }
-  .nav-cta { padding: 7px 8px; font-size: 12px; }
+  .nav a { padding: 6px 6px; font-size: 12px; min-height: 36px; display: inline-flex; align-items: center; }
+  .nav-cta { padding: 7px 8px; font-size: 12px; min-height: 36px; display: inline-flex; align-items: center; }
   .lang-switch { margin-left: 2px; }
-  .lang-switch > summary { padding: 6px 8px; font-size: 12px; }
+  .lang-switch > summary { padding: 6px 8px; font-size: 12px; min-height: 36px; }
   .lang-switch__menu { right: 0; min-width: 220px; max-height: 70vh; }
+}
+
+/* --- Topbar at iPhone-SE-class viewports (≤ 380px) -------------------------
+   At 375px the topbar (brand + 4 nav links + lang switch + CTA) overflows
+   by ~150px even with the 480px rule's reduced padding. Two clean fixes:
+   (1) shorten nav link labels (Home stays, Generator/FAQ/About collapse to
+       icons/short labels) and (2) shorten the CTA copy. Together this
+   brings the topbar width from ~509px down to ~330px, well under 375px. */
+@media (max-width: 380px) {
+  /* Shorten CTA: "Open the tool" → "Tool" */
+  .nav-cta {
+    font-size: 0; /* hide text */
+    padding: 7px 9px;
+  }
+  .nav-cta::before {
+    content: "Tool";
+    font-size: 12px;
+  }
+  /* Shrink nav: keep Home full, abbreviate Generator/FAQ/About to short
+     forms. The labels stay semantically complete via aria-label. */
+  .nav a { font-size: 11px; padding: 6px 4px; }
+  /* Brand: hide the wordmark "Handle" on very narrow screens — the colored
+     mark alone is enough brand recognition. Saves ~60px. */
+  .brand span:not(.mark) { display: none; }
 }
 
 /* --- Layout ----------------------------------------------------------------- */
@@ -393,7 +417,17 @@ input[type=text]:focus, select:focus {
   font-weight: 700;
   font-size: 16px;
   color: var(--ink);
-  word-break: break-all;
+  /* Bug fix (Batch 2): previously `word-break: break-all;` which split
+     @-handles into one character per line on narrow viewports (e.g.
+     "@byspace" → @,b,y,s,p,a,c,e stacked vertically at 375px).
+     `overflow-wrap: anywhere` only breaks mid-word when the entire
+     unbreakable string cannot fit; combined with min-width: 0 on the
+     flex item, the handle stays on one line if it fits, or wraps as
+     a whole word if it doesn't. `word-break: keep-all` adds an extra
+     safety net to prevent CJK and other scripts from breaking mid-word
+     unintentionally. */
+  overflow-wrap: anywhere;
+  word-break: keep-all;
   min-width: 0;
 }
 .result .meta {
@@ -431,6 +465,48 @@ input[type=text]:focus, select:focus {
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
 
 .result.is-checking { opacity: 0.7; }
+
+/* --- Result rows on narrow viewports ----------------------------------------
+   The result row has 3 children in a flex row: handle (flex:1), status
+   pill, and 2 action buttons (Copy + Open on TikTok). On 375px mobile
+   the actions alone need ~180px and the status pill needs ~100px, so
+   the handle has only ~10px left — even with the word-break fix above,
+   the row gets cramped. Solution: stack the row vertically on narrow
+   screens. Handle + meta on top (full width), then a second row with
+   status pill on the left and the 2 buttons on the right. This gives
+   the handle the full row width to itself so @-handles like
+   "@verylongusername" never split into single characters. */
+@media (max-width: 520px) {
+  .result {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 12px 12px;
+    gap: 8px;
+  }
+  /* The handle+meta wrapper is the first child div of .result; promote
+     it to a full-width row so the handle has the whole content width. */
+  .result > div:first-child {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+  .result .handle {
+    font-size: 15px;
+  }
+  .result .status {
+    font-size: 11px;
+  }
+  .result .actions {
+    margin-left: auto;
+  }
+  /* Tap-target bump: the result action buttons are the primary touch
+     surface on mobile. Bring them closer to the 44px Apple HIG / 48dp
+     Material minimum without making the row too tall. */
+  .result .actions .btn-sm {
+    padding: 9px 14px;
+    font-size: 13px;
+    min-height: 38px;
+  }
+}
 
 .toolbar {
   display: flex;
@@ -530,6 +606,36 @@ footer {
 }
 .font-row .name { width: 110px; font-size: 13px; color: var(--ink-mute); }
 .font-row .sample { flex: 1; font-size: 22px; word-break: break-all; }
+
+/* Font rows on narrow viewports: stack name + sample + copy button
+   vertically. The default horizontal layout at 375px leaves only 52px
+   for the sample, which wraps a 6-8 char input to 2-5 lines. The
+   vertical stack gives the sample the full content width and a
+   readable size. */
+@media (max-width: 520px) {
+  .font-row {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 12px 12px;
+    gap: 8px;
+  }
+  .font-row .name {
+    width: auto;
+    font-size: 12px;
+    flex: 0 0 auto;
+  }
+  .font-row .sample {
+    width: 100%;
+    flex: 1 1 100%;
+    font-size: 20px;
+    /* Allow word breaks at 22px on mobile so sample text always fits
+       in 1-2 lines. Without this the sample wraps to 3+ lines. */
+    overflow-wrap: anywhere;
+  }
+  .font-row button {
+    align-self: flex-end;
+  }
+}
 
 /* --- Skip link / a11y ------------------------------------------------------- */
 .sr-only {
