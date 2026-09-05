@@ -10,7 +10,8 @@
     "dev": "node server.js",
     "minify": "node scripts/minify.js",
     "minify:css": "cleancss -o public/css/style.min.css public/css/style.css",
-    "minify:js": "node scripts/minify-js.js"
+    "minify:js": "node scripts/minify-js.js",
+    "build": "python3 i18n/build.py"
   },
   "engines": {
     "node": ">=18"
