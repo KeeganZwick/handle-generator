@@ -63,11 +63,16 @@ app.use((req, res, next) => {
     'Content-Security-Policy',
     [
       `default-src 'self'`,
-      `script-src 'self' 'nonce-${nonce}'`,
+      // AdSense requires 'unsafe-inline' for its dynamic injection
+      // (and our own nonce-tagged script). The nonce is more specific and
+      // is preferred when the browser sees both, but 'unsafe-inline' is
+      // the documented fallback AdSense needs.
+      `script-src 'self' 'nonce-${nonce}' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com`,
       `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`,
       `font-src 'self' https://fonts.gstatic.com`,
       `img-src 'self' data: https:`,
-      `connect-src 'self' https://www.tiktok.com`,
+      `connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net`,
+      `frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com`,
       `base-uri 'self'`,
       `form-action 'self'`,
       `frame-ancestors 'none'`,
@@ -90,7 +95,15 @@ const HOME_META = {
 };
 app.get('/', (req, res) => {
   res.set('Content-Type', 'text/html; charset=utf-8');
-  res.send(stripPerRouteTemplates(rewriteHreflang(injectMeta(loadIndexHtml(), HOME_META, res.locals.cspNonce), 'home')));
+  res.send(stripPerRouteTemplates(rewriteHreflang(
+    stripMetaCsp(
+      addCspNoncesToInlineScripts(
+        injectMeta(loadIndexHtml(), HOME_META, res.locals.cspNonce),
+        res.locals.cspNonce
+      )
+    ),
+    'home'
+  )));
 });
 
 // --- Per-route HTML middleware ----------------------------------------------
@@ -126,26 +139,38 @@ app.use((req, res, next) => {
 
   let html = fs.readFileSync(filePath, 'utf8');
 
+  // Add the per-request CSP nonce to every <script> tag that doesn't
+  // already have one. We have a few small inline scripts in the head
+  // (route detection, AdSense config placeholder) that all need the
+  // same nonce so the browser lets them run. We use a function
+  // callback so we can preserve any existing attributes (e.g. JSON-LD
+  // scripts that have type="application/ld+json").
+  if (res.locals.cspNonce) {
+    const nonceAttr = ' nonce="' + escapeAttr(res.locals.cspNonce) + '"';
+    html = html.replace(
+      /<script([^>]*)>/g,
+      (match, attrs) => /\snonce=/.test(attrs) ? match : '<script' + nonceAttr + attrs + '>'
+    );
+  }
+
   // Apply per-route meta (canonical + title + description)
   if (lang === 'en') {
     const meta = route === 'home' ? HOME_META : ROUTE_META[route];
     if (meta) html = injectMeta(html, meta, res.locals.cspNonce);
-    else if (res.locals.cspNonce) {
-      html = html.replace(
-        /<script>(\s*\(function \(\) \{\s*var path = window\.location)/,
-        '<script nonce="' + escapeAttr(res.locals.cspNonce) + '">$1'
-      );
-    }
   } else {
     const localeRouteMeta = LOCALE_META[lang] && LOCALE_META[lang][route];
     if (localeRouteMeta) html = injectMeta(html, localeRouteMeta, res.locals.cspNonce);
-    else if (res.locals.cspNonce) {
-      html = html.replace(
-        /<script>(\s*\(function \(\) \{\s*var path = window\.location)/,
-        '<script nonce="' + escapeAttr(res.locals.cspNonce) + '">$1'
-      );
-    }
   }
+
+  // Add CSP nonce to any other inline scripts (e.g. AdSense config
+  // placeholder) that don't already have one.
+  html = addCspNoncesToInlineScripts(html, res.locals.cspNonce);
+
+  // Strip the meta CSP from the source HTML. The HTTP header (set by
+  // the upstream middleware) is the source of truth for CSP on this
+  // Express server. Keeping both would let the meta CSP (which uses
+  // an old SHA-256 hash) reject any new inline scripts that get a nonce.
+  html = stripMetaCsp(html);
 
   // Rewrite hreflang to point to the current route
   html = rewriteHreflang(html, route);
@@ -783,6 +808,21 @@ function loadIndexHtml() {
 
 const SUPPORTED_LOCALES = Object.keys(LOCALE_META);
 
+// Strip the <meta http-equiv="Content-Security-Policy"> from the served
+// HTML. The Express server sets a strict CSP via the HTTP header (with
+// a per-request nonce), which is more reliable than a meta tag (the
+// meta tag is enforced too, but with the static-host SHA-256 hash,
+// which doesn't match the new AdSense config inline script that gets
+// a nonce). Keeping both active would result in the meta CSP
+// rejecting any nonce-tagged script that doesn't match its hash. The
+// HTTP header alone is enough on this Express server.
+function stripMetaCsp(html) {
+  return html.replace(
+    /<meta\s+http-equiv=["']Content-Security-Policy["'][^>]*>\n?/i,
+    ''
+  );
+}
+
 function injectMeta(html, meta, nonce) {
   let out = html.replace(/<title>[^<]*<\/title>/, '<title>' + escapeHtml(meta.title) + '</title>');
   out = out.replace(
@@ -801,10 +841,10 @@ function injectMeta(html, meta, nonce) {
     /<meta property="og:description" content="[^"]*">/,
     '<meta property="og:description" content="' + escapeAttr(meta.description) + '">'
   );
-  // Add the nonce to the inline route-detection script so the strict
-  // CSP header we set above allows it. The static deploy's meta-CSP
-  // uses a SHA-256 hash; the local build uses a nonce. Both work,
-  // both block the platform's injected script.
+  // The static deploy's meta-CSP uses a SHA-256 hash for the route-detection
+  // script; the local build uses a nonce. Both work, both block the
+  // platform's injected script. The nonce is added here so the route
+  // detection runs on per-route requests.
   if (nonce) {
     out = out.replace(
       /<script>(\s*\(function \(\) \{\s*var path = window\.location)/,
@@ -812,6 +852,23 @@ function injectMeta(html, meta, nonce) {
     );
   }
   return out;
+}
+
+// Add the per-request CSP nonce to every <script> tag in the HTML that
+// doesn't already carry one. We have a few small inline scripts in the
+// head (route detection handled above in injectMeta, AdSense config
+// placeholder) that all need the nonce so the strict CSP header
+// allows them. We use a function callback so we can preserve any
+// existing attributes (e.g. JSON-LD scripts that have
+// type="application/ld+json"). External scripts (with src=) and scripts
+// that already have a nonce are left alone.
+function addCspNoncesToInlineScripts(html, nonce) {
+  if (!nonce) return html;
+  const nonceAttr = ' nonce="' + escapeAttr(nonce) + '"';
+  return html.replace(
+    /<script([^>]*)>/g,
+    (match, attrs) => /\snonce=/.test(attrs) ? match : '<script' + nonceAttr + attrs + '>'
+  );
 }
 
 function escapeHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
@@ -876,7 +933,15 @@ app.get(SPA_ROUTE, (req, res) => {
     return res.sendFile(INDEX_HTML_PATH);
   }
   res.set('Content-Type', 'text/html; charset=utf-8');
-  res.send(stripPerRouteTemplates(rewriteHreflang(injectMeta(loadIndexHtml(), meta, res.locals.cspNonce), route)));
+  res.send(stripPerRouteTemplates(rewriteHreflang(
+    stripMetaCsp(
+      addCspNoncesToInlineScripts(
+        injectMeta(loadIndexHtml(), meta, res.locals.cspNonce),
+        res.locals.cspNonce
+      )
+    ),
+    route
+  )));
 });
 
 // --- Localized SPA routes (/xx/generator, /xx/faq, etc.) -------------------
@@ -900,13 +965,11 @@ app.get(LOCALE_SPA_ROUTE, (req, res) => {
   let html = fs.readFileSync(localeFile, 'utf8');
   if (localeRouteMeta) {
     html = injectMeta(html, localeRouteMeta, res.locals.cspNonce);
-  } else if (res.locals.cspNonce) {
-    // Still need the nonce on the inline script for CSP
-    html = html.replace(
-      /<script>(\s*\(function \(\) \{\s*var path = window\.location)/,
-      '<script nonce="' + escapeAttr(res.locals.cspNonce) + '">$1'
-    );
   }
+  // Add CSP nonces to any inline scripts (route detection + AdSense config)
+  html = addCspNoncesToInlineScripts(html, res.locals.cspNonce);
+  // Strip the meta CSP (HTTP header is the source of truth on this server)
+  html = stripMetaCsp(html);
   res.set('Content-Type', 'text/html; charset=utf-8');
   res.send(stripPerRouteTemplates(rewriteHreflang(html, route)));
 });
@@ -923,12 +986,10 @@ app.get(LOCALE_HOME_ROUTE, (req, res) => {
     return res.sendFile(INDEX_HTML_PATH);
   }
   let html = fs.readFileSync(localeFile, 'utf8');
-  if (res.locals.cspNonce) {
-    html = html.replace(
-      /<script>(\s*\(function \(\) \{\s*var path = window\.location)/,
-      '<script nonce="' + escapeAttr(res.locals.cspNonce) + '">$1'
-    );
-  }
+  // Add CSP nonces to any inline scripts (route detection + AdSense config)
+  html = addCspNoncesToInlineScripts(html, res.locals.cspNonce);
+  // Strip the meta CSP (HTTP header is the source of truth on this server)
+  html = stripMetaCsp(html);
   res.set('Content-Type', 'text/html; charset=utf-8');
   res.send(stripPerRouteTemplates(rewriteHreflang(html, 'home')));
 });
