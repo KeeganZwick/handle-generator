@@ -1,0 +1,1083 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Per-page SEO: title + meta + og + hreflang for all 6 pages. router.js swaps document.title and meta[name=description] on route change. The hreflang tags below are emitted for all 6 pages × 18 langs = 108 links so Google can match any (lang, page) pair. -->
+  <template data-page-meta="home"><title>Generator Nazw TikTok — Sprawdź Dostępność Za Darmo</title><meta name="description" content="Darmowy generator nazw użytkowników TikTok z natychmiastowym sprawdzaniem dostępności. Wpisz słowo kluczowe, wybierz niszę i styl, otrzymaj 10-20 pomysłów na @ zgodnych z zasadami TikToka. Bez rejestracji, bez limitu."><meta property="og:title" content="Generator Nazw TikTok — Sprawdź Dostępność"><meta property="og:description" content="Pomysły na @ zgodne z zasadami TikToka. Sprawdzanie na żywo. 17 stylów, 17 nisz, bez rejestracji."></template>
+  <template data-page-meta="generator"><title>Generator Nicków TikTok — Sprawdzanie Dostępności na Żywo</title><meta name="description" content="Wygeneruj 10-20 unikalnych @-nicków dla TikToka ze słowa kluczowego, niszy i stylu, i od razu sprawdź, które są jeszcze dostępne. Uczciwe wyniki. Bez rejestracji, bez znaku wodnego."><meta property="og:title" content="Generator TikTok — Na Żywo"><meta property="og:description" content="10-20 unikalnych @-pomysłów dla TikToka ze sprawdzaniem dostępności na żywo. Bez rejestracji."></template>
+  <template data-page-meta="faq"><title>Najczęściej Zadawane Pytania — Nazwy TikTok | Handle</title><meta name="description" content="Odpowiedzi na pytania, które ludzie naprawdę zadają przed wyborem nicku na TikToku: zasady, jak działa sprawdzanie dostępności, dlaczego mówimy "Prawdopodobnie" zamiast "Dostępne", jak znaleźć nick, który do ciebie pasuje."><meta property="og:title" content="FAQ — Nazwy TikTok"><meta property="og:description" content="Prawdziwe odpowiedzi na pytania zadawane przed wyborem nicku na TikToku."></template>
+  <template data-page-meta="about"><title>O Handle — Darmowy Generator Nicków TikTok ze Sprawdzaniem na Żywo</title><meta name="description" content="Handle to darmowy, niezależny generator nicków TikTok ze sprawdzaniem dostępności na żywo. Niezależny od TikTok / ByteDance. Open source, 17 języków, 17 stylów, 17 nisz. Bez rejestracji, bez limitów, bez znaku wodnego."><meta property="og:title" content="O Handle — Niezależny Generator Nicków TikTok"><meta property="og:description" content="Darmowy, niezależny generator nicków TikTok ze sprawdzaniem dostępności na żywo."></template>
+  <template data-page-meta="privacy"><title>Polityka Prywatności — Handle</title><meta name="description" content="Co Handle zbiera (logi serwera, jedna flaga w localStorage), czego nie zbiera (bez analityki, bez reklam, bez śledzenia) i Twoje prawa."><meta property="og:title" content="Polityka Prywatności — Handle"><meta property="og:description" content="Co Handle zbiera, czego nie, i Twoje prawa."></template>
+  <template data-page-meta="terms"><title>Warunki Korzystania — Handle</title><meta name="description" content="Warunki, na jakich możesz korzystać z Handle: za darmo, bez rejestracji, bez gwarancji na wyniki dostępności, bez wyszukiwania znaków towarowych, bez powiązań z TikTokiem ani ByteDance."><meta property="og:title" content="Warunki Korzystania — Handle"><meta property="og:description" content="Warunki korzystania z darmowego generatora nicków TikTok Handle."></template>
+  <meta name="keywords" content="tiktok username generator, tiktok name generator, tiktok username ideas, tiktok name ideas, tiktok handle generator, tiktok name checker, tiktok username availability, aesthetic tiktok names, cool tiktok names, unique tiktok names, tiktok fonts, tiktok names 2026">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://gethandlenames.com/pl/">
+  <!-- Per-page canonical: router.js swaps the active <link rel="canonical"> on every route change. -->
+  <template data-page-canonical="home"><link rel="canonical" href="https://gethandlenames.com/"></template>
+  <template data-page-canonical="generator"><link rel="canonical" href="https://gethandlenames.com/generator"></template>
+  <template data-page-canonical="faq"><link rel="canonical" href="https://gethandlenames.com/faq"></template>
+  <template data-page-canonical="about"><link rel="canonical" href="https://gethandlenames.com/about"></template>
+  <template data-page-canonical="privacy"><link rel="canonical" href="https://gethandlenames.com/privacy"></template>
+  <template data-page-canonical="terms"><link rel="canonical" href="https://gethandlenames.com/terms"></template>
+  <link rel="alternate" hreflang="en" href="https://gethandlenames.com/">
+  <link rel="alternate" hreflang="es" href="https://gethandlenames.com/es/">
+  <link rel="alternate" hreflang="de" href="https://gethandlenames.com/de/">
+  <link rel="alternate" hreflang="fr" href="https://gethandlenames.com/fr/">
+  <link rel="alternate" hreflang="it" href="https://gethandlenames.com/it/">
+  <link rel="alternate" hreflang="pt" href="https://gethandlenames.com/pt/">
+  <link rel="alternate" hreflang="nl" href="https://gethandlenames.com/nl/">
+  <link rel="alternate" hreflang="pl" href="https://gethandlenames.com/pl/">
+  <link rel="alternate" hreflang="ru" href="https://gethandlenames.com/ru/">
+  <link rel="alternate" hreflang="zh" href="https://gethandlenames.com/zh/">
+  <link rel="alternate" hreflang="vi" href="https://gethandlenames.com/vi/">
+  <link rel="alternate" hreflang="id" href="https://gethandlenames.com/id/">
+  <link rel="alternate" hreflang="ms" href="https://gethandlenames.com/ms/">
+  <link rel="alternate" hreflang="tl" href="https://gethandlenames.com/tl/">
+  <link rel="alternate" hreflang="ar" href="https://gethandlenames.com/ar/" dir="rtl">
+  <link rel="alternate" hreflang="hi" href="https://gethandlenames.com/hi/">
+  <link rel="alternate" hreflang="bn" href="https://gethandlenames.com/bn/">
+  <link rel="alternate" hreflang="ur" href="https://gethandlenames.com/ur/" dir="rtl">
+  <link rel="alternate" hreflang="x-default" href="https://gethandlenames.com/">
+  <!-- Per-page hreflang alternates: 6 pages × 18 langs = 108 links. router.js unhides the active page set on route change. -->
+  <template data-page-hreflang="home">
+    <link rel="alternate" hreflang="en" href="https://gethandlenames.com/">
+    <link rel="alternate" hreflang="es" href="https://gethandlenames.com/es/">
+    <link rel="alternate" hreflang="de" href="https://gethandlenames.com/de/">
+    <link rel="alternate" hreflang="fr" href="https://gethandlenames.com/fr/">
+    <link rel="alternate" hreflang="it" href="https://gethandlenames.com/it/">
+    <link rel="alternate" hreflang="pt" href="https://gethandlenames.com/pt/">
+    <link rel="alternate" hreflang="nl" href="https://gethandlenames.com/nl/">
+    <link rel="alternate" hreflang="pl" href="https://gethandlenames.com/pl/">
+    <link rel="alternate" hreflang="ru" href="https://gethandlenames.com/ru/">
+    <link rel="alternate" hreflang="zh" href="https://gethandlenames.com/zh/">
+    <link rel="alternate" hreflang="vi" href="https://gethandlenames.com/vi/">
+    <link rel="alternate" hreflang="id" href="https://gethandlenames.com/id/">
+    <link rel="alternate" hreflang="ms" href="https://gethandlenames.com/ms/">
+    <link rel="alternate" hreflang="tl" href="https://gethandlenames.com/tl/">
+    <link rel="alternate" hreflang="hi" href="https://gethandlenames.com/hi/">
+    <link rel="alternate" hreflang="bn" href="https://gethandlenames.com/bn/">
+    <link rel="alternate" hreflang="ur" href="https://gethandlenames.com/ur/" dir="rtl">
+    <link rel="alternate" hreflang="ar" href="https://gethandlenames.com/ar/" dir="rtl">
+    <link rel="alternate" hreflang="x-default" href="https://gethandlenames.com/">
+  </template>
+  <template data-page-hreflang="generator">
+    <link rel="alternate" hreflang="en" href="https://gethandlenames.com/generator">
+    <link rel="alternate" hreflang="es" href="https://gethandlenames.com/es/generator">
+    <link rel="alternate" hreflang="de" href="https://gethandlenames.com/de/generator">
+    <link rel="alternate" hreflang="fr" href="https://gethandlenames.com/fr/generator">
+    <link rel="alternate" hreflang="it" href="https://gethandlenames.com/it/generator">
+    <link rel="alternate" hreflang="pt" href="https://gethandlenames.com/pt/generator">
+    <link rel="alternate" hreflang="nl" href="https://gethandlenames.com/nl/generator">
+    <link rel="alternate" hreflang="pl" href="https://gethandlenames.com/pl/generator">
+    <link rel="alternate" hreflang="ru" href="https://gethandlenames.com/ru/generator">
+    <link rel="alternate" hreflang="zh" href="https://gethandlenames.com/zh/generator">
+    <link rel="alternate" hreflang="vi" href="https://gethandlenames.com/vi/generator">
+    <link rel="alternate" hreflang="id" href="https://gethandlenames.com/id/generator">
+    <link rel="alternate" hreflang="ms" href="https://gethandlenames.com/ms/generator">
+    <link rel="alternate" hreflang="tl" href="https://gethandlenames.com/tl/generator">
+    <link rel="alternate" hreflang="hi" href="https://gethandlenames.com/hi/generator">
+    <link rel="alternate" hreflang="bn" href="https://gethandlenames.com/bn/generator">
+    <link rel="alternate" hreflang="ur" href="https://gethandlenames.com/ur/generator" dir="rtl">
+    <link rel="alternate" hreflang="ar" href="https://gethandlenames.com/ar/generator" dir="rtl">
+    <link rel="alternate" hreflang="x-default" href="https://gethandlenames.com/generator">
+  </template>
+  <template data-page-hreflang="faq">
+    <link rel="alternate" hreflang="en" href="https://gethandlenames.com/faq">
+    <link rel="alternate" hreflang="es" href="https://gethandlenames.com/es/faq">
+    <link rel="alternate" hreflang="de" href="https://gethandlenames.com/de/faq">
+    <link rel="alternate" hreflang="fr" href="https://gethandlenames.com/fr/faq">
+    <link rel="alternate" hreflang="it" href="https://gethandlenames.com/it/faq">
+    <link rel="alternate" hreflang="pt" href="https://gethandlenames.com/pt/faq">
+    <link rel="alternate" hreflang="nl" href="https://gethandlenames.com/nl/faq">
+    <link rel="alternate" hreflang="pl" href="https://gethandlenames.com/pl/faq">
+    <link rel="alternate" hreflang="ru" href="https://gethandlenames.com/ru/faq">
+    <link rel="alternate" hreflang="zh" href="https://gethandlenames.com/zh/faq">
+    <link rel="alternate" hreflang="vi" href="https://gethandlenames.com/vi/faq">
+    <link rel="alternate" hreflang="id" href="https://gethandlenames.com/id/faq">
+    <link rel="alternate" hreflang="ms" href="https://gethandlenames.com/ms/faq">
+    <link rel="alternate" hreflang="tl" href="https://gethandlenames.com/tl/faq">
+    <link rel="alternate" hreflang="hi" href="https://gethandlenames.com/hi/faq">
+    <link rel="alternate" hreflang="bn" href="https://gethandlenames.com/bn/faq">
+    <link rel="alternate" hreflang="ur" href="https://gethandlenames.com/ur/faq" dir="rtl">
+    <link rel="alternate" hreflang="ar" href="https://gethandlenames.com/ar/faq" dir="rtl">
+    <link rel="alternate" hreflang="x-default" href="https://gethandlenames.com/faq">
+  </template>
+  <template data-page-hreflang="about">
+    <link rel="alternate" hreflang="en" href="https://gethandlenames.com/about">
+    <link rel="alternate" hreflang="es" href="https://gethandlenames.com/es/about">
+    <link rel="alternate" hreflang="de" href="https://gethandlenames.com/de/about">
+    <link rel="alternate" hreflang="fr" href="https://gethandlenames.com/fr/about">
+    <link rel="alternate" hreflang="it" href="https://gethandlenames.com/it/about">
+    <link rel="alternate" hreflang="pt" href="https://gethandlenames.com/pt/about">
+    <link rel="alternate" hreflang="nl" href="https://gethandlenames.com/nl/about">
+    <link rel="alternate" hreflang="pl" href="https://gethandlenames.com/pl/about">
+    <link rel="alternate" hreflang="ru" href="https://gethandlenames.com/ru/about">
+    <link rel="alternate" hreflang="zh" href="https://gethandlenames.com/zh/about">
+    <link rel="alternate" hreflang="vi" href="https://gethandlenames.com/vi/about">
+    <link rel="alternate" hreflang="id" href="https://gethandlenames.com/id/about">
+    <link rel="alternate" hreflang="ms" href="https://gethandlenames.com/ms/about">
+    <link rel="alternate" hreflang="tl" href="https://gethandlenames.com/tl/about">
+    <link rel="alternate" hreflang="hi" href="https://gethandlenames.com/hi/about">
+    <link rel="alternate" hreflang="bn" href="https://gethandlenames.com/bn/about">
+    <link rel="alternate" hreflang="ur" href="https://gethandlenames.com/ur/about" dir="rtl">
+    <link rel="alternate" hreflang="ar" href="https://gethandlenames.com/ar/about" dir="rtl">
+    <link rel="alternate" hreflang="x-default" href="https://gethandlenames.com/about">
+  </template>
+  <template data-page-hreflang="privacy">
+    <link rel="alternate" hreflang="en" href="https://gethandlenames.com/privacy">
+    <link rel="alternate" hreflang="es" href="https://gethandlenames.com/es/privacy">
+    <link rel="alternate" hreflang="de" href="https://gethandlenames.com/de/privacy">
+    <link rel="alternate" hreflang="fr" href="https://gethandlenames.com/fr/privacy">
+    <link rel="alternate" hreflang="it" href="https://gethandlenames.com/it/privacy">
+    <link rel="alternate" hreflang="pt" href="https://gethandlenames.com/pt/privacy">
+    <link rel="alternate" hreflang="nl" href="https://gethandlenames.com/nl/privacy">
+    <link rel="alternate" hreflang="pl" href="https://gethandlenames.com/pl/privacy">
+    <link rel="alternate" hreflang="ru" href="https://gethandlenames.com/ru/privacy">
+    <link rel="alternate" hreflang="zh" href="https://gethandlenames.com/zh/privacy">
+    <link rel="alternate" hreflang="vi" href="https://gethandlenames.com/vi/privacy">
+    <link rel="alternate" hreflang="id" href="https://gethandlenames.com/id/privacy">
+    <link rel="alternate" hreflang="ms" href="https://gethandlenames.com/ms/privacy">
+    <link rel="alternate" hreflang="tl" href="https://gethandlenames.com/tl/privacy">
+    <link rel="alternate" hreflang="hi" href="https://gethandlenames.com/hi/privacy">
+    <link rel="alternate" hreflang="bn" href="https://gethandlenames.com/bn/privacy">
+    <link rel="alternate" hreflang="ur" href="https://gethandlenames.com/ur/privacy" dir="rtl">
+    <link rel="alternate" hreflang="ar" href="https://gethandlenames.com/ar/privacy" dir="rtl">
+    <link rel="alternate" hreflang="x-default" href="https://gethandlenames.com/privacy">
+  </template>
+  <template data-page-hreflang="terms">
+    <link rel="alternate" hreflang="en" href="https://gethandlenames.com/terms">
+    <link rel="alternate" hreflang="es" href="https://gethandlenames.com/es/terms">
+    <link rel="alternate" hreflang="de" href="https://gethandlenames.com/de/terms">
+    <link rel="alternate" hreflang="fr" href="https://gethandlenames.com/fr/terms">
+    <link rel="alternate" hreflang="it" href="https://gethandlenames.com/it/terms">
+    <link rel="alternate" hreflang="pt" href="https://gethandlenames.com/pt/terms">
+    <link rel="alternate" hreflang="nl" href="https://gethandlenames.com/nl/terms">
+    <link rel="alternate" hreflang="pl" href="https://gethandlenames.com/pl/terms">
+    <link rel="alternate" hreflang="ru" href="https://gethandlenames.com/ru/terms">
+    <link rel="alternate" hreflang="zh" href="https://gethandlenames.com/zh/terms">
+    <link rel="alternate" hreflang="vi" href="https://gethandlenames.com/vi/terms">
+    <link rel="alternate" hreflang="id" href="https://gethandlenames.com/id/terms">
+    <link rel="alternate" hreflang="ms" href="https://gethandlenames.com/ms/terms">
+    <link rel="alternate" hreflang="tl" href="https://gethandlenames.com/tl/terms">
+    <link rel="alternate" hreflang="hi" href="https://gethandlenames.com/hi/terms">
+    <link rel="alternate" hreflang="bn" href="https://gethandlenames.com/bn/terms">
+    <link rel="alternate" hreflang="ur" href="https://gethandlenames.com/ur/terms" dir="rtl">
+    <link rel="alternate" hreflang="ar" href="https://gethandlenames.com/ar/terms" dir="rtl">
+    <link rel="alternate" hreflang="x-default" href="https://gethandlenames.com/terms">
+  </template>
+
+    <meta property="og:type" content="website">
+  <meta property="og:title" content="Generator Nazw TikTok — Sprawdź Dostępność">
+  <meta property="og:description" content="Pomysły na @ zgodne z zasadami TikToka. Sprawdzanie na żywo. 17 stylów, 17 nisz, bez rejestracji.">
+  <meta property="og:image" content="/og-image.svg">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="nl_NL">
+  <meta property="og:locale:alternate" content="pl_PL">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="vi_VN">
+  <meta property="og:locale:alternate" content="id_ID">
+  <meta property="og:locale:alternate" content="ms_MY">
+  <meta property="og:locale:alternate" content="tl_PH">
+  <meta property="og:locale:alternate" content="ar_SA">
+  <meta property="og:locale:alternate" content="hi_IN">
+  <meta property="og:locale:alternate" content="bn_BD">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/og-image.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!--
+    Content-Security-Policy via meta tag. The static-host platform
+    appends a small analytics block to the served HTML. The block has
+    no src attribute (it's fully inline) so we can't block it by
+    origin. Instead we whitelist our OWN inline script by SHA-256
+    hash; the platform's inline script has different content, so its
+    hash will never match ours, and the browser refuses to execute it.
+
+    The hash covers the route-detection + DOM-strip script below.
+    To rebuild after any change: see the rebuild note beside that
+    script.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com; frame-ancestors 'none'">
+
+  <!--
+    Inline style at the very top of head. Runs before the platform's
+    appended style block is parsed, so the suppress rule is in force
+    from first paint. No flash of attribution.
+  -->
+  <style>
+    #minimax-floating-ball, [class*="minimax-"] { display: none !important; }
+  </style>
+
+  <!-- Structured data: stacked JSON-LD schemas for Google rich results.
+       1. Organization — the site itself
+       2. WebApplication — the tool (preferred over SoftwareApplication for web tools)
+       3. FAQPage — all 18 FAQ entries as Question/Answer pairs (drives FAQ rich results)
+       4. BreadcrumbList — main navigation path
+  -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gethandlenames.com/#organization",
+      "name": "Handle",
+      "url": "https://gethandlenames.com/",
+      "logo": "https://gethandlenames.com/og-image.svg",
+      "description": "Handle is a free TikTok username generator with a live availability check on TikTok. Available in 17 languages.",
+      "sameAs": []
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://gethandlenames.com/#webapp",
+      "name": "Handle — TikTok Username Generator",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "UsernameGenerator",
+      "operatingSystem": "Any (Web browser)",
+      "browserRequirements": "Requires JavaScript. Requires modern browser.",
+      "url": "https://gethandlenames.com/generator",
+      "description": "Free TikTok username generator that produces handle ideas following TikTok's current rules and checks live availability on TikTok. Verdicts read 'Likely available', 'Likely taken', or 'Unknown' — never a confident 'Available'.",
+      "inLanguage": [
+        "en",
+        "es",
+        "de",
+        "fr",
+        "it",
+        "pt",
+        "nl",
+        "pl",
+        "ru",
+        "zh",
+        "vi",
+        "id",
+        "ms",
+        "tl",
+        "hi",
+        "bn",
+        "ur",
+        "ar"
+      ],
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "Generate TikTok username ideas from a keyword, niche, and vibe",
+        "Live availability check on TikTok with honest Likely available / Likely taken / Unknown verdicts",
+        "Unicode font converter for stylish bio text in 11 styles",
+        "Enforces current TikTok username rules: 2-24 characters, letters/numbers/period/underscore",
+        "Available in 17 languages with per-locale keyword targeting"
+      ],
+      "creator": {
+        "@id": "https://gethandlenames.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://gethandlenames.com/#faq",
+      "url": "https://gethandlenames.com/faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What should my TikTok username be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best TikTok usernames in 2026 share four traits: short (under 16 characters is the sweet spot), easy to say out loud, easy to spell from memory, and a hint at what you post. Start with your real name or your niche, then layer in a vibe (aesthetic, funny, gaming, professional — whatever matches the content you'll actually publish) and let the TikTok username generator do the rest of the combinatorics for you. If you publish under a personal brand, a handle based on your real name is the move; if you publish under a topical account, a niche-first handle like \"miaplays\" or \"cozy.eats\" tends to grow faster because new viewers know what they're going to see before they follow. Avoid names that lock you into one platform, one language, or one moment in time — don't include the year you graduated, the city you might move from, or a joke that won't land in two years. The handle is identity infrastructure; treat it like a domain name."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I pick a TikTok username that fits me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two questions, in order: what's the single word someone should associate with your content, and what's your real name (or a nickname your audience already knows you by). Combine them. Gaming + Jordan gives you playwithjordan or jordangaming. Beauty + Mia gives you glowbymia or miasatin. The TikTok username generator handles the combinatorics — you supply the two entries, it produces the long list. Then filter the list by four hard rules: under 16 characters, no number you have to remember, no underscore mid-word, no character that breaks when someone says it out loud. If a candidate passes all four and still sounds like you, that's your handle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my TikTok name already taken?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because TikTok is massive and the short, memorable handles were claimed in the platform's first three years. If the obvious version of your name is gone, the move is to lengthen the handle by exactly one element: a niche word, a vibe word, a period, an underscore, a digit, or a doubled letter. mia is gone; miasatin, mia.glaze, mia_jams, miahq, glowmiaaa are usually still free. The free TikTok username checker's unique mode biases toward these structural patterns on purpose. Avoid padding with random digits — the mia72841 anti-pattern looks like a throwaway and kills your reply-value. If even the padded version is taken, your fallback is to swap the root word: miasclips instead of mia, or borrow from a related aesthetic (frostmuse if glowmuse is taken)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes a good TikTok username?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Short, all lowercase, no numbers you have to remember, no underscores that break the phrase when someone says your handle out loud. Bonus points if it hints at your content niche. Penalties if it includes a birth year, a school, a city you might move away from, or your full legal name — those are anchors you don't want in a public profile. The strongest TikTok name ideas are short enough to fit in a TikTok bio mention without crowding the rest of the bio, pronounceable as a single syllable or a tight two-syllable pair, and have a meaning the viewer can grasp in under a second. A good gut test: if you said it on a podcast and a listener typed it into TikTok search, would they find you? glowmuse passes. xo_luna_03 fails."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I change my TikTok username?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In the TikTok app: tap your profile icon, top-right settings gear, Manage account, Username. TikTok lets you change your username once every 30 days, and once it's changed, the old one is freed up for someone else to claim. In the web dashboard at tiktok.com, the path is Profile, Edit profile, Username. Type the new handle, confirm with your password, and the change is immediate. If TikTok says the new username is unavailable, it usually means either the handle is taken by another account and hasn't been freed yet, the handle is reserved by TikTok for system use (anything starting with tiktok_ or matching a reserved word), or the handle doesn't meet TikTok's character rules — currently 2 to 24 characters, lowercase letters, numbers, periods, and underscores, no leading or trailing period or underscore, no consecutive periods. The TikTok username generator on this site produces names that always pass rule (c), so the only thing blocking you is (a) or (b)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between a TikTok username and a TikTok display name?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A TikTok username is the @handle that identifies your account — it's unique across all of TikTok, it's how people find and tag you, and it appears in your profile URL (tiktok.com/@yourhandle). It can only be changed every 30 days and only contains lowercase letters, numbers, periods, and underscores. A TikTok display name (or 'name') is the human-readable label that shows up next to your avatar in comments, messages, and search results. It can be anything up to 30 characters — emoji, mixed case, spaces, you name it. You can change it as often as you want, no cooldown. The clever pattern most top creators use: pick a short, plain-word handle (mia, kaito, lee) and let your display name carry the aesthetic — mia ✧ soft grunge, kaito | genshin builds, LEE / dj sets. That way the handle is the findable anchor and the display name is the brandable layer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if a TikTok username is available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use a TikTok username availability tool that probes TikTok's public profile endpoint in real time, like the free TikTok username checker on this site. Type a candidate handle, click Check, and within a second or two you get a verdict: Likely available (the probe got a 404 or empty response from TikTok's profile endpoint, which means no live profile is using that handle), Likely taken (the probe got a real profile page back, which means the handle is in use), or Unknown (the probe couldn't reach TikTok in time, usually a network blip, a regional block, or a TikTok-side rate-limit). The verdict matters because TikTok's own UI only tells you unavailable after you've typed a full username into the change flow — by which point you've invested 30 seconds. A good TikTok username availability tool runs the check for you in batch, so you can scan 20 candidates in a minute and pick the winner without ever opening the app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the availability check work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free TikTok username checker on this site uses the same approach TikTok's own search uses, just from the other side: it sends a request to TikTok's public profile/oEmbed endpoint asking for the profile associated with a given handle. If TikTok returns a real profile page, the handle is in use. If TikTok returns a 404 or an empty response, the handle is free. If TikTok's endpoint is slow, rate-limited, or region-blocked, the check returns Unknown — the safe default, since the alternative (declaring a handle Available when the check was inconclusive) would hand you a false negative and a wasted change attempt. The probe runs from a server pool in the US and EU, with a token-bucket rate limit (60 checks per minute per IP) to stay within TikTok's own anti-abuse thresholds. Each result card shows the handle, the verdict, the timestamp of the check, and a direct Open on TikTok link so you can verify by eye before you commit to the 30-day cooldown of changing your username."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does it say \"Likely available\" instead of just \"Available\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because TikTok username availability can change between the moment we check and the moment you click Change in the app. A handle that returns Likely available now could be claimed by someone else five minutes from now — TikTok doesn't reserve a handle just because someone probed it. And a handle that returns Likely taken could become available tomorrow if the current owner changes their username or deletes their account. The free TikTok username checker's three-state verdict exists precisely because a binary Available / Not Available would lie too often. Likely available with a timestamp is a confident suggestion that the handle is free at the moment of the check; the actual confirmation happens when you submit the change inside the TikTok app, which is the only place where TikTok will actually commit the handle to your account. The Likely prefix is not hedging — it's an honest statement that any check from outside the app is best-effort, and the final word belongs to TikTok's own change flow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does a handle show \"Unknown\" on the result list?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An Unknown verdict on the result list means the free TikTok username checker tried to reach TikTok's profile endpoint for that handle and either got a timeout, a 429 rate-limit response, or a regional block. It does NOT mean the handle is taken. The safe default is to label it Unknown rather than guess, because guessing wrong in either direction costs you the 30-day cooldown on username changes. In practice, Unknown verdicts cluster in two situations: you're generating 30+ names in a row and the server is hitting the per-IP rate limit — wait 60 seconds and re-run, or generate in smaller batches; or you're on a network where TikTok's profile endpoint is geo-restricted. In both cases, the Open on TikTok link next to the handle still works — if you click it and the profile loads in your browser, the handle is taken; if you get TikTok's user not found page, the handle is free. So an Unknown verdict from the tool is always resolvable with one extra click."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the best TikTok usernames for 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 2026 TikTok name ideas trend lean toward short, lowercase, single-word handles with one stylistic flourish — a doubled letter (glowy, serenee), a single digit suffix (kaito4, miasato9), or one of the Unicode font styles you can also generate on this site. Aesthetic and soft girl handles still rank for the lifestyle and beauty niches, but the gaming and tech niches are leaning hard into two-word combos with a period separator (pixel.mode, loot.drift, void.run). Aesthetic, gaming, and a few evergreen sub-vibes (retro, wholesome, fantasy) dominate the leaderboard; edgy, professional, and corporate-tone handles have been falling out of favor since the platform shifted to short-form video and creator-led content. The full leaderboard of TikTok name ideas for 2026 trends toward handles that read like a username you'd find in a 2003 forum or a 2025 indie game — short, lowercase, slightly offbeat, memorable. Run the generator with a single-word keyword and the unique vibe for the most on-trend output."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's a short TikTok username, and why does length matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under 12 characters. A short TikTok username gets more mentions in comments (less typing), reads clearly when laid over a video, and is easier to remember when heard spoken aloud. If your name plus a niche fits in 10 characters, that's the sweet spot — miaplays at 9 characters beats miaplays_official at 16. The reason short handles win: TikTok's search and mention features both surface the handle as a clickable element, and a longer handle crowds out the surrounding text. The free TikTok username checker's unique mode biases toward single-syllable roots (mia, lux, vibe) with 2-3 character suffixes to keep the total under 12. If you can't get under 12, aim for under 16 — that's where TikTok's truncation kicks in on mobile, so a 15-character handle still displays in full on a phone. Anything over 20 and TikTok starts shrinking the font in the comment stream to fit, which makes your handle harder to read at a glance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the best aesthetic, cool, funny, and edgy TikTok usernames?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on what you post, but the high-engagement patterns cluster in four vibes. Aesthetic handles for lifestyle, beauty, and soft girl content lean on soft consonants and doubled letters: miasatin, frostmuse, pearlgrr. Cool handles for tech, fashion, and streetwear lean on shorter roots and an edgier suffix: vibelab, kaitonine, leexvoid. Funny handles lean on wordplay and inside-joke references that your audience will get but TikTok's search won't penalize: mia_jams, kaito_snacks, leemcshakes. Edgy handles lean on darker phonetics and one of the structural patterns (vowel-drop, leet, doubled consonant): glowvoid, kait0x, frmtbeats. The TikTok name ideas generator produces candidates for all four, and the best workflow is to generate the same keyword under each vibe, then mix-and-match the strongest 3-4 candidates across vibes into a final list. The biggest mistake new creators make is settling for the first option the generator returns — usually that's the obvious one and is already taken on TikTok. The real TikTok name ideas are in the second and third pages of the generator output."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use TikTok fonts in my @handle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, and this trips up a lot of creators. TikTok usernames (@handles) only accept ASCII letters, numbers, periods, and underscores. The fancy Unicode font styles that work in your display name (mia ✧ or 𝓂𝒾𝒶) will not work in the @handle field — TikTok silently strips or rejects the characters and tells you the handle is invalid. The right pattern is: keep your @handle as plain ASCII (mia, kaitox), and put all the visual flair in your display name using the font converter on this site. The font converter outputs 11 Unicode styles (small caps, bold, italic, script, bold-script, fraktur, circled, squared, strikethrough, underline, reverse) that all work in TikTok's display name field, so you get the aesthetic without breaking searchability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the generator work for other platforms too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Right now, the free TikTok username checker only checks TikTok. The architecture is ready for cross-platform — same probe pattern, different public profile endpoints for Instagram, YouTube, X — but the per-platform checkers are on the roadmap. In the meantime, the right workflow for a cross-platform launch is: generate the same handle concept in the TikTok name ideas generator, verify it's free on TikTok using the live check, once you've claimed it on TikTok, paste the same handle into Instagram / YouTube / X manually — all three of those platforms also have a username not available check in the change flow, and 70% of the time a handle that's free on TikTok is also free on the others, because short handles are mostly claimed cross-platform already. The cross-platform check is the most-requested feature in the user feedback so far, and it will land once the rate-limit and per-platform anti-abuse constraints are worked out."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use the names Handle generates commercially?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, every name the TikTok username generator produces is free to use however you want — commercially, personally, for a brand, for a meme account, for a parody that stays inside fair-use. The generator doesn't trademark or reserve anything; it just produces name candidates from a combinatoric model over word pools and structural patterns. What you do with the candidates is your call. The one caveat is the standard trademark check the free TikTok username checker doesn't do: a handle can be free on TikTok and still infringe a registered mark in your industry, especially if you're building a brand around it. Before you commit to a handle for a commercial brand, run a search at the USPTO TESS (US) or EUIPO (EU) trademark database for the same string. If the trademark is registered in your class (the 45 Nice Classification categories), pick a different handle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Handle free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, completely free. The TikTok username generator, the live availability check, the font converter, the FAQ, the About page, the privacy policy, the terms — every feature on this site is free, with no signup, no email required, no account creation, no rate limit on name generation, and no watermarks on the output. The site makes money from advertising (Google AdSense, once enabled) and that's it. There is no paid tier, no premium plan, and no upsell. The free TikTok username checker runs 60 checks per minute per IP — that's enough for a normal user to scan 30-40 candidates in a session, and if you hit the limit, wait 60 seconds and it's reset. There is no API access or bulk-export feature yet; if you need 1000+ candidate handles, the right move is to script it against TikTok's own public endpoint directly, with appropriate rate-limit handling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Handle affiliated with TikTok?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Handle is an independent project. It is not affiliated with, endorsed by, sponsored by, or in any way associated with TikTok, ByteDance Ltd., or any of their subsidiaries. TikTok is a trademark of ByteDance Ltd. All references to TikTok on this site — in the TikTok username generator UI, the availability checker, the FAQ, the privacy policy, the terms — are descriptive uses (the tool checks usernames on TikTok) made under fair use, in the same way a website that compares airline prices references each airline by name without being affiliated with any of them. Handle's free TikTok username checker makes requests to TikTok's public profile and oEmbed endpoints; the requests are made from our own server IPs (US and EU) with our own User-Agent (HandleBot/0.1), and TikTok sees them as requests from a third party. We don't have any privileged access to TikTok's data, and the verdicts we return are best-effort probes, not authoritative. If you are a rights holder at TikTok or ByteDance and believe a page on this site uses your mark in a way that is not fair use, write to legal@gethandlenames.com and we will address it promptly."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gethandlenames.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TikTok Username Generator",
+          "item": "https://gethandlenames.com/generator"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "FAQ",
+          "item": "https://gethandlenames.com/faq"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "About",
+          "item": "https://gethandlenames.com/about"
+        }
+      ]
+    }
+  ]
+}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.min.css">
+
+  <!--
+    The static host serves this same index.html for every path, so we
+    set the right section synchronously in the head, before the
+    browser paints, to avoid a flash of the wrong page. We also strip
+    the platform-injected "Created by MiniMax Agent" floating ball
+    here, synchronously, before it can be rendered. This script's
+    SHA-256 hash is whitelisted in the meta CSP above; the platform's
+    inline script (different content, different hash) is blocked.
+  -->
+  <script>window.__handleTitles = {"home": "Generator Nazw TikTok — Handle", "generator": "Generator Nazw TikTok — Handle", "faq": "Często Zadawane Pytania — Handle", "about": "O Handle", "privacy": "Polityka Prywatności — Handle", "terms": "Warunki Korzystania — Handle"};</script>
+
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var route = (path === '/generator' || path === '/generator/') ? 'generator'
+                : (path === '/faq'       || path === '/faq/')       ? 'faq'
+                : (path === '/about'     || path === '/about/')     ? 'about'
+                : (path === '/privacy'   || path === '/privacy/')   ? 'privacy'
+                : (path === '/terms'     || path === '/terms/')     ? 'terms'
+                : 'home';
+      document.documentElement.setAttribute('data-route', route);
+
+      // Strip the platform-injected "Created by MiniMax Agent" ball
+      // from the DOM as early as possible. CSS hides it visually; this
+      // also removes it from the accessibility tree and tab order.
+      function strip() {
+        try {
+          var el = document.getElementById('minimax-floating-ball');
+          if (el && el.parentNode) el.parentNode.removeChild(el);
+        } catch (e) {}
+      }
+      strip();
+
+      // Catch late injection: the platform's script (if it ever runs)
+      // may try to re-attach the ball or create a fresh one. Watch
+      // for it for a few seconds, then disconnect.
+      try {
+        var mo = new MutationObserver(function (muts) {
+          for (var i = 0; i < muts.length; i++) {
+            var n = muts[i].addedNodes;
+            for (var j = 0; j < n.length; j++) {
+              var x = n[j];
+              if (!x || x.nodeType !== 1) continue;
+              var id = (x.id || '');
+              if (id.indexOf('minimax') !== -1) { x.parentNode && x.parentNode.removeChild(x); }
+            }
+          }
+        });
+        mo.observe(document.documentElement, { childList: true, subtree: true });
+        setTimeout(function () { mo.disconnect(); }, 8000);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-route="home">
+  <a href="#main" class="sr-only">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="Handle — home">
+        <span class="mark" aria-hidden="true">H</span>
+        <span>Handle</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/pl/" data-nav="home" class="is-active">Start</a>
+        <a href="/pl/generator" data-nav="generator">Generator</a>
+        <a href="/pl/faq" data-nav="faq">FAQ</a>
+        <a href="/pl/about" data-nav="about">O nas</a>
+      </nav>
+      <details class="lang-switch" data-lang-switch>
+        <summary aria-label="Change language" title="Change language">
+          <span class="lang-switch__globe" aria-hidden="true">🌐</span>
+          <span class="lang-switch__current" data-lang-current>EN</span>
+        </summary>
+        <div class="lang-switch__menu" role="menu">
+          <a href="/" data-lang="en" role="menuitem"><span class="lang-native">English</span><span class="lang-en">English</span></a>
+          <a href="/es/" data-lang="es" role="menuitem"><span class="lang-native">Español</span><span class="lang-en">Spanish</span></a>
+          <a href="/de/" data-lang="de" role="menuitem"><span class="lang-native">Deutsch</span><span class="lang-en">German</span></a>
+          <a href="/fr/" data-lang="fr" role="menuitem"><span class="lang-native">Français</span><span class="lang-en">French</span></a>
+          <a href="/it/" data-lang="it" role="menuitem"><span class="lang-native">Italiano</span><span class="lang-en">Italian</span></a>
+          <a href="/pt/" data-lang="pt" role="menuitem"><span class="lang-native">Português</span><span class="lang-en">Portuguese</span></a>
+          <a href="/nl/" data-lang="nl" role="menuitem"><span class="lang-native">Nederlands</span><span class="lang-en">Dutch</span></a>
+          <a href="/pl/" data-lang="pl" role="menuitem"><span class="lang-native">Polski</span><span class="lang-en">Polish</span></a>
+          <a href="/ru/" data-lang="ru" role="menuitem"><span class="lang-native">Русский</span><span class="lang-en">Russian</span></a>
+          <a href="/zh/" data-lang="zh" role="menuitem"><span class="lang-native">中文</span><span class="lang-en">Chinese</span></a>
+          <a href="/vi/" data-lang="vi" role="menuitem"><span class="lang-native">Tiếng Việt</span><span class="lang-en">Vietnamese</span></a>
+          <a href="/id/" data-lang="id" role="menuitem"><span class="lang-native">Bahasa Indonesia</span><span class="lang-en">Indonesian</span></a>
+          <a href="/ms/" data-lang="ms" role="menuitem"><span class="lang-native">Bahasa Melayu</span><span class="lang-en">Malay</span></a>
+          <a href="/tl/" data-lang="tl" role="menuitem"><span class="lang-native">Filipino</span><span class="lang-en">Tagalog</span></a>
+          <a href="/hi/" data-lang="hi" role="menuitem"><span class="lang-native">हिन्दी</span><span class="lang-en">Hindi</span></a>
+          <a href="/bn/" data-lang="bn" role="menuitem"><span class="lang-native">বাংলা</span><span class="lang-en">Bengali</span></a>
+          <a href="/ur/" data-lang="ur" role="menuitem"><span class="lang-native">اردو</span><span class="lang-en">Urdu</span></a>
+          <a href="/ar/" data-lang="ar" role="menuitem" dir="rtl"><span class="lang-native">العربية</span><span class="lang-en">Arabic</span></a>
+        </div>
+      </details>
+      <a class="nav-cta" href="/pl/generator" data-nav="generator">Otwórz narzędzie</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================================================================== HOME -->
+    <section data-page-section="home">
+      <div class="hero">
+        <h1>Darmowy generator nazw użytkowników TikTok z natychmiastowym sprawdzaniem dostępności.</h1>
+        <p class="lede">Wpisz słowo kluczowe, wybierz niszę i styl, a otrzymasz 10–20 unikalnych pomysłów na nazwy TikTok zgodnych z obowiązującymi zasadami TikToka. Każdy jest sprawdzany na żywo w TikToku, dzięki czemu wiesz, czy jest prawdopodobnie dostępny, zanim go skopiujesz. Bez rejestracji, bez limitów użycia, bez znaków wodnych.</p>
+        <div class="toolbar">
+          <a class="btn-primary" href="/generator" data-nav="generator" data-i18n="home_cta_primary">Wygeneruj pomysły na nazwy →</a>
+          <a class="btn-ghost" href="#how-it-works" data-nav="home" data-i18n="home_cta_secondary">Jak to działa</a>
+        </div>
+        <p class="affiliation-note" role="note">Handle nie jest powiązany, popierany ani sponsorowany przez TikTok ani ByteDance Ltd. "TikTok" jest znakiem towarowym ByteDance Ltd.</p>
+      </div>
+
+      <section class="section" id="how-it-works">
+        <h2>Jak wybrać nazwę TikTok, która do ciebie pasuje</h2>
+        <p>Dobra nazwa TikTok jest krótka, łatwa do powiedzenia na głos, łatwa do zapisania z pamięci i sygnalizuje, o czym są twoje treści. Handle zajmuje się nudną częścią: wpisujesz słowo kluczowe (swoje imię, swoją niszę, słowo opisujące styl), wybierasz jedną z 17 nisz i jeden z 17 stylów, a generator zwraca 10–20 unikalnych pomysłów na nazwy TikTok, które przestrzegają obecnych zasad TikToka — od 2 do 24 znaków, małe litery, cyfry, kropki i podkreślenia, bez kropki na początku lub na końcu, bez kolejnych kropek.</p>
+        <p>Każdy pomysł jest następnie sprawdzany na żywo w TikToku pod kątem dostępności, ze znacznikiem czasu, i oznaczany jako "Prawdopodobnie dostępna", "Prawdopodobnie zajęta" lub "Nieznana". Werdykt jest celowo uczciwy: nazwa może być wolna w momencie, gdy ją sprawdzamy, i zajęta w momencie, gdy próbujesz ją zająć. Jeśli sprawdzanie nie może dotrzeć do TikToka (przejściowa usterka sieci, limit po stronie TikToka lub region prywatny), zobaczysz "Nieznana" z bezpośrednim linkiem do samodzielnego potwierdzenia w TikToku.</p>
+      </section>
+
+      <section class="section">
+        <h2>Dlaczego Handle</h2>
+        <div class="callout">
+          <h3>Trzy rzeczy, które inne generatory nazw TikTok pomijają</h3>
+          <p>Większość generatorów nazw TikTok zatrzymuje się na liście. Kopiujesz nazwę, otwierasz TikToka i okazuje się, że jest zajęta. I znowu. Handle zamyka tę pętlę na trzy sposoby, których żadne inne darmowe narzędzie nie łączy.</p>
+          <ul>
+            <li><strong>Sprawdzanie dostępności na żywo w TikToku.</strong> Każdy wygenerowany @ jest sprawdzany z własnym endpointem profilu TikToka, zanim go zobaczysz. Koniec z kopiowaniem 12 nazw, by dowiedzieć się, że wszystkie są zajęte.</li>
+            <li><strong>Uczciwe werdykty.</strong> "Prawdopodobnie dostępna" ze znacznikiem czasu jest lepsze niż pewne "Dostępna", które jest błędne w momencie kliknięcia. Mówimy "Prawdopodobnie" celowo.</li>
+            <li><strong>Zasady wymuszane z góry.</strong> Każda nazwa przestrzega obecnych zasad dotyczących znaków TikToka, zanim do ciebie dotrze — koniec z kopiowaniem @ o 25 znakach, by dowiedzieć się, że TikTok go nie zaakceptuje.</li>
+            <li><strong>17 stylów + 17 nisz.</strong> Aesthetic, funny, professional, edgy, cute, mysterious, cool, chill, smart, romantic, powerful, gaming, techy, spooky, retro, wholesome, fantasy — każdy przesuwa pule przedrostków i przyrostków, więc pomysły wyglądają jak twórca, którego próbujesz być, a nie generyczne "uzytkownik123".</li>
+            <li><strong>Dostępne w 17 językach.</strong> Całe narzędzie jest zlokalizowane na hiszpański, francuski, niemiecki, włoski, portugalski, niderlandzki, polski, rosyjski, chiński, wietnamski, indonezyjski, malajski, tagalski, hindi, bengalski, arabski i urdu — z lokalnie zbadanym targetowaniem słów kluczowych, nie tłumaczeniem maszynowym.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Trendy w nazwach TikTok na 2026</h2>
+        <p>Trendy w nazwach TikTok na 2026 zmierzają ku <strong>krótkim, pisanym małymi literami, jednopodstawowym @</strong> z jednym akcentem stylistycznym — podwojona litera ("glowy", "serenee"), sufiks jednocyfrowy, lub jeden ze stylów czcionek Unicode, które możesz tu również wygenerować. @ aesthetic i "soft girl" nadal się pozycjonują w niszach lifestyle i beauty; @ gaming i tech mocniej zmierzają ku dwuwyrazowym kombinacjom ("pixel.mode", "loot.drift"). Użyj generatora ze stylem <strong>unikalny</strong> lub <strong>aesthetic</strong>, aby zobaczyć obecny kierunek, i przepuść wynik przez konwerter czcionek, jeśli chcesz pasującą nazwę wyświetlaną.</p>
+        <p>W przygotowaniu: blog dla twórców TikToka, programistyczne strony niszowe, sprawdzanie międzyplatformowe (Instagram, YouTube, X), cotygodniowy e-mail z nazwami i kanały społecznościowe z wyborami nazw. Plan i kompromisy w README.</p>
+      </section>
+    </section>
+
+    <!-- ============================================================== GENERATOR -->
+    <section data-page-section="generator">
+      <h1>Generator nazw użytkowników TikTok</h1>
+      <p class="lede">Darmowe pomysły na nazwy TikTok w sekundy. Wpisz słowo kluczowe (swoje imię, swoją niszę lub dowolne słowo, które zakotwiczy wynik), wybierz jedną z 17 nisz treści i jeden z 17 stylów, a generator zwróci 10–20 unikalnych sugestii @, które przestrzegają obecnych zasad TikToka. Każda sugestia jest następnie sprawdzana na żywo pod kątem dostępności w TikToku, ze znacznikiem czasu, i oznaczana jako "Prawdopodobnie dostępna", "Prawdopodobnie zajęta" lub "Nieznana", abyś wiedział, co kopiujesz, zanim to zajmiesz.</p>
+      <p class="affiliation-note" role="note">Handle nie jest powiązany, popierany ani sponsorowany przez TikTok ani ByteDance Ltd. "TikTok" jest znakiem towarowym ByteDance Ltd.</p>
+
+      <section class="tool" id="tool" aria-label="Username generator">
+        <div class="field">
+          <label for="keyword" data-i18n="label_keyword">Słowo kluczowe lub imię</label>
+          <input type="text" id="keyword" name="keyword" placeholder="e.g. fitness, mia, bookishvibes" autocomplete="off" maxlength="24" pattern="[a-zA-Z0-9._]{0,24}" inputmode="text" required data-i18n-placeholder="placeholder_keyword">
+          <span class="help" data-i18n="help_keyword">Od 2 do 24 znaków. Litery, cyfry, kropki, podkreślenia. Bez spacji.</span>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="category" data-i18n="label_niche">Nisza / kategoria</label>
+            <select id="category" name="category">
+              <option value="general" data-i18n="niche_general">Ogólne</option>
+              <option value="fitness" data-i18n="niche_fitness">Fitness</option>
+              <option value="food" data-i18n="niche_food">Jedzenie</option>
+              <option value="beauty" data-i18n="niche_beauty">Uroda</option>
+              <option value="fashion" data-i18n="niche_fashion">Moda</option>
+              <option value="gaming" data-i18n="niche_gaming">Gry</option>
+              <option value="tech" data-i18n="niche_tech">Technologia / dev</option>
+              <option value="travel" data-i18n="niche_travel">Podróże</option>
+              <option value="pets" data-i18n="niche_pets">Zwierzęta</option>
+              <option value="dance" data-i18n="niche_dance">Taniec</option>
+              <option value="comedy" data-i18n="niche_comedy">Komedia</option>
+              <option value="music" data-i18n="niche_music">Muzyka</option>
+              <option value="art" data-i18n="niche_art">Sztuka</option>
+              <option value="education" data-i18n="niche_education">Edukacja</option>
+              <option value="finance" data-i18n="niche_finance">Finanse</option>
+              <option value="parenting" data-i18n="niche_parenting">Rodzicielstwo</option>
+              <option value="business" data-i18n="niche_business">Biznes</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="count" data-i18n="label_count">Ile</label>
+            <select id="count" name="count">
+              <option value="10">10 names</option>
+              <option value="12" selected>12 names</option>
+              <option value="16">16 names</option>
+              <option value="20">20 names</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label data-i18n="label_vibe">Styl</label>
+          <div class="vibes" id="vibes" role="radiogroup" aria-label="Vibe">
+            <span class="vibe-chip" data-vibe="aesthetic" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_aesthetic">estetyczny</span>
+            <span class="vibe-chip" data-vibe="funny" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_funny">zabawny</span>
+            <span class="vibe-chip" data-vibe="professional" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_professional">profesjonalny</span>
+            <span class="vibe-chip" data-vibe="edgy" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_edgy">odważny</span>
+            <span class="vibe-chip" data-vibe="cute" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_cute">słodki</span>
+            <span class="vibe-chip" data-vibe="mysterious" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_mysterious">tajemniczy</span>
+            <span class="vibe-chip is-active" data-vibe="cool" tabindex="0" role="radio" aria-checked="true" data-i18n="vibe_cool">cool</span>
+            <span class="vibe-chip" data-vibe="chill" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_chill">luz</span>
+            <span class="vibe-chip" data-vibe="smart" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_smart">mądry</span>
+            <span class="vibe-chip" data-vibe="romantic" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_romantic">romantyczny</span>
+            <span class="vibe-chip" data-vibe="powerful" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_powerful">potężny</span>
+            <span class="vibe-chip" data-vibe="gaming" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_gaming">gaming</span>
+            <span class="vibe-chip" data-vibe="techy" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_techy">techniczny</span>
+            <span class="vibe-chip" data-vibe="spooky" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_spooky">upiorny</span>
+            <span class="vibe-chip" data-vibe="retro" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_retro">retro</span>
+            <span class="vibe-chip" data-vibe="wholesome" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_wholesome">ciepły</span>
+            <span class="vibe-chip" data-vibe="fantasy" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_fantasy">fantasy</span>
+            <span class="vibe-chip vibe-chip-mode" data-vibe="none" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_none">brak</span>
+            <span class="vibe-chip vibe-chip-mode" data-vibe="random" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_random">losowy</span>
+            <span class="vibe-chip vibe-chip-mode" data-vibe="unique" tabindex="0" role="radio" aria-checked="false" data-i18n="vibe_unique">unikalny</span>
+          </div>
+          <span class="help" data-i18n="help_vibe">Tematyczne style przesuwają pule przedrostków i przyrostków. <strong>none</strong> nie używa żadnej puli tematycznej, <strong>random</strong> miesza je dla każdego kandydata, <strong>unique</strong> faworyzuje wzorce strukturalne (usunięta samogłoska, podwójna litera, leet).<strong>none</strong> nie używa żadnej puli tematycznej, <strong>random</strong> miesza je dla każdego kandydata, <strong>unique</strong> faworyzuje wzorce strukturalne (usunięta samogłoska, podwójna litera, leet).</span>
+        </div>
+
+        <div class="toolbar">
+          <button class="btn-primary" id="generate-btn" type="button">Generate usernames</button>
+          <button class="btn-ghost" id="recheck-btn" type="button" disabled>Re-check availability</button>
+          <span class="spacer"></span>
+          <span class="free-tag" aria-label="Free to use" data-i18n="free_tag">Darmowe · bez rejestracji · bez limitu</span>
+          <span id="status-text" aria-live="polite" class="status-text"></span>
+        </div>
+
+        <div class="results-summary" id="results-summary" hidden></div>
+        <div class="disclaimer" id="disclaimer" hidden></div>
+
+        <div class="results" id="results" aria-live="polite"></div>
+      </section>
+
+      <section class="section" id="font-converter">
+        <h2 data-i18n="fonts_heading">Czcionki TikTok — stylowy tekst do Twojego bio i nazwy wyświetlanej</h2>
+        <p data-i18n="fonts_desc">Wpisz słowo lub frazę i otrzymaj je w 11 stylowych czcionkach Unicode do wklejenia bezpośrednio do nazwy wyświetlanej lub bio na TikToku — tam, gdzie TikTok pozwala na Unicode (nazwa wyświetlana i bio, nie @handle). Wybierz styl pasujący do charakteru uchwytu. Wynik zachowuje tę samą liczbę znaków co wejście.</p>
+        <div class="font-converter">
+          <div class="field">
+            <label for="font-input" data-i18n="label_your_text">Twój tekst</label>
+            <input type="text" id="font-input" maxlength="60" placeholder="e.g. miabakes" autocomplete="off" data-i18n-placeholder="placeholder_your_text">
+            <span class="help" data-i18n="help_your_text">Do 60 znaków. Wynik zachowuje tę samą liczbę znaków, więc 6 liter wejścia daje 6 liter w bio.</span>
+          </div>
+          <div class="font-grid" id="font-grid"></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ==================================================================== FAQ -->
+    <section data-page-section="faq">
+      <h1>Najczęściej zadawane pytania o generator nazw TikTok</h1>
+      <p class="lede">Krótkie odpowiedzi na pytania, które ludzie faktycznie wyszukują przed wyborem nazwy TikTok: jakie są zasady, jak działa sprawdzanie dostępności, dlaczego werdykt mówi "Prawdopodobnie" zamiast "Dostępna", i jak znaleźć nazwę, która do ciebie pasuje. Dłuższą wersję znajdziesz na stronie <a href="/about" data-nav="about">O nas</a>; stronę prawną znajdziesz w <a href="/terms" data-nav="terms">Warunkach</a> i <a href="/privacy" data-nav="privacy">Prywatności</a>.</p>
+
+      <section class="section">
+        <h2>Wybór nazwy TikTok</h2>
+
+        <div class="faq-item">
+          <h3>Jaka powinna być moja nazwa TikTok?</h3>
+          <p>Najlepsze nazwy użytkownika TikTok w 2026 roku mają cztery cechy wspólne: są krótkie (mniej niż 16 znaków to sweet spot), łatwe do wymówienia na głos, łatwe do zapisania z pamięci i dają wskazówkę, co publikujesz. Zacznij od swojego prawdziwego imienia lub swojej niszy, potem dodaj vibe (estetyczny, zabawny, gamingowy, profesjonalny — ten, który pasuje do treści, które faktycznie będziesz publikować) i pozwól generatorowi nazw użytkownika TikTok zrobić resztę kombinatoryki za ciebie. Jeśli publikujesz pod marką osobistą, handle oparty na twoim prawdziwym imieniu to właściwy wybór; jeśli publikujesz pod kontem tematycznym, handle skoncentrowany na niszy ("miaplays", "cozy.eats") zwykle rośnie szybciej, ponieważ nowi widzowie wiedzą, co zobaczą, zanim cię zaobserwują. Unikaj nazw, które przypisują cię do jednej platformy, jednego języka lub jednego momentu — nie umieszczaj roku ukończenia studiów, miasta z którego możesz się przeprowadzić, ani żartu, który nie starzeje się dobrze. Handle to infrastruktura tożsamości; traktuj go jak nazwę domeny. Traktuj to jak domenę — wartość, którą budujesz przez lata, nie jednorazowy numer.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Jak wybrać nazwę TikTok, która do mnie pasuje?</h3>
+          <p>Dwa pytania, w tej kolejności: jakie jest jedno słowo, z którym ktoś powinien kojarzyć twoje treści, i jakie jest twoje prawdziwe imię (lub pseudonim, pod którym twoja publiczność już cię zna)? Połącz je. "Gaming + Jordan" daje "playwithjordan" lub "jordangaming". "Beauty + Mia" daje "glowbymia" lub "miasatin". Generator pomysłów na nazwy TikTok zajmuje się kombinatoryką — ty decydujesz o dwóch danych wejściowych, on produkuje długą listę. Potem filtrujesz listę czterema twardymi zasadami: (1) mniej niż 16 znaków, (2) żadnej cyfry do zapamiętania, (3) żadnego podkreślenia w środku słowa, (4) żadnego znaku, który się łamie, gdy ktoś go wymawia na głos. Jeśli kandydat przejdzie wszystkie cztery i mimo to brzmi jak ty, to jest twój handle. Pierwsze dziesięć opcji listy to zwykle oczywiste — złoto jest w opcjach 11-20, gdzie wzorce strukturalne (opuszczenie samogłoski, podwójna litera, substytucja leet) zaczynają produkować nazwy, które czują się odkryte, a nie wygenerowane. Poświęć godzinę, nie pięć minut — właściwy handle oszczędzi ci bólu głowy przez lata.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Dlaczego moja nazwa TikTok jest już zajęta?</h3>
+          <p>Ponieważ TikTok jest ogromny, a krótkie, zapadające w pamięć handle zostały wszystkie zajęte w pierwszych trzech latach platformy. Jeśli oczywista wersja twojej nazwy jest zajęta, przedłuż handle o dokładnie jeden element: słowo niszy, słowo vibe, kropkę, podkreślenie, jedną cyfrę lub podwojoną literę. "mia" jest zajęte; "miasatin", "mia.glaze", "mia_jams", "miahq", "glowmiaaa" są zwykle wolne. Tryb <strong>unikalny</strong> darmowego sprawdzania nazw TikTok celowo priorytetyzuje te wzorce strukturalne. Unikaj wypełniania losowymi cyframi (anty-wzorzec "mia72841") — wygląda jak jednorazowy handle i zabija twoją wartość odpowiedzi. Jeśli nawet wypełniona wersja jest zajęta, twoim planem B jest zmiana słowa rdzenia: "miasclips" zamiast "mia", lub pożyczenie pokrewnej estetyki ("frostmuse" jeśli "glowmuse" jest zajęte). Generator pomysłów TikTok robi to rozszerzenie automatycznie przez 17 nisz i 17 vibe'ów, więc najbardziej użyteczne pomysły na nazwy TikTok to zwykle te, które pojawiają się, gdy uruchomisz ponownie to samo słowo kluczowe z wybranym innym vibe. Generator w ciągu minuty produkuje dwadzieścia kandydatów; prawdziwa selekcja to kwestia twojego gustu, nie algorytmu.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Co sprawia, że nazwa TikTok jest dobra?</h3>
+          <p>Krótka, całkowicie małymi literami, bez cyfr do zapamiętania, bez podkreśleń, które łamią płynność, gdy ktoś mówi twój handle na głos. Bonusowe punkty, jeśli nawiązuje do twojej niszy treści. Kary, jeśli zawiera rok urodzenia, szkołę, miasto z którego możesz się przeprowadzić, lub twoje pełne imię i nazwisko prawne — to są kotwice, których nie chcesz w publicznym profilu. Najsilniejsze pomysły na nazwy TikTok są wystarczająco krótkie, aby zmieścić się w wzmiance w bio bez nasycania reszty bio, wymawialne jako jedna sylaba lub ciasna para dwóch, i ze znaczeniem, które widz chwyta w mniej niż sekundę. Dobry test: gdybyś powiedział to w podcaście, a słuchacz wpisałby to w wyszukiwarkę TikTok, znalazłby cię? "glowmuse" przechodzi. "xo_luna_03" nie przechodzi. Darmowe sprawdzanie nazw TikTok na Handle ocenia każdą wygenerowaną nazwę pod kątem tych reguł, zanim ci ją pokaże, więc lista, którą widzisz, jest już przefiltrowana pod kątem tego, co prawdopodobnie zadziała jako prawdziwy publiczny handle.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Jak zmienić moją nazwę TikTok?</h3>
+          <p>W aplikacji TikTok: stuknij swoją ikonę profilu (prawy dolny róg) → stuknij ikonę zębatki ustawień w prawym górnym rogu → "Zarządzaj kontem" → "Nazwa użytkownika". TikTok pozwala zmieniać nazwę użytkownika raz na 30 dni, a po zmianie stara staje się wolna dla kogoś innego. W panelu webowym na tiktok.com ścieżka to Profil → Edytuj profil → Nazwa użytkownika. Wpisz nowy handle, potwierdź hasłem, a zmiana jest natychmiastowa. Jeśli TikTok mówi, że nowa nazwa użytkownika nie jest dostępna, zwykle oznacza to jedną z trzech rzeczy: (a) handle jest zajęty przez inne konto i nie został jeszcze zwolniony, (b) handle jest zarezerwowany przez TikTok do użytku systemowego (cokolwiek zaczynające się od "tiktok_" lub pasujące do zarezerwowanego słowa), lub (c) handle nie spełnia reguł znakowych TikTok — obecnie 2-24 znaki, małe litery, cyfry, kropki i podkreślenia, bez kropki lub podkreślenia na początku lub końcu, bez kolejnych kropek. Generator nazw użytkownika TikTok na tej stronie produkuje nazwy, które zawsze spełniają regułę (c), więc jedyną rzeczą, która może cię zablokować, jest (a) lub (b).</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Jaka jest różnica między nazwą użytkownika a nazwą wyświetlaną?</h3>
+          <p>Nazwa użytkownika TikTok to @handle, który identyfikuje twoje konto — jest unikalna w całym TikTok, to jak ludzie cię znajdują i tagują, i pojawia się w twoim adresie URL profilu (tiktok.com/@twójHandle). Można ją zmieniać tylko co 30 dni i zawiera tylko małe litery, cyfry, kropki i podkreślenia. Nazwa wyświetlana TikTok (lub "name") to czytelna etykieta, która pojawia się obok twojego awatara w komentarzach, wiadomościach i wynikach wyszukiwania. Może być czymkolwiek do 30 znaków — emoji, wielkie/małe litery mieszane, spacje, cokolwiek chcesz. Możesz ją zmieniać tak często, jak chcesz, bez czasu oczekiwania. Inteligentny wzorzec, którego używa większość najlepszych twórców: wybierz krótki, jednowyrazowy handle ("mia", "kaito", "lee") i pozwól, aby nazwa wyświetlana nosiła estetykę — "mia ✧ soft grunge", "kaito | genshin builds", "LEE / dj sets". W ten sposób handle jest kotwicą do znalezienia, a nazwa wyświetlana to warstwa do oznakowania marki. Konwerter czcionek na tej stronie jest zaprojektowany, aby uczynić warstwę nazwy wyświetlanej bardziej ekspresyjną: wklej swoją nazwę wyświetlaną i otrzymaj ją w 11 stylach Unicode, które działają w polu nazwy wyświetlanej TikTok.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Jak działa sprawdzanie dostępności</h2>
+
+        <div class="faq-item">
+          <h3>Skąd wiem, czy nazwa TikTok jest dostępna?</h3>
+          <p>Użyj narzędzia do sprawdzania dostępności nazw użytkownika TikTok, które sonduje publiczny punkt końcowy profilu TikTok w czasie rzeczywistym, jak darmowe sprawdzanie nazw TikTok na tej stronie. Wpisz kandydata na handle, kliknij Sprawdź, a w ciągu jednej lub dwóch sekund otrzymasz werdykt: "Prawdopodobnie dostępny" (sonda otrzymała 404 lub pustą odpowiedź z punktu końcowego profilu TikTok, co oznacza, że żaden aktywny profil nie używa tego handle), "Prawdopodobnie zajęty" (sonda otrzymała prawdziwą stronę profilu, co oznacza, że handle jest w użyciu), lub "Nieznany" (sonda nie mogła skontaktować się z TikTok na czas, zwykle chwilowy problem sieciowy, regionalna blokada lub limit szybkości po stronie TikTok). Werdykt ma znaczenie, ponieważ własny interfejs TikTok mówi ci "niedostępne" dopiero po wpisaniu pełnej nazwy użytkownika w przepływie zmiany — w tym momencie zainwestowałeś już 30 sekund. Dobre narzędzie do sprawdzania dostępności nazw użytkownika TikTok wykonuje sprawdzanie za ciebie w partii, abyś mógł przeskanować 20 kandydatów w ciągu minuty i wybrać zwycięzcę bez otwierania aplikacji. Każdy wynik na tej stronie linkuje bezpośrednio do adresu URL aktywnego profilu TikTok, abyś mógł potwierdzić wizualnie przed odebraniem.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Jak działa sprawdzanie dostępności?</h3>
+          <p>Darmowe sprawdzanie nazw TikTok na tej stronie używa tego samego podejścia, którego używa własne wyszukiwanie TikTok, tylko z drugiej strony: wysyła żądanie do publicznego punktu końcowego profilu/oEmbed TikTok pytając o profil powiązany z danym handle. Jeśli TikTok zwraca prawdziwą stronę profilu, handle jest w użyciu. Jeśli TikTok zwraca 404 lub pustą odpowiedź, handle jest wolny. Jeśli punkt końcowy TikTok jest wolny, ograniczony limitem szybkości lub zablokowany regionalnie, sprawdzanie zwraca "Nieznany" — bezpieczna wartość domyślna, ponieważ alternatywa (zadeklarowanie handle jako "Dostępny" gdy sprawdzanie było niejednoznaczne) dałaby ci fałszywy wynik negatywny i zmarnowaną próbę zmiany. Sonda jest uruchamiana z puli serwerów w USA i UE, z limitem szybkości token bucket (60 sprawdzeń na minutę na IP), aby pozostać w granicach własnych progów anty-nadużyciowych TikTok. Każda karta wyniku pokazuje handle, werdykt, znacznik czasu sprawdzenia i bezpośredni link "Otwórz w TikTok ↗", abyś mógł zweryfikować wizualnie przed zobowiązaniem się do 30-dniowego czasu oczekiwania przy zmianie nazwy użytkownika.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Dlaczego pisze „Prawdopodobnie dostępna” zamiast po prostu „Dostępna”?</h3>
+          <p>Ponieważ dostępność nazwy użytkownika TikTok może się zmienić między momentem, gdy sprawdzamy, a momentem, gdy klikniesz Zmień w aplikacji. Handle, który teraz zwraca "Prawdopodobnie dostępny", może zostać odebrany przez kogoś innego za pięć minut — TikTok nie rezerwuje handle tylko dlatego, że ktoś go sondował. A handle, który zwraca "Prawdopodobnie zajęty", może stać się wolny jutro, jeśli obecny właściciel zmieni swoją nazwę użytkownika lub usunie swoje konto. Trójstanowy werdykt darmowego sprawdzania nazw TikTok istnieje właśnie dlatego, że binarny werdykt Dostępny / Niedostępny kłamałby zbyt często. "Prawdopodobnie dostępny" ze znacznikiem czasu to pewna sugestia, że handle jest wolny w momencie sprawdzenia; rzeczywiste potwierdzenie następuje, gdy złożysz zmianę w aplikacji TikTok, która jest jedynym miejscem, gdzie TikTok faktycznie przypisze handle do twojego konta. Prefiks "Prawdopodobnie" nie jest asekuracją — to uczciwe stwierdzenie, że każde sprawdzanie z zewnątrz aplikacji jest w najlepszym razie próbą, a ostatnie słowo należy do własnego przepływu zmian TikTok.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Dlaczego uchwyt pokazuje „Nieznany” na liście wyników?</h3>
+          <p>Werdykt "Nieznany" na liście wyników oznacza, że darmowe sprawdzanie nazw TikTok próbowało dotrzeć do punktu końcowego profilu TikTok dla tego handle i uzyskało limit czasu, odpowiedź 429 limitu szybkości lub blokadę regionalną. NIE oznacza to, że handle jest zajęty. Bezpieczna wartość domyślna to oznaczenie go jako Nieznany zamiast zgadywania, ponieważ błędne zgadywanie w obu kierunkach kosztuje cię 30-dniowy czas oczekiwania na zmiany nazwy użytkownika. W praktyce werdykty Nieznany kumulują się w dwóch sytuacjach: (1) generujesz więcej niż 30 nazw z rzędu i serwer osiąga limit szybkości na IP — poczekaj 60 sekund i uruchom ponownie, lub generuj w mniejszych partiach; (2) jesteś w sieci, gdzie punkt końcowy profilu TikTok jest geograficznie ograniczony (niektóre sieci korporacyjne i szkolne go blokują). W obu przypadkach link "Otwórz w TikTok" obok handle nadal działa — jeśli klikniesz i profil ładuje się w twojej przeglądarce, handle jest zajęty; jeśli uzyskasz stronę "nie znaleziono użytkownika" TikTok, handle jest wolny. Tak więc werdykt Nieznany z narzędzia zawsze rozwiązuje się jednym dodatkowym kliknięciem.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Nazwy, style i trendy</h2>
+
+        <div class="faq-item">
+          <h3>Jakie są najlepsze nazwy TikTok na 2026?</h3>
+          <p>Trendy pomysłów na nazwy TikTok 2026 nachylają się ku krótkim, małoliterowym, jednowyrazowym handle z stylistycznym akcentem — podwojona litera ("glowy", "serenee"), jednocyfrowy sufiks ("kaito4", "miasato9") lub jeden ze stylów czcionek Unicode, które możesz również wygenerować na tej stronie ("glowmuse" → "𝔤𝔩𝔬𝔴𝔪𝔲𝔰𝔢" w frakturze). Handle estetyczne i "soft girl" nadal plasują się w niszach lifestyle i beauty, ale nisze gamingowe i technologiczne silnie nachylają się ku kombinacjom dwóch słów z separatorem kropki ("pixel.mode", "loot.drift", "void.run"). Estetyczny, gamingowy i niektóre ponadczasowe sub-vibe'y (retro, wholesome, fantasy) dominują ranking; handle o tonacji edgy, profesjonalnej i korporacyjnej wyszły z łask od czasu, gdy platforma przesunęła się w stronę krótkiego wideo i treści prowadzonych przez twórców. Pełna tablica pomysłów na nazwy TikTok 2026 nachyla się ku handle, które czytają się jak nazwa użytkownika, którą znalazłbyś na forum z 2003 lub w grze indie z 2025 — krótkie, małe litery, lekko dziwne, zapadające w pamięć. Uruchom generator z jednym słowem jako słowem kluczowym i vibe <strong>unikalny</strong> dla najbardziej aktualnego wyniku.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Co to jest krótka nazwa TikTok i dlaczego długość ma znaczenie?</h3>
+          <p>Mniej niż 12 znaków. Krótka nazwa użytkownika TikTok otrzymuje więcej wzmianek w komentarzach (mniej pisania), czyta się wyraźniej, gdy jest nałożona na wideo, i łatwiej ją zapamiętać, gdy jest słyszana na głos. Jeśli twoje imię plus nisza mieści się w 10 znakach, to jest sweet spot — "miaplays" z 9 znaków bije "miaplays_official" z 16. Powód, dla którego krótkie handle wygrywają: funkcje wyszukiwania i wzmianek TikTok pokazują handle jako klikalny element, a dłuższy handle zjada otaczający tekst. Tryb <strong>unikalny</strong> darmowego sprawdzania nazw TikTok priorytetyzuje jednosylabowe rdzenie ("mia", "lux", "vibe") z sufiksami 2-3 znakowymi, aby utrzymać sumę poniżej 12. Jeśli nie możesz zejść poniżej 12, celuj w mniej niż 16 — tam wchodzi w grę skrócenie TikTok na mobile, więc handle 15-znakowy jest nadal wyświetlany w całości na telefonie. Cokolwiek powyżej 20 i TikTok zaczyna zmniejszać czcionkę w strumieniu komentarzy, aby go zmieścić, co czyni twój handle trudniejszym do odczytania na pierwszy rzut oka.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Jakie są najlepsze estetyczne, cool, zabawne i edgy nazwy TikTok?</h3>
+          <p>To zależy od tego, co publikujesz, ale wzorce wysokiego zaangażowania grupują się w cztery vibe'y. Handle <strong>estetyczne</strong> dla treści lifestyle, beauty i "soft girl" nachylają się ku miękkim spółgłoskom i podwojonym literom: "miasatin", "frostmuse", "pearlgrr". Handle <strong>cool</strong> dla tech, mody i streetwear nachylają się ku krótszym rdzeniom i bardziej edgiemu sufiksowi: "vibelab", "kaitonine", "leexvoid". Handle <strong>zabawne</strong> nachylają się ku grze słów i wewnętrznym odniesieniom, które twoja publiczność zrozumie, ale których wyszukiwarka TikTok nie ukarze: "mia_jams", "kaito_snacks", "leemcshakes". Handle <strong>edgy</strong> nachylają się ku ciemniejszej fonetyce i jednemu ze wzorców strukturalnych (opuszczenie samogłoski, leet, podwojona spółgłoska): "glowvoid", "kait0x", "frmtbeats". Generator pomysłów na nazwy TikTok produkuje kandydatów dla wszystkich czterech, a najlepszy przepływ pracy to wygenerowanie tego samego słowa kluczowego pod każdym vibe, potem wymieszanie 3-4 najsilniejszych kandydatów z vibe'ów w finalną listę. Największy błąd, jaki popełniają nowi twórcy, to zadowolenie się pierwszą opcją, którą generator zwraca — zwykle jest oczywista i już zajęta na TikTok. Prawdziwe pomysły na nazwy TikTok są na drugiej i trzeciej stronie wyjścia generatora.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Czy mogę użyć czcionek TikTok w moim @handle?</h3>
+          <p>Nie, i to myli wielu twórców. Nazwy użytkownika TikTok (@handle) akceptują tylko litery ASCII, cyfry, kropki i podkreślenia. Eleganckie style czcionek Unicode, które działają w twojej nazwie wyświetlanej ("mia ✧" lub "𝓂𝒾𝒶"), nie zadziałają w polu @handle — TikTok po cichu odrzuca znaki lub je odrzuca i mówi ci, że handle jest nieprawidłowy. Prawidłowy wzorzec to: utrzymuj swój @handle jako prosty ASCII ("mia", "kaitox"), a całą wizualną ekstrawagancję umieść w swojej nazwie wyświetlanej używając konwertera czcionek na tej stronie. Konwerter czcionek produkuje 11 stylów Unicode (small caps, bold, italic, script, bold-script, fraktur, circled, squared, strikethrough, underline, reverse), które wszystkie działają w polu nazwy wyświetlanej TikTok, więc uzyskujesz estetykę bez łamania wyszukiwalności. Narzędzie na stronie głównej, które konwertuje słowo na wszystkie 11 stylów naraz, jest prawidłowym przepływem pracy: wybierz pomysł na nazwę TikTok z generatora, potem wystylizuj go w konwerterze czcionek dla swojej nazwy wyświetlanej. Display name zmienisz sto razy, handle raz na trzydzieści dni — wybierz mądrze.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Konto, kwestie prawne i wsparcie</h2>
+
+        <div class="faq-item">
+          <h3>Czy generator działa dla innych platform?</h3>
+          <p>W tej chwili darmowe sprawdzanie nazw TikTok sprawdza tylko TikTok. Architektura jest gotowa na multi-platformę — ten sam wzorzec sondy, różne publiczne punkty końcowe profilu dla Instagrama, YouTube, X — ale sprawdzania dla poszczególnych platform są w roadmapie. W międzyczasie prawidłowy przepływ pracy dla premiery multi-platformowej to: (1) wygeneruj tę samą koncepcję handle w generatorze pomysłów na nazwy TikTok, (2) zweryfikuj, że jest wolna na TikTok używając sprawdzania na żywo, (3) gdy ją odbierzesz na TikTok, wklej ten sam handle w Instagram / YouTube / X ręcznie — wszystkie trzy platformy mają również sprawdzanie "nazwa użytkownika niedostępna" w przepływie zmiany, i 70% czasu handle, który jest wolny na TikTok, jest również wolny na innych, ponieważ krótkie handle są już w większości odebrane na wszystkich platformach. Sprawdzanie multi-platformowe jest najczęściej żądaną funkcją w komentarzach użytkowników do tej pory, i pojawi się, gdy ograniczenia limitu szybkości i anty-nadużyciowe dla poszczególnych platform zostaną rozwiązane.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Czy mogę komercyjnie wykorzystywać nazwy generowane przez Handle?</h3>
+          <p>Tak, każda nazwa, którą produkuje generator nazw użytkownika TikTok, jest wolna do użytku, jak chcesz — komercyjnie, osobiście, dla marki, dla konta memów, dla parodii, która pozostaje w granicach fair use. Generator nie oznacza ani nie rezerwuje niczego; produkuje tylko kandydatów na nazwy z modelu kombinatorycznego na pulach słów i wzorcach strukturalnych. Co zrobisz z kandydatami to twoja decyzja. Jedynym zastrzeżeniem jest standardowe sprawdzanie znaków towarowych, które darmowe sprawdzanie nazw TikTok nie wykonuje: handle może być wolny na TikTok, a mimo to naruszać zarejestrowany znak towarowy w twojej branży, szczególnie jeśli budujesz wokół niego markę. Zanim zobowiążesz się do handle dla marki komercyjnej, przeprowadź wyszukiwanie w bazie danych znaków towarowych USPTO TESS (USA) lub EUIPO (UE) dla tego samego ciągu. Jeśli znak towarowy jest zarejestrowany w twojej klasie (45 kategorii Klasyfikacji Nicejskiej), wybierz inny handle. Generator pomysłów TikTok sprawia, że ponowne generowanie z innym słowem kluczowym i vibe jest tanie, więc obejście jest zawsze o jedno kliknięcie.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Czy Handle jest darmowy?</h3>
+          <p>Tak, całkowicie za darmo. Generator nazw użytkownika TikTok, sprawdzanie dostępności na żywo, konwerter czcionek, FAQ, strona O nas, polityka prywatności, warunki — każda funkcja na tej stronie jest darmowa, bez rejestracji, bez emaila, bez tworzenia konta, bez limitu szybkości na generowanie nazw i bez znaku wodnego na wyjściu. Strona jest wspierana przez reklamy (Google AdSense, po aktywacji) i to wszystko. Nie ma poziomu płatnego, nie ma planu premium, nie ma upsellingu. Darmowe sprawdzanie nazw TikTok wykonuje 60 sprawdzeń na minutę na IP — to wystarczy dla normalnego użytkownika, aby przeskanować 30-40 kandydatów w jednej sesji, a jeśli osiągniesz limit, poczekaj 60 sekund i się zresetuje. Nie ma jeszcze dostępu do API ani funkcji eksportu masowego; jeśli potrzebujesz więcej niż 1000 kandydatów na handle, właściwą rzeczą jest skryptowanie bezpośrednio przeciwko publicznemu punktowi końcowemu TikTok, z odpowiednią obsługą limitu szybkości. Darmowy generator pomysłów na nazwy TikTok, darmowe sprawdzanie nazw TikTok i darmowy konwerter czcionek są wszystkie zaprojektowane tak, aby być najbardziej użytecznymi narzędziami, których twórca TikTok może użyć do wybrania handle w mniej niż pięć minut.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Czy Handle jest powiązany z TikTokiem?</h3>
+          <p>Nie. Handle jest niezależnym projektem. Nie jest stowarzyszony z, popierany przez, sponsorowany przez, ani w żaden sposób powiązany z TikTok, ByteDance Ltd. ani żadnym z ich podmiotów zależnych. "TikTok" jest znakiem towarowym ByteDance Ltd. Wszystkie odniesienia do TikTok na tej stronie — w UI generatora nazw użytkownika TikTok, sprawdzania dostępności, FAQ, polityki prywatności, warunków — są użyciami opisowymi (narzędzie sprawdza nazwy użytkownika na TikTok) dokonanymi w ramach fair use, w taki sam sposób, w jaki strona internetowa porównująca ceny linii lotniczych odnosi się do każdej linii lotniczej z nazwy bez stowarzyszenia z którąkolwiek z nich. Darmowe sprawdzanie nazw TikTok Handle wysyła żądania do publicznych punktów końcowych profilu i oEmbed TikTok; żądania są dokonywane z naszych własnych IP serwerów (USA i UE) z naszym własnym User-Agent (HandleBot/0.1), a TikTok widzi je jako żądania strony trzeciej. Nie mamy uprzywilejowanego dostępu do danych TikTok, a werdykty, które zwracamy, są sondowaniami w najlepszym razie, nie autorytatywnymi. Jeśli jesteś posiadaczem praw w TikTok lub ByteDance i uważasz, że strona na tej witrynie używa twojego znaku towarowego w sposób, który nie jest fair use, napisz na legal@gethandlenames.com, a zajmiemy się tym szybko.</p>
+        </div>
+      </section>
+    </section>
+
+    <!-- =================================================================== ABOUT -->
+    <section data-page-section="about">
+      <h1>O Handle — darmowym generatorze nazw TikTok z natychmiastowym sprawdzaniem dostępności</h1>
+      <p class="lede">Handle to darmowe narzędzie dla twórców TikToka, którzy chcą nazwę użytkownika, która faktycznie istnieje. Wpisz słowo kluczowe, wybierz niszę i styl, otrzymaj 10–20 pomysłów na nazwy TikTok zgodne z obowiązującymi zasadami i zobacz, które są prawdopodobnie dostępne, zanim którąś skopiujesz. Całe narzędzie jest darmowe, nie wymaga rejestracji i jest dostępne w 17 językach.</p>
+
+      <section class="section">
+        <h2>Co to jest</h2>
+          <p>Darmowy generator nazw TikTok, który nie zatrzymuje się na liście. Każda nazwa zwrócona przez narzędzie jest sprawdzana na żywo przez TikTok, więc widzisz "Prawdopodobnie dostępna" lub "Prawdopodobnie zajęta" ze znacznikiem czasu, zanim zainwestujesz w uchwyt. Generator działa całkowicie w twojej przeglądarce; sprawdzanie dostępności to małe zapytanie po stronie serwera do własnego punktu końcowego profili TikTok, z 5-minutową pamięcią podręczną, żeby pojedynczy limit po stronie TikToka nie kładł całej strony.</p>
+          <p>Handle jest zbudowany dla twórców TikTok, którzy chcą unikalnych pomysłów na nazwy użytkownika, uchwytów z marką dla małej firmy lub projektu pobocznego, sugestii specyficznych dla niszy (gaming, beauty, fitness, moda, jedzenie i 12 innych) oraz uczciwych werdyktów zamiast pewnego "Dostępna", które jest błędne w momencie, gdy klikniesz.</p>
+      </section>
+
+      <section class="section">
+        <h2>Czym to nie jest</h2>
+          <p>Nie jest powiązany z TikTokiem, ByteDance, Instagramem, YouTube, X ani żadną inną platformą (zobacz Warunki Korzystania). Nie jest wyszukiwarką znaków towarowych — nazwa może być wolna na TikToku i mimo to naruszać zarejestrowany znak w twojej kategorii, a Handle nie przeszukuje baz USPTO / EUIPO / krajowych. Nie jest gwarancją — werdykty są uczciwe, słowa "Prawdopodobnie" i "Nieznana" są celowe. Jeśli sprawdzanie nie może dotrzeć do TikToka, zobaczysz "Nieznana" z bezpośrednim linkiem do strony profilu, żebyś mógł/mogła potwierdzić na własne oczy, zanim się zdecydujesz.</p>
+      </section>
+
+      <section class="section">
+        <h2>Jak to działa od środka</h2>
+          <p>Generowanie to silnik listy słów + wzorców, który działa w milisekundach i wymusza aktualne zasady TikToka (od 2 do 24 znaków, dozwolony zestaw, bez kropki na początku lub końcu, bez kolejnych kropek), zanim jakikolwiek kandydat do ciebie dotrze. Silnik wzorców ma trzy warstwy: strukturalną (twoje słowo kluczowe + słowo niszowe, lub odwrotnie), tematyczną (twoje słowo kluczowe + słowo vibe z aktywnego chipa, jak "estetyczny" lub "gaming") oraz nietypową (zdublowane litery, przedrostek z jednej litery, usunięcie samogłosek, substytucja w stylu leet). Sprawdzanie dostępności jest podłączane — interfejs, backendy dostarczane dziś i sposób podłączenia nowego są udokumentowane w README.</p>
+      </section>
+
+      <section class="section">
+        <h2>Lokalizacja — 17 języków, natywne targetowanie słów kluczowych</h2>
+          <p>Handle jest obecnie dostępny w 17 językach: angielski (domyślny), hiszpański, niemiecki, francuski, włoski, portugalski, niderlandzki, polski, rosyjski, chiński, wietnamski, indonezyjski, malajski, tagalski, hindi, bengalski, arabski i urdu. Każdy język ma swój własny URL (/es/, /de/, itd.) dzięki czemu wyszukiwarki indeksują każdą wersję osobno, a metatagi, nawigacja i tekst strony są napisane dla native speakerów, a nie przetłumaczone słowo w słowo. Algorytm generatora pozostaje ten sam we wszystkich językach — listy słów niszowych i viby są niezależne od platformy — ale otaczający tekst używa lokalnych terminów wyszukiwania, które ludzie faktycznie wpisują (na przykład "generator nazw TikTok" po polsku, a nie dosłowne tłumaczenie "TikTok username generator").</p>
+      </section>
+
+      <section class="section">
+        <h2>Plan rozwoju</h2>
+        <ul>
+          <li>Strona z <strong>pomysłami na nazwy TikTok</strong>: ponad 200 wyselekcjonowanych @ pogrupowanych według niszy i stylu, zoptymalizowana pod wyszukiwanie long-tail "pomysły na nazwę TikTok".</li>
+          <li>Dedykowana strona <strong>czcionek TikTok</strong>: promowanie konwertera czcionek Unicode pod własnym adresem URL z meta, tekstem wprowadzającym i kątem "stylowy tekst do bio TikToka".</li>
+          <li><strong>Pomysły na bio TikTok</strong> i <strong>nicki dla par na TikToku</strong>: osobne strony dla pokrewnych intencji wyszukiwania.</li>
+          <li>Programowane strony niszowe dla SEO long-tail (np. <code>/tiktok-username-ideas/aesthetic-fitness</code>).</li>
+          <li>Sprawdzanie dostępności międzyplatformowej (Instagram, YouTube, X): architektura gotowa, brakuje tylko sprawdzaczy dla poszczególnych platform.</li>
+          <li>Zbieranie e-maili do cotygodniowego newslettera z nazwami.</li>
+          <li>Kanały TikTok i YouTube prezentujące cotygodniowe wybory nazw.</li>
+          <li>Warstwa afiliacyjna kierująca twórców do Linktree, Namecheap, Canva Pro i podobnych narzędzi.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Kontakt</h2>
+        <p>Znalazłeś błąd, chcesz zaproponować funkcję, albo po prostu przywitać się? Napisz do nas na <strong>hello@gethandlenames.com</strong> — czytamy wszystko i staramy się odpowiedzieć w ciągu tygodnia. W sprawie formalnych zawiadomień prawnych, żądań usunięcia lub uprawnień osoby, której dane dotyczą, wynikających z RODO/CCPA, pisz na <strong>legal@gethandlenames.com</strong>.</p>
+      </section>
+    </section>
+
+    <!-- ================================================================ PRIVACY -->
+    <section data-page-section="privacy">
+      <h1>Polityka prywatności</h1>
+      <p class="lede">Last updated 25 August 2026. This policy explains what Handle collects, what it does not, and how you can exercise your rights. We try to write in plain language; the formal legal terms are the ones that apply if there is ever a conflict between plain language and these formal terms.</p>
+
+      <section class="section">
+        <h2>Czym jest Handle</h2>
+        <p>Handle to darmowy generator nazw użytkownika TikTok. Wpisujesz słowo kluczowe, wybierasz niszę i vibe, a strona zwraca listę pomysłów na nazwy, które są zgodne z zasadami nazw TikTok. Każda nazwa jest następnie sprawdzana względem publicznego endpointu profilu TikTok, abyś mógł zobaczyć, czy jest prawdopodobnie dostępna, prawdopodobnie zajęta, czy nieznana (sprawdzenie nie mogło zostać zakończone). Handle to niezależny projekt. Nie jest powiązany z TikTok ani ByteDance Ltd.</p>
+      </section>
+
+      <section class="section">
+        <h2>Pliki cookie i podobne technologie</h2>
+        <p>Główne narzędzie nie ustawia żadnych plików cookie. Jedynym trwałym miejscem przechowywania po stronie klienta, którego używamy, jest pojedynczy wpis w <code>localStorage</code> Twojej przeglądarki, który nie jest wysyłany na żaden serwer i nie jest odczytywany przez osoby trzecie. Jeśli Google AdSense jest włączony (patrz sekcja Reklamy poniżej), Google ustawi własne pliki cookie i odczyta własne identyfikatory w celu wyświetlania i mierzenia reklam; ta sekcja wyjaśnia, jakie to są i jak zrezygnować.</p>
+        <p>Flaga localStorage, którą ustawiamy, nazywa się <code>handle.cookieConsent.v1</code> i przechowuje tylko ciąg <code>"accepted"</code> po kliknięciu przycisku akceptacji banera zgody. Nigdy nie jest wysyłana na nasz serwer, nigdy nie jest odczytywana przez osoby trzecie i możesz ją wyczyścić w dowolnym momencie za pomocą narzędzi deweloperskich przeglądarki lub usuwając dane witryny.</p>
+      </section>
+
+      <section class="section">
+        <h2>Co zbieramy</h2>
+        <p>Nic, co bezpośrednio Cię identyfikuje. Wpisane słowo kluczowe, wybrana nisza i vibe oraz lista wygenerowanych nazw są przetwarzane w Twojej przeglądarce i nie są powiązane z żadnym profilem użytkownika po naszej stronie.</p>
+        <p><strong>Logi serwera.</strong> Jak większość serwerów WWW, nasz dostawca hostingu rejestruje adres IP, user-agent, ścieżkę żądania, status odpowiedzi i znacznik czasu w standardowych logach dostępu, przechowywanych przez 30 dni w celu bezpieczeństwa i zapobiegania nadużyciom. Nie używamy tych logów do reklam, profilowania ani żadnych analiz zorientowanych na użytkownika.</p>
+        <p><strong>Brak kont, brak e-maili, brak profili.</strong> Handle nie wymaga konta, nie prosi o Twój adres e-mail i nie buduje Twojego profilu. Strona nie ma zapisu na newsletter, systemu komentarzy ani formularza kontaktowego, który prosi o dane osobowe.</p>
+      </section>
+
+      <section class="section">
+        <h2>Jak wykorzystujemy informacje</h2>
+        <p>Wykorzystujemy zebrane informacje do trzech celów: (1) dostarczenia Ci narzędzia — uruchomienia generatora, sprawdzenia dostępności w TikTok i wyrenderowania kart wyników; (2) utrzymania kondycji usługi — limitu szybkości, zapobiegania nadużyciom, debugowania awarii; oraz (3) odpowiadania na żądania prawne, jeśli kiedykolwiek je otrzymamy.</p>
+        <p>Nie sprzedajemy Twoich danych. Nie udostępniamy ich reklamodawcom, z wyjątkiem zagregowanej statystycznej formy, w jakiej robi to każda strona z reklamami (sieć reklamowa widzi żądanie, nie imię). Nie używamy ich do podejmowania zautomatyzowanych decyzji o Tobie.</p>
+        <p>Jeśli napiszesz do nas na adres e-mail poniżej, używamy tego, co nam powiesz, tylko po to, by Ci odpowiedzieć, i usuwamy wątek po 12 miesiącach, chyba że poprosisz nas o jego zachowanie.</p>
+      </section>
+
+      <section class="section">
+        <h2>Podstawa prawna (odwiedzający z EOG / Wielkiej Brytanii)</h2>
+        <p>Jeśli jesteś w Europejskim Obszarze Gospodarczym lub Wielkiej Brytanii, Ogólne rozporządzenie o ochronie danych (RODO) wymaga od nas wskazania podstawy prawnej dla każdej czynności przetwarzania. Naszymi podstawami prawnymi są: <strong>zgoda</strong> na ustawianie nieistotnych plików cookie (w tym ewentualnych plików cookie AdSense, gdy AdSense zostanie włączony); <strong>uzasadniony interes</strong> w zakresie limitu szybkości opartego na IP w pamięci, niezbędnego do utrzymania dostępności endpointu sprawdzania dostępności; oraz <strong>obowiązek prawny</strong> w zakresie przechowywania standardowych logów serwera przez okres bezpieczeństwa i zapobiegania nadużyciom wymagany przez naszego dostawcę hostingu.</p>
+      </section>
+
+      <section class="section">
+        <h2>Reklamy (Google AdSense)</h2>
+        <p>Handle rezerwuje miejsce dla Google AdSense za pośrednictwem pliku <code>ads.txt</code> w katalogu głównym witryny, ale AdSense obecnie nie wyświetla reklam. Po włączeniu AdSense zastosowanie mają poniższe ujawnienia. Wyświetlimy jasne powiadomienie i uzyskamy zgodę przed ustawieniem jakichkolwiek plików cookie AdSense dla odwiedzających z EOG, Wielkiej Brytanii i Szwajcarii.</p>
+        <p><strong>Wymagane ujawnienie Google.</strong> Dostawcy zewnętrzni, w tym Google, używają plików cookie do wyświetlania reklam na podstawie wcześniejszych wizyt użytkownika w tej lub innych witrynach. Użycie przez Google plików cookie reklamowych umożliwia jemu i jego partnerom wyświetlanie reklam użytkownikom na podstawie ich wizyty w tej witrynie i/lub innych witrynach w Internecie.</p>
+        <p><strong>Jak zrezygnować z reklam spersonalizowanych.</strong> Możesz zrezygnować z reklam spersonalizowanych, odwiedzając <a href="https://adssettings.google.com/" rel="noopener noreferrer" target="_blank">Ustawienia reklam</a> Google. Możesz również zrezygnować z użycia plików cookie przez niektórych zewnętrznych dostawców do reklam spersonalizowanych, odwiedzając <a href="https://www.aboutads.info/" rel="noopener noreferrer" target="_blank">www.aboutads.info</a>. Aby uzyskać informacje o tym, jak Google wykorzystuje dane z witryn partnerów, zobacz <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer" target="_blank">Jak Google wykorzystuje informacje z witryn lub aplikacji korzystających z naszych usług</a>.</p>
+      </section>
+
+      <section class="section">
+        <h2>Usługi stron trzecich</h2>
+        <p><strong>TikTok / ByteDance.</strong> Sprawdzanie dostępności wysyła żądanie z naszego serwera do publicznych endpointów profilu i oEmbed TikTok. TikTok widzi żądanie z adresu IP naszego serwera, sprawdzaną nazwę i standardowe nagłówki HTTP (w tym nasz User-Agent <code>HandleBot/0.1</code>). To, co TikTok zrobi z tym żądaniem, podlega <a href="https://www.tiktok.com/legal/privacy-policy" rel="noopener noreferrer" target="_blank">Polityce Prywatności TikTok</a>.</p>
+        <p><strong>Hosting i CDN.</strong> Nasze pliki statyczne są dostarczane poprzez sieć dostarczania treści. CDN loguje IP, user-agent i ścieżkę żądania do własnych celów zapobiegania nadużyciom; to logowanie podlega polityce prywatności dostawcy CDN.</p>
+        <p><strong>Sieci reklamowe.</strong> Gdy AdSense jest włączony, Google i jego certyfikowani partnerzy reklamowi mogą ustawiać i odczytywać pliki cookie oraz podobne identyfikatory w Twojej przeglądarce w celu wyboru i mierzenia reklam. Pełną listę ujawnień i linków do rezygnacji znajdziesz w sekcji Reklamy powyżej.</p>
+      </section>
+
+      <section class="section">
+        <h2>Sprawdzanie dostępności na TikToku</h2>
+        <p>Gdy klikniesz "Sprawdź" lub "Generuj", serwer, z którym rozmawiasz, wysyła żądanie do TikTok, aby dowiedzieć się, czy dany nick jest powiązany z aktywnym profilem. Sprawdzana nazwa jest częścią tego żądania, więc TikTok może zobaczyć, jaka nazwa Cię interesuje. Nie wysyłamy Twojego adresu IP, imienia, e-maila ani żadnego innego identyfikatora razem z tym żądaniem, poza standardowymi nagłówkami HTTP, które niesie każde żądanie webowe. Sprawdzenie odbywa się w najlepszej wierze: TikTok może w dowolnym momencie nałożyć limit szybkości, zablokować lub zwrócić niepełne wyniki, a werdykty mogą stać się nieaktualne w momencie wydania.</p>
+      </section>
+
+      <section class="section">
+        <h2>Limit szybkości i adresy IP</h2>
+        <p>Aby utrzymać dostępność endpointu sprawdzania dostępności i pozostać w granicach progów antynadużyciowych TikTok, serwer stosuje limit szybkości typu token-bucket, indeksowany Twoim adresem IP. Bucket jest przechowywany w <code>Map</code> JavaScript w pamięci procesu Node. Nie jest zapisywany na dysku, nie jest replikowany między serwerami i nie jest udostępniany osobom trzecim. Po ponownym uruchomieniu serwera bucket znika. Nie logujemy, nie przechowujemy ani nie analizujemy adresów IP w żadnym innym celu; IP służy wyłącznie jako klucz do bucketa w pamięci, a następnie jest zapominane, gdy bucket jest usuwany lub wyrzucany.</p>
+      </section>
+
+      <section class="section">
+        <h2>Dzieci poniżej 13. roku życia</h2>
+        <p>Handle nie jest skierowany do dzieci poniżej 13. roku życia i nie zbieramy świadomie danych osobowych od dzieci poniżej 13. roku życia. Strona jest narzędziem dla dorosłych twórców TikToka i osób budujących markę. Jeśli uważasz, że dziecko poniżej 13. roku życia podało dane osobowe za pośrednictwem strony, skontaktuj się z nami pod adresem poniżej, a my je usuniemy. Zarówno amerykańska Children's Online Privacy Protection Act (COPPA), jak i unijna RODO-K definiują dziecko jako osobę poniżej 13. roku życia, chyba że państwo członkowskie ustali wyższy wiek do 16 lat; stosujemy bardziej rygorystyczny próg.</p>
+      </section>
+
+      <section class="section">
+        <h2>Twoje prawa (EOG / Wielka Brytania)</h2>
+        <p>Jeśli jesteś w EOG, Wielkiej Brytanii lub Szwajcarii, masz prawo do: dostępu do danych osobowych, które o Tobie przechowujemy; sprostowania nieprawidłowych danych; żądania usunięcia Twoich danych; ograniczenia lub wniesienia sprzeciwu wobec przetwarzania; otrzymania danych w przenośnym formacie nadającym się do odczytu maszynowego; oraz wycofania zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem. Masz również prawo wnieść skargę do lokalnego organu ochrony danych. Ponieważ nie zbieramy danych osobowych poza standardowymi logami serwera, większość żądań otrzyma odpowiedź "nie mamy o Tobie niczego identyfikowalnego" — ale prawo pozostaje. Aby wykonać którekolwiek z tych praw, skontaktuj się z nami pod adresem poniżej.</p>
+      </section>
+
+      <section class="section">
+        <h2>Prawa do prywatności w Kalifornii (CCPA / CPRA)</h2>
+        <p>Jeśli jesteś mieszkańcem Kalifornii, California Consumer Privacy Act (CCPA), zmieniony przez California Privacy Rights Act (CPRA), daje Ci konkretne prawa dotyczące Twoich danych osobowych.</p>
+        <p><strong>Nie sprzedawaj ani nie udostępniaj moich danych osobowych.</strong> Nie sprzedajemy danych osobowych za pieniądze ani nie udostępniamy ich w celu reklamy behawioralnej między kontekstami, zgodnie z definicjami tych terminów w CPRA. Jeśli AdSense zostanie włączony i chcesz zrezygnować z wszelkich przyszłych reklam między kontekstami, możesz to zrobić, włączając kontrolki "Ogranicz śledzenie reklam" lub "Zrezygnuj z reklam spersonalizowanych" opisane w sekcji Reklamy powyżej lub klikając link <a href="https://adssettings.google.com/" rel="noopener noreferrer" target="_blank">Ustawienia reklam Google, aby zarządzać swoimi preferencjami reklam</a>. Nie sprzedajemy ani nie udostępniamy świadomie danych osobowych konsumentów poniżej 16. roku życia.</p>
+        <p>Masz również prawo wiedzieć, jakie kategorie danych osobowych zbieramy (tylko logi serwera), żądać ich usunięcia i nie być dyskryminowanym za korzystanie ze swoich praw. Aby wykonać którekolwiek z tych praw, skontaktuj się z nami pod adresem poniżej. Odpowiemy w ciągu 45 dni, zgodnie z wymogami CCPA.</p>
+      </section>
+
+      <section class="section">
+        <h2>Przechowywanie danych</h2>
+        <p>Logi serwera: 30 dni, następnie usuwane. Buckety limitu szybkości: do momentu ponownego napełnienia bucketa do pełna (w praktyce 1 godzina po ostatnim żądaniu) lub do ponownego uruchomienia serwera, w zależności od tego, co nastąpi wcześniej. Wyniki sprawdzania dostępności: nie są przechowywane po naszej stronie; każde sprawdzenie to nowe sondowanie. Flaga zgody w localStorage pozostaje w Twojej przeglądarce, dopóki nie wyczyścisz danych witryny.</p>
+      </section>
+
+      <section class="section">
+        <h2>Transfery międzynarodowe</h2>
+        <p>Handle jest obsługiwany z serwerów zlokalizowanych w Stanach Zjednoczonych i Unii Europejskiej (nasze węzły CDN). Gdy korzystasz z narzędzia, Twoje żądanie może być obsłużone z węzła blisko Ciebie, ale żądania sprawdzania dostępności, które wysyłamy do TikTok, pochodzą ze stałego zestawu adresów IP naszych serwerów (regiony USA i UE). Jeśli jesteś w regionie z rygorystycznymi zasadami rezydencji danych, samo korzystanie z narzędzia oznacza, że Twoje żądanie jest przetwarzane poza Twoim regionem. Opieramy się na standardowych klauzulach umownych i decyzjach stwierdzających odpowiednią ochronę Komisji Europejskiej w odniesieniu do ograniczonych przetwarzanych danych osobowych (IP do limitu szybkości).</p>
+      </section>
+
+      <section class="section">
+        <h2>Zmiany w niniejszej polityce</h2>
+        <p>Jeśli wprowadzimy istotne zmiany, zaktualizujemy datę "Ostatnia aktualizacja" na górze tej strony. W przypadku zmian, które poszerzają zbierane przez nas dane, zmieniają sposób ich wykorzystania lub zmieniają strony trzecie, którym je udostępniamy, dodamy bardziej widoczne powiadomienie na stronie głównej przez co najmniej 30 dni przed wejściem zmiany w życie. Poprzednia wersja tej polityki jest dostępna na żądanie.</p>
+      </section>
+
+      <section class="section">
+        <h2>Kontakt</h2>
+        <p>W sprawach dotyczących prywatności, żądań osoby, której dane dotyczą, żądań CCPA, zawiadomień o prawach autorskich i wszelkich innych kwestii prawnych pisz na <strong>privacy@gethandlenames.com</strong>. Staramy się odpowiadać w ciągu 14 dni na żądania dotyczące prywatności i w ciągu 30 dni na żądania osoby, której dane dotyczą, zgodnie z wymogami RODO.</p>
+      </section>
+    </section>
+
+    <!-- ================================================================== TERMS -->
+    <section data-page-section="terms">
+      <h1>Warunki korzystania</h1>
+      <p class="lede">Last updated 25 August 2026. By using Handle you agree to these terms. They cover what Handle is, who owns what, what you can and can't do with the tool, and what happens if something goes wrong.</p>
+
+      <section class="section">
+        <h2>Czym jest Handle</h2>
+        <p>Handle to darmowe, publiczne narzędzie internetowe, które pomaga ci wymyślać nazwy użytkowników TikToka i sprawdzać, czy kandydat jest prawdopodobnie dostępny. Wynikiem jest zestaw sugestii @ plus werdykt dostępności (prawdopodobnie dostępna, prawdopodobnie zajęta lub nieznana).</p>
+      </section>
+
+      <section class="section">
+        <h2>Brak powiązań z TikTokiem</h2>
+        <p>Handle jest niezależnym projektem. Nie jest powiązany, popierany, sponsorowany ani w żaden sposób stowarzyszony z TikTokiem, ByteDance Ltd. ani żadną z ich spółek zależnych. "TikTok" jest znakiem towarowym ByteDance Ltd. Wszystkie odniesienia do TikToka na tej stronie mają wyłącznie charakter opisowy (narzędzie sprawdza nazwy użytkowników na TikToku) i są dokonywane w ramach dozwolonego użytku.</p>
+        <p>Jeśli jesteś posiadaczem praw i uważasz, że strona na tej witrynie używa twojego znaku w sposób, który nie jest dozwolonym użytkiem, skontaktuj się z nami, a szybko to zaadresujemy.</p>
+      </section>
+
+      <section class="section">
+        <h2>Brak gwarancji co do werdyktów dostępności</h2>
+        <p>Sprawdzanie dostępności to sonda best-effort publicznych endpointów TikToka. Werdykty mogą być błędne, mogą być nieaktualne w momencie wydania i mogą być dotknięte limitami po stronie TikToka, regionalnymi blokadami lub incydentami serwisowymi. "Prawdopodobnie dostępna" nie jest gwarancją. Jesteś odpowiedzialny za potwierdzenie dostępności na TikToku przed zbudowaniem marki na @.</p>
+      </section>
+
+      <section class="section">
+        <h2>Brak wyszukiwania znaków towarowych</h2>
+        <p>Handle nie sprawdza zarejestrowanych znaków towarowych. @ może być wolna na TikToku i nadal naruszać zarejestrowany znak w twojej branży. Zanim zdecydujesz się na @ dla publicznej marki, przeprowadź wyszukiwanie znaków towarowych (USPTO TESS w USA, EUIPO w UE lub lokalny odpowiednik) i rozważ rozmowę z prawnikiem.</p>
+      </section>
+
+      <section class="section">
+        <h2>Dopuszczalne użycie</h2>
+        <p>Zgadzasz się nie używać Handle do:</p>
+        <ul>
+          <li>Sondowania TikToka w tempie, które uruchomiłoby ich systemy antynadużyciowe. Strona egzekwuje limit 60 sprawdzeń na minutę na IP; proszę, szanuj go.</li>
+          <li>Generowanie treści nielegalnych, naruszających prawa lub nękających.</li>
+          <li>Próby obchodzenia limitów prędkości, scrapowania strony na skalę przemysłową lub innego zakłócania usługi.</li>
+          <li>Przedstawiania narzędzia jako powiązanego z TikTokiem.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Własność intelektualna</h2>
+        <p>Nazwa Handle, kod strony oraz oryginalne listy słów/reguły wzorców są naszą własnością. Możesz używać wygenerowanych nazw, jak chcesz — to sugestie, nie nasza własność po przekazaniu. Znaki towarowe TikToka, logo TikToka i zasady nazw TikToka należą do TikToka. Glify Unicode w konwerterze czcionek są własnością Unicode Consortium i oryginalnych projektantów typografii.</p>
+      </section>
+
+      <section class="section">
+        <h2>Wyłączenie gwarancji</h2>
+        <p>Strona jest dostarczana "taka jaka jest" i "w miarę dostępności". W maksymalnym zakresie dozwolonym przez prawo, zrzekamy się wszelkich gwarancji, wyraźnych lub dorozumianych, w tym dorozumianych gwarancji przydatności handlowej, przydatności do określonego celu i nienaruszania praw. Nie gwarantujemy, że strona będzie nieprzerwana, wolna od błędów, ani że werdykty dostępności będą dokładne.</p>
+      </section>
+
+      <section class="section">
+        <h2>Ograniczenie odpowiedzialności</h2>
+        <p>W maksymalnym zakresie dozwolonym przez prawo, nie ponosimy odpowiedzialności za jakiekolwiek szkody pośrednie, przypadkowe, szczególne, wtórne lub karne wynikające z lub związane z twoim korzystaniem ze strony, w tym utracone zyski, utratę danych lub przerwę w działalności, nawet jeśli zostaliśmy poinformowani o możliwości takich szkód.</p>
+      </section>
+
+      <section class="section">
+        <h2>Zmiany w tych warunkach</h2>
+        <p>Jeśli wprowadzimy istotne zmiany, zaktualizujemy datę "Ostatnia aktualizacja" i, w przypadku zmian rozszerzających to, co możemy robić z twoimi danymi lub jak ograniczamy twoje prawa, dodamy bardziej widoczne powiadomienie na stronie głównej na co najmniej 30 dni.</p>
+      </section>
+
+      <section class="section">
+        <h2>Prawo właściwe</h2>
+        <p>Niniejsze warunki podlegają prawu stanu Delaware, Stany Zjednoczone Ameryki, bez uwzględnienia jego przepisów kolizyjnych. Wszelkie spory wynikające z lub związane z niniejszymi warunkami będą rozstrzygane przez sądy stanowe lub federalne zlokalizowane w Delaware, a Ty wyrażasz zgodę na osobistą jurysdykcję tych sądów.</p>
+      </section>
+
+      <section class="section">
+        <h2>Kontakt</h2>
+        <p>W sprawie zawiadomień prawnych, żądań usunięcia i wszelkiej innej formalnej korespondencji pisz na <strong>legal@gethandlenames.com</strong>. Staramy się odpowiadać w ciągu 14 dni. Nieformalne opinie i zgłoszenia błędów mogą być kierowane na ten sam adres — czytamy wszystko — ale formalne zawiadomienia prawne muszą iść tym kanałem.</p>
+      </section>
+    </section>
+
+    <!-- =================================================================== 404 -->
+    <section data-page-section="404">
+      <div class="hero">
+        <h1>404 — strona nie znaleziona</h1>
+        <p class="lede">Ten adres URL nie pasuje do żadnej z naszych stron. Może to być literówka lub link wskazujący na starą wersję strony.</p>
+        <div class="toolbar">
+          <a class="btn-primary" href="/" data-nav="home">Wróć do strony głównej →</a>
+          <a class="btn-ghost" href="/generator" data-nav="generator">Otwórz generator</a>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2>Szukasz jednej z tych?</h2>
+        <ul>
+          <li><a href="/" data-nav="home">Home</a></li>
+          <li><a href="/generator" data-nav="generator">Generator nazw TikTok</a></li>
+          <li><a href="/faq" data-nav="faq">FAQ</a></li>
+          <li><a href="/about" data-nav="about">About</a></li>
+          <li><a href="/privacy" data-nav="privacy">Polityka prywatności</a></li>
+          <li><a href="/terms" data-nav="terms">Warunki korzystania</a></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span data-i18n="footer_copyright">© 2026 Handle</span>
+      <span class="spacer"></span>
+      <a href="/faq" data-nav="faq" data-i18n="footer_faq_short">FAQ</a>
+      <a href="/about" data-nav="about" data-i18n="footer_about_short">O nas</a>
+      <a href="/privacy" data-nav="privacy" data-i18n="footer_privacy_short">Prywatność</a>
+      <a href="/terms" data-nav="terms" data-i18n="footer_terms_short">Warunki</a>
+      <a href="/generator" data-nav="generator" data-i18n="footer_generator_short">Generator</a>
+    </div>
+    <div class="footer-legal" data-i18n="footer_disclaimer">Handle nie jest powiązany z TikTokiem ani ByteDance Ltd. i nie jest przez nie popierany ani sponsorowany. „TikTok" jest znakiem towarowym ByteDance Ltd.</div>
+  </footer>
+
+  <script src="/js/client-shim.min.js" defer></script>
+  <script src="/js/titles.min.js" defer></script>
+  <script src="/js/strings.min.js" defer></script>
+  <script src="/js/router.min.js" defer></script>
+  <script src="/js/fonts.min.js" defer></script>
+  <script src="/js/generator.min.js" defer></script>
+  <script src="/js/consent.min.js" defer></script>
+</body>
+</html>
