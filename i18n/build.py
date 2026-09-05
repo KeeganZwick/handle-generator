@@ -37,6 +37,11 @@ ROOT = Path(__file__).resolve().parent.parent
 EN_PATH = ROOT / 'public' / 'index.html'
 OUT_BASE = ROOT / 'public'
 
+# Production site URL — used for absolute hreflang and canonical URLs.
+# Update this when the production domain changes. The same value is used by
+# build_sitemap.py for sitemap <loc> entries.
+SITE_URL = 'https://gethandlenames.com'
+
 # Locale registry
 LOCALES = {
     'es': {'native': 'Español', 'short': 'ES', 'en_name': 'Spanish', 'og_locale': 'es_ES', 'dir': 'ltr', 'tier': 1},
@@ -876,10 +881,16 @@ def localize(html, lang, loc, tr, is_tier1):
             count=1,
         )
 
-    # 5. canonical
+    # 5. canonical — v18.2: per-page static canonicals are written out
+    # by main() below, one HTML file per (lang, page) pair, each with the
+    # correct absolute URL hardcoded. The static canonical on this single
+    # intermediate `out` is a temporary placeholder; main() rewrites it
+    # before writing each per-page file. The original single static line
+    # stays (kept as the home canonical by the regex on the home file
+    # when out is written to public/{lang}/index.html).
     out = re.sub(
         r'<link rel="canonical" href="[^"]*">',
-        f'<link rel="canonical" href="/{lang}/">',
+        f'<link rel="canonical" href="{SITE_URL}/{"".join([lang + "/"] if lang != "en" else [])}">',
         out,
         count=1,
     )
@@ -1139,7 +1150,7 @@ def localize(html, lang, loc, tr, is_tier1):
         # California / CCPA
         ('privacy_p_ccpa_h2', 'California privacy rights (CCPA / CPRA)', 'h2'),
         ('privacy_p_ccpa_p1', "If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), gives you specific rights regarding your personal information."),
-        ('privacy_p_ccpa_p2', "<strong>Do Not Sell or Share My Personal Information.</strong> We do not sell personal information for money, and we do not share it for cross-context behavioural advertising as those terms are defined under the CPRA. If AdSense is enabled and you would like to opt out of any future cross-context advertising, you can do so by enabling the \"Limit ad tracking\" or \"Opt out of personalised ads\" controls described in the Advertising section above, or by following the link <a href=\"https://adssettings.google.com/\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>. We do not knowingly sell or share the personal information of consumers under 16."),
+        ('privacy_p_ccpa_p2', "<strong>Do Not Sell or Share My Personal Information.</strong> We do not sell personal information for money, and we do not share it for cross-context behavioural advertising as those terms are defined under the CPRA. If AdSense is enabled and you would like to opt out of any future cross-context advertising, you can do so by enabling the \"Limit ad tracking\" or \"Opt out of personalised ads\" controls described in the Advertising section above, or by visiting <a href=\"https://adssettings.google.com/\" rel=\"noopener noreferrer\" target=\"_blank\">Google Ads Settings to manage your ad preferences</a>. We do not knowingly sell or share the personal information of consumers under 16."),
         ('privacy_p_ccpa_p3', "You also have the right to know what categories of personal information we collect (server logs only), to request deletion, and to not be discriminated against for exercising your rights. To exercise any of these rights, contact us at the address below. We will respond within 45 days as required by the CCPA."),
         # Data retention
         ('privacy_p_retention_h2', 'Data retention', 'h2'),
@@ -1413,7 +1424,6 @@ def localize(html, lang, loc, tr, is_tier1):
         # = 108 hreflang tags. Each <link rel="alternate" hreflang="X"
         # href="..."> is wrapped in a <template data-page-hreflang="X">
         # so router.js can hide all but the active page's set.
-        from per_page_seo import url_for
         hreflang_template_lines = [
             '  <!-- Per-page hreflang alternates: 6 pages × 18 langs = 108 links. '
             'router.js unhides the active page set on route change. -->',
@@ -1423,7 +1433,10 @@ def localize(html, lang, loc, tr, is_tier1):
                 f'  <template data-page-hreflang="{page_name}">'
             )
             for hreflang_lang in ['en'] + LANG_ORDER:  # all 18 langs
-                path = url_for(hreflang_lang, page_name)
+                # Absolute URL — Google requires absolute URLs in hreflang,
+                # relative URLs cause "Document doesn't have a valid hreflang"
+                # warnings in Lighthouse / Search Console.
+                path = SITE_URL + url_for(hreflang_lang, page_name)
                 extra = ''
                 if hreflang_lang in ('ar', 'ur'):
                     extra = ' dir="rtl"'
@@ -1437,7 +1450,7 @@ def localize(html, lang, loc, tr, is_tier1):
                     )
             # x-default for this page
             hreflang_template_lines.append(
-                f'    <link rel="alternate" hreflang="x-default" href="{url_for("en", page_name)}">'
+                f'    <link rel="alternate" hreflang="x-default" href="{SITE_URL + url_for("en", page_name)}">'
             )
             hreflang_template_lines.append('  </template>')
         # Replace the existing hreflang block (the 19 <link rel="alternate"
@@ -1447,7 +1460,12 @@ def localize(html, lang, loc, tr, is_tier1):
             r'  <link rel="alternate" hreflang="x-default"[^>]*>\n',
         )
         new_hreflang_block = '\n'.join(hreflang_template_lines) + '\n'
-        out = hreflang_block_pattern.sub(new_hreflang_block, out, count=1)
+        # Only inject per-page hreflang templates if they aren't already in
+        # the source (the source HTML now has them for en, and the build
+        # reads source as the starting point for all 17 locale files, so
+        # without this guard we'd get 12 templates per locale file).
+        if 'data-page-hreflang="home"' not in out:
+            out = hreflang_block_pattern.sub(new_hreflang_block, out, count=1)
 
     # 10. FAQ H2 subheadings + H3 question titles + About H2 subheadings
 
@@ -1775,12 +1793,33 @@ def main():
             print(f'Warning: could not merge strings.js for {lang}: {e}')
 
         localized = localize(en_html, lang, loc, tr_full, is_tier1)
-        out_path.write_text(localized, encoding='utf-8')
+
+        # v18.2: Per-page static canonicals. Emit 6 HTML files per locale
+        # (one per route: home, generator, faq, about, privacy, terms),
+        # each with the correct absolute static canonical hardcoded. This
+        # is the most robust setup: Google sees the right canonical from
+        # the first byte, no JS execution required. The router.js
+        # swapPageCanonical function has been removed since the static
+        # canonical is always correct on the served file.
+        for page_name in PAGES:
+            page_url = SITE_URL + url_for(lang, page_name)
+            page_html = re.sub(
+                r'<link rel="canonical" href="[^"]*">',
+                f'<link rel="canonical" href="{page_url}">',
+                localized,
+                count=1,
+            )
+            if page_name == 'home':
+                page_out_path = OUT_BASE / lang / 'index.html'
+            else:
+                page_out_path = OUT_BASE / lang / page_name / 'index.html'
+            page_out_path.parent.mkdir(parents=True, exist_ok=True)
+            page_out_path.write_text(page_html, encoding='utf-8')
 
         status = 'TIER1-full' if is_tier1 else 'TIER2-meta'
         has_body = lang in FAQ_ABOUT_BODIES
         body_status = 'body' if has_body else 'no-body'
-        print(f'  [{status:11}/{body_status:7}] {out_path}')
+        print(f'  [{status:11}/{body_status:7}] {len(PAGES)} files @ {lang}/')
 
 
 if __name__ == '__main__':
