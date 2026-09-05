@@ -154,19 +154,33 @@
     if (!cfg || !cfg.client) return;
     ADSENSE_SCRIPT_LOADED = true;
 
-    // 1. Inject the AdSense library
+    // 1. Inject the AdSense library. We use a class instead of a
+    //    data-* attribute because AdSense scans its own script tag's
+    //    attributes for config and warns about unknown ones.
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + encodeURIComponent(cfg.client);
     s.crossOrigin = 'anonymous';
-    s.setAttribute('data-handle-adsense', '1');
+    s.className = 'handle-adsense-loader';
     document.head.appendChild(s);
 
-    // 2. Push each existing ad slot
+    // 2. Push each existing ad slot. We wait for layout to settle
+    //    before pushing: if push() fires while the page is still
+    //    rendering, AdSense measures the slot's parent at that
+    //    moment, sees availableWidth=0, and throws "No slot size".
+    //    requestAnimationFrame runs after the next style/layout
+    //    pass, so the slot's parent has a real width by then.
+    //    We also wrap in setTimeout(0) as a fallback for browsers
+    //    that fire rAF before fonts/CSS are settled.
     function pushSlots() {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) { /* AdSense not loaded yet */ }
+      var raf = window.requestAnimationFrame || function (cb) { return setTimeout(cb, 16); };
+      raf(function () {
+        setTimeout(function () {
+          try {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+          } catch (e) { /* AdSense not loaded yet */ }
+        }, 0);
+      });
     }
     if (document.readyState === 'complete') {
       pushSlots();

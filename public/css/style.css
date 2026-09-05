@@ -829,14 +829,18 @@ html[dir="rtl"] .affiliation-note {
    has a clear "Advertisement" label for screen readers. The min-height
    prevents the page from jumping when an ad loads (CLS = 0). */
 .ad-slot {
+  display: block;
+  width: 100%;
   max-width: 100%;
+  box-sizing: border-box;
   margin: 28px auto;
   padding: 0 20px;
   text-align: center;
   min-height: 100px; /* prevent CLS while ad loads */
 }
 .ad-slot ins.adsbygoogle {
-  display: inline-block;
+  display: block;
   width: 100%;
   max-width: 728px; /* common responsive AdSense max width */
+  margin: 0 auto;
 }
