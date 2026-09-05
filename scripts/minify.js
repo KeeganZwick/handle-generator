@@ -51,8 +51,16 @@ function minifyCss() {
 }
 
 function minifyJs() {
+  // Source files: only unhashed *.js. Excludes:
+  //   - *.min.js           (already minified)
+  //   - *.min.{hash}.js    (hashed minified from a previous build)
+  //   - anything else weird in the directory
+  // The filter `endsWith('.js') && !endsWith('.min.js')` is too loose:
+  // it matches `client-shim.min.abc12345.js` because that file ends
+  // in `.js` (not in `.min.js`). We'd then re-minify the already-
+  // minified hashed file, producing a `*.min.abc12345.min.js` mess.
   const entries = fs.readdirSync(JS_DIR).filter(
-    (f) => f.endsWith('.js') && !f.endsWith('.min.js')
+    (f) => /^[a-z][a-z0-9-]*\.js$/.test(f)
   );
   if (entries.length === 0) {
     console.error(`\n=== BUILD FAILURE ===`);
