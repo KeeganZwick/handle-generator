@@ -117,7 +117,7 @@ PRIVACY['en'] = {
 
     'privacy_p_ccpa_h2': 'California privacy rights (CCPA / CPRA)',
     'privacy_p_ccpa_p1': 'If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), gives you specific rights regarding your personal information.',
-    'privacy_p_ccpa_p2': '<strong>Do Not Sell or Share My Personal Information.</strong> We do not sell personal information for money, and we do not share it for cross-context behavioural advertising as those terms are defined under the CPRA. If AdSense is enabled and you would like to opt out of any future cross-context advertising, you can do so by enabling the "Limit ad tracking" or "Opt out of personalised ads" controls described in the Advertising section above, or by following the link <a href="https://adssettings.google.com/" rel="noopener noreferrer" target="_blank">here</a>. We do not knowingly sell or share the personal information of consumers under 16.',
+    'privacy_p_ccpa_p2': '<strong>Do Not Sell or Share My Personal Information.</strong> We do not sell personal information for money, and we do not share it for cross-context behavioural advertising as those terms are defined under the CPRA. If AdSense is enabled and you would like to opt out of any future cross-context advertising, you can do so by enabling the "Limit ad tracking" or "Opt out of personalised ads" controls described in the Advertising section above, or by visiting <a href="https://adssettings.google.com/" rel="noopener noreferrer" target="_blank">Google Ads Settings to manage your ad preferences</a>. We do not knowingly sell or share the personal information of consumers under 16.',
     'privacy_p_ccpa_p3': 'You also have the right to know what categories of personal information we collect (server logs only), to request deletion, and to not be discriminated against for exercising your rights. To exercise any of these rights, contact us at the address below. We will respond within 45 days as required by the CCPA.',
 
     'privacy_p_retention_h2': 'Data retention',
@@ -130,12 +130,12 @@ PRIVACY['en'] = {
     'privacy_p_changes_p1': 'If we make material changes, we will update the "Last updated" date at the top of this page. For changes that broaden the data we collect, change how we use it, or change the third parties we share with, we will add a more prominent notice on the home page for at least 30 days before the change takes effect. The previous version of this policy is available on request.',
 
     'privacy_p_contact_h2': 'Contact',
-    'privacy_p_contact_p1': 'For privacy questions, data-subject requests, CCPA requests, copyright notices, and any other legal matter, write to <strong>privacy@gethandlenames.com</strong>. We aim to respond within 14 days for privacy requests and within 30 days for data-subject requests as required by the GDPR.',
+    'privacy_p_contact_p1': 'For privacy questions, data-subject requests, CCPA requests, copyright notices, and any other legal matter, write to <strong>privacy@handle.name</strong>. We aim to respond within 14 days for privacy requests and within 30 days for data-subject requests as required by the GDPR.',
 }
 
 TERMS['en'] = {
     'terms_governing_p': 'These terms are governed by the laws of the State of Delaware, United States of America, without regard to its conflict-of-laws provisions. Any dispute arising out of or related to these terms will be resolved in the state or federal courts located in Delaware, and you consent to the personal jurisdiction of those courts.',
-    'terms_contact_p': 'For legal notices, takedown requests, and any other formal correspondence, write to <strong>legal@gethandlenames.com</strong>. We aim to respond within 14 days. Casual feedback and bug reports can go to the same address — we read everything — but formal legal notices must follow this channel.',
+    'terms_contact_p': 'For legal notices, takedown requests, and any other formal correspondence, write to <strong>legal@handle.name</strong>. We aim to respond within 14 days. Casual feedback and bug reports can go to the same address — we read everything — but formal legal notices must follow this channel.',
     'terms_lede_p': "Last updated 25 August 2026. By using Handle you agree to these terms. They cover what Handle is, who owns what, what you can and can't do with the tool, and what happens if something goes wrong.",
 }
 
