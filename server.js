@@ -73,13 +73,7 @@ app.use((req, res, next) => {
       `img-src 'self' data: https:`,
       `connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net https://*.googlesyndication.com https://pagead2.googlesyndication.com https://*.google https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://partner.googleadservices.com https://adservice.google.com`,
       `frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.google https://*.adtrafficquality.google https://fundingchoicesmessages.google.com`,
-      // 5b.1: object-src 'none' (per Google AdSense CSP recommendation)
-      // blocks <object>, <embed>, <applet> tags. We don't use any.
-      `object-src 'none'`,
-      // 5b.1: base-uri 'none' (was 'self'). Blocks any <base href="...">
-      // element, preventing an attacker from changing relative-URL
-      // resolution on the page. We don't use <base> anywhere.
-      `base-uri 'none'`,
+      `base-uri 'self'`,
       `form-action 'self'`,
       `frame-ancestors 'none'`,
     ].join('; ')
@@ -193,11 +187,9 @@ app.use((req, res, next) => {
 //
 // express.static is mounted twice with different cache policies:
 //   1. /css/ and /js/ → 1 year, immutable. These are content-hashed at
-//      build time by i18n/build.py:hash_assets(). Each minified file
-//      gets a SHA-256 prefix in its filename (e.g.
-//      /css/style.min.abc12345.css). The HTML references the hashed
-//      path, so unchanged files keep their 1-year cache and changed
-//      files automatically get a new URL the browser is forced to fetch.
+//      build time (or, in our case, versioned by being minified into
+//      `*.min.css` / `*.min.js`). When a new version ships, the HTML
+//      references a new path and the browser's old cache is bypassed.
 //   2. Everything else (HTML, images, sitemap, robots.txt) → 1 hour. HTML
 //      changes with every deploy; sitemap updates with new per-locale
 //      URLs; 1h is short enough to pick up changes but long enough to
