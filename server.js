@@ -7,6 +7,7 @@
 const path = require('path');
 const fs = require('fs');
 const express = require('express');
+const compression = require('compression');
 const { generate } = require('./lib/generator');
 const { buildDefaultChecker } = require('./lib/availability');
 
@@ -19,6 +20,25 @@ const SITE_URL = 'https://gethandlenames.com';
 
 const checker = buildDefaultChecker();
 const app = express();
+
+// --- Compression -------------------------------------------------------------
+//
+// gzip (and brotli if accepted) every text response. ~70% size reduction on
+// HTML/CSS/JS, so the network cost of the SPA shell drops from ~340KB to
+// ~95KB. The compression middleware is added FIRST so it wraps every
+// downstream response, including the per-route HTML and the static assets.
+app.use(compression({
+  // Skip already-compressed assets (images, fonts). Compression won't help
+  // on those and just wastes CPU. By MIME we keep it conservative.
+  filter: (req, res) => {
+    const ct = res.getHeader('content-type') || '';
+    if (ct.match(/image|font|video|audio/)) return false;
+    // Default: compress everything else
+    return compression.filter(req, res);
+  },
+  level: 6, // 1-9; 6 is the default zlib level, good speed/ratio balance
+  threshold: 512, // Don't compress tiny responses (<512 bytes)
+}));
 
 // --- Content-Security-Policy --------------------------------------------------
 //
@@ -138,9 +158,47 @@ app.use((req, res, next) => {
   res.send(html);
 });
 
+// --- Static assets with long-cache + separate per-type config -----------------
+//
+// express.static is mounted twice with different cache policies:
+//   1. /css/ and /js/ → 1 year, immutable. These are content-hashed at
+//      build time (or, in our case, versioned by being minified into
+//      `*.min.css` / `*.min.js`). When a new version ships, the HTML
+//      references a new path and the browser's old cache is bypassed.
+//   2. Everything else (HTML, images, sitemap, robots.txt) → 1 hour. HTML
+//      changes with every deploy; sitemap updates with new per-locale
+//      URLs; 1h is short enough to pick up changes but long enough to
+//      keep the network cost down on repeat visits.
+// The middleware order matters: the more-specific /css/ and /js/ handlers
+// run first; the catch-all express.static runs second for any path that
+// didn't match.
+
+const ONE_YEAR = '1y';
+const ONE_HOUR = '1h';
+
+// Long-cache static assets: CSS, JS, fonts. These are content-stable;
+// new versions ship as new files (style.min.css, *.min.js, etc.) so
+// a year-long cache is safe.
+app.use('/css', express.static(path.join(__dirname, 'public', 'css'), {
+  maxAge: ONE_YEAR,
+  immutable: true,
+  setHeaders: (res) => {
+    res.setHeader('Cache-Control', `public, max-age=${60 * 60 * 24 * 365}, immutable`);
+  },
+}));
+app.use('/js', express.static(path.join(__dirname, 'public', 'js'), {
+  maxAge: ONE_YEAR,
+  immutable: true,
+  setHeaders: (res) => {
+    res.setHeader('Cache-Control', `public, max-age=${60 * 60 * 24 * 365}, immutable`);
+  },
+}));
+
+// Catch-all static for everything else (HTML, images, favicon, og-image,
+// sitemap.xml, robots.txt, ads.txt, per-page files). Short cache.
 app.use(express.static(path.join(__dirname, 'public'), {
   extensions: ['html'],
-  maxAge: '1h',
+  maxAge: ONE_HOUR,
 }));
 
 // --- API: generate -----------------------------------------------------------
