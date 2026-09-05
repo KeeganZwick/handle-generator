@@ -89,7 +89,13 @@
     var titles = getTitles(locale);
     document.title = titles[route] || titles.home;
     swapPageMeta(route);
-    swapPageHreflang(route);
+    // Hreflang is no longer swapped at runtime — v18.3 strips the
+    // <template data-page-hreflang> blocks in server.js, so the served
+    // HTML already has the right 19 live hreflang tags. There's nothing
+    // to swap on SPA navigation either (the template is gone).
+    // Canonical is no longer swapped at runtime — v18.2 emits per-page
+    // static canonicals in the build output (one HTML file per route),
+    // so the served file already has the correct absolute URL.
     document.querySelectorAll('.nav a[data-nav]').forEach(function (a) {
       a.classList.toggle('is-active', a.getAttribute('data-nav') === route);
     });
@@ -124,26 +130,22 @@
     });
   }
 
-  // Per-page hreflang swap. The build script emits a
-  // <template data-page-hreflang="X"> for each route, each containing 18
-  // <link rel="alternate" hreflang="X"> tags (one per language) plus
-  // x-default. On route change, we move the active template's link tags
-  // into the head and remove the previous page's tags.
-  function swapPageHreflang(route) {
-    var tmpl = document.querySelector('template[data-page-hreflang="' + route + '"]');
-    if (!tmpl) return;
-    // Remove the previous page's hreflang tags
-    document.querySelectorAll('head link[rel="alternate"][data-page-hreflang-active]').forEach(function (el) {
-      el.parentNode.removeChild(el);
-    });
-    // Clone the template's children into the head
-    var content = tmpl.content;
-    var frag = document.importNode(content, true);
-    Array.prototype.forEach.call(frag.children, function (el) {
-      el.setAttribute('data-page-hreflang-active', route);
-      document.head.appendChild(el);
-    });
-  }
+  // Per-page hreflang swap. REMOVED in v18.3: server.js strips the
+  // <template data-page-hreflang> blocks from the served HTML, so the
+  // document already has the right 19 live hreflang tags. There's no
+  // template to query and nothing to swap on route change.
+  // (swapPageHreflang function intentionally removed — see v18.3)
+
+  // Per-page canonical swap. REMOVED in v18.2: the build now emits
+  // per-page static canonicals in the output (one HTML file per route),
+  // each with the correct absolute URL hardcoded. The served file
+  // already has the right canonical, so no client-side swap is needed.
+  // Direct URL access (/es/generator) returns the right file; SPA
+  // navigation keeps the canonical of the originally-loaded file (which
+  // is a known trade-off in exchange for SEO robustness with zero JS
+  // dependence on the canonical).
+
+  // (swapPageCanonical function intentionally removed — see v18.2)
 
   function onLinkClick(e) {
     var a = e.target.closest('a');
