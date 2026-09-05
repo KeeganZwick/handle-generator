@@ -67,12 +67,12 @@ app.use((req, res, next) => {
       // (and our own nonce-tagged script). The nonce is more specific and
       // is preferred when the browser sees both, but 'unsafe-inline' is
       // the documented fallback AdSense needs.
-      `script-src 'self' 'nonce-${nonce}' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com`,
+      `script-src 'self' 'nonce-${nonce}' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com https://*.google https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://partner.googleadservices.com https://adservice.google.com`,
       `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`,
       `font-src 'self' https://fonts.gstatic.com`,
       `img-src 'self' data: https:`,
-      `connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net https://*.googlesyndication.com https://pagead2.googlesyndication.com`,
-      `frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com`,
+      `connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net https://*.googlesyndication.com https://pagead2.googlesyndication.com https://*.google https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://partner.googleadservices.com https://adservice.google.com`,
+      `frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.google https://*.adtrafficquality.google https://fundingchoicesmessages.google.com`,
       `base-uri 'self'`,
       `form-action 'self'`,
       `frame-ancestors 'none'`,
