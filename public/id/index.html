@@ -204,7 +204,7 @@
     To rebuild after any change: see the rebuild note beside that
     script.
   -->
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc=' 'sha256-beKWZk8mrNoZgwKX1HLo8kd3g1sIJmMy+B+NV1xrspI=' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com; frame-ancestors 'none'">
 
   <!--
     Inline style at the very top of head. Runs before the platform's
@@ -520,6 +520,14 @@
       } catch (e) {}
     })();
   </script>
+
+  <!-- AdSense auto-ads: script is injected by /js/consent.js after the
+       user clicks the cookie-consent "Got it" button. Until then, the
+       <ins class="adsbygoogle"> slots in the body are inert (no script
+       has called (adsbygoogle = window.adsbygoogle || []).push({...})
+       on them, so AdSense won't render anything). This keeps EEA / UK
+       users' ad-personalisation data collection gated on consent. -->
+  <script>window.__handleAdSense = { client: 'ca-pub-3477009677814503' };</script>
 </head>
 <body data-route="home">
   <a href="#main" class="sr-only">Skip to content</a>
@@ -599,6 +607,16 @@
           </ul>
         </div>
       </section>
+
+      <!-- Ad slot 1: home, after "Why Handle" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Ide nama TikTok yang sedang tren untuk 2026</h2>
@@ -747,6 +765,16 @@
           <p>Nama pengguna TikTok adalah @handle yang mengidentifikasi akun Anda — itu unik di seluruh TikTok, itulah cara orang menemukan dan menandai Anda, dan muncul di URL profil Anda (tiktok.com/@handleAnda). Itu hanya dapat diubah setiap 30 hari dan hanya berisi huruf kecil, angka, titik, dan garis bawah. Nama tampilan TikTok (atau "name") adalah label yang dapat dibaca manusia yang muncul di sebelah avatar Anda di komentar, pesan, dan hasil pencarian. Itu bisa apa saja hingga 30 karakter — emoji, campuran huruf besar/kecil, spasi, apa pun yang Anda inginkan. Anda dapat mengubahnya sesering yang Anda inginkan, tanpa waktu tunggu. Pola cerdas yang digunakan sebagian besar kreator top: pilih handle pendek dan satu kata ("mia", "kaito", "lee") dan biarkan nama tampilan membawa estetika — "mia ✧ soft grunge", "kaito | genshin builds", "LEE / dj sets". Dengan cara ini handle adalah jangkar yang dapat ditemukan dan nama tampilan adalah lapisan yang dapat diberi merek. Konverter font di situs ini dirancang untuk membuat lapisan nama tampilan lebih ekspresif: tempel nama tampilan Anda dan terima dalam 11 gaya Unicode yang berfungsi di bidang nama tampilan TikTok.</p>
         </div>
       </section>
+
+      <!-- Ad slot 2: FAQ section, after "Picking" group, before "How the availability check works" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Cara kerja pengecekan ketersediaan</h2>

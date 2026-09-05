@@ -121,6 +121,7 @@
     if (!btn) return;
     btn.addEventListener('click', function () {
       rememberConsent();
+      loadAdSense();
       // Smooth fade-out so it doesn't just snap away
       bar.style.transition = 'opacity 180ms, transform 180ms';
       bar.style.opacity = '0';
@@ -129,6 +130,60 @@
         if (bar && bar.parentNode) bar.parentNode.removeChild(bar);
       }, 200);
     });
+  }
+
+  // --- 3. AdSense loading (gated on consent) ---------------------------------
+  //
+  // The AdSense auto-ads script is NOT loaded on page load. Instead, the
+  // HTML has a placeholder config object (window.__handleAdSense) and
+  // inert <ins class="adsbygoogle"> slots in the body. When the user
+  // clicks the consent banner (or has already consented from a previous
+  // visit), this function:
+  //   1. Injects the AdSense library script with the publisher ID
+  //   2. Calls (adsbygoogle = window.adsbygoogle || []).push({}) for each
+  //      ad slot to tell AdSense "fill this one"
+  //
+  // If the user never consents, the slots stay inert. No script runs, no
+  // cookies are set by AdSense, no ad requests leave the browser.
+
+  var ADSENSE_SCRIPT_LOADED = false;
+
+  function loadAdSense() {
+    if (ADSENSE_SCRIPT_LOADED) return;
+    var cfg = window.__handleAdSense;
+    if (!cfg || !cfg.client) return;
+    ADSENSE_SCRIPT_LOADED = true;
+
+    // 1. Inject the AdSense library
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + encodeURIComponent(cfg.client);
+    s.crossOrigin = 'anonymous';
+    s.setAttribute('data-handle-adsense', '1');
+    document.head.appendChild(s);
+
+    // 2. Push each existing ad slot
+    function pushSlots() {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) { /* AdSense not loaded yet */ }
+    }
+    if (document.readyState === 'complete') {
+      pushSlots();
+    } else {
+      window.addEventListener('load', pushSlots);
+    }
+  }
+
+  // If the user has already consented (returning visit), load immediately
+  // after DOMContentLoaded. The slots in the body are already there; the
+  // script just needs to be present so AdSense can fill them.
+  if (alreadyConsented()) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadAdSense);
+    } else {
+      loadAdSense();
+    }
   }
 
   if (document.readyState === 'loading') {

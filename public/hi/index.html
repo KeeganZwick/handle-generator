@@ -204,7 +204,7 @@
     To rebuild after any change: see the rebuild note beside that
     script.
   -->
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc=' 'sha256-beKWZk8mrNoZgwKX1HLo8kd3g1sIJmMy+B+NV1xrspI=' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com; frame-ancestors 'none'">
 
   <!--
     Inline style at the very top of head. Runs before the platform's
@@ -520,6 +520,14 @@
       } catch (e) {}
     })();
   </script>
+
+  <!-- AdSense auto-ads: script is injected by /js/consent.js after the
+       user clicks the cookie-consent "Got it" button. Until then, the
+       <ins class="adsbygoogle"> slots in the body are inert (no script
+       has called (adsbygoogle = window.adsbygoogle || []).push({...})
+       on them, so AdSense won't render anything). This keeps EEA / UK
+       users' ad-personalisation data collection gated on consent. -->
+  <script>window.__handleAdSense = { client: 'ca-pub-3477009677814503' };</script>
 </head>
 <body data-route="home">
   <a href="#main" class="sr-only">Skip to content</a>
@@ -599,6 +607,16 @@
           </ul>
         </div>
       </section>
+
+      <!-- Ad slot 1: home, after "Why Handle" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>2026 के लिए ट्रेंडिंग TikTok यूजरनेम आइडिया</h2>
@@ -747,6 +765,16 @@
           <p>एक TikTok उपयोगकर्ता नाम वह @हैंडल है जो आपके खाते की पहचान करता है — यह पूरे TikTok पर अद्वितीय है, यह वह तरीका है जिससे लोग आपको ढूँढते और टैग करते हैं, और यह आपके प्रोफ़ाइल URL (tiktok.com/@आपकाHandle) में दिखाई देता है। इसे केवल हर 30 दिनों में बदला जा सकता है और इसमें केवल लोअरकेस अक्षर, अंक, बिंदु और अंडरस्कोर होते हैं। एक TikTok प्रदर्शन नाम (या "name") मानव-पठनीय लेबल है जो टिप्पणियों, संदेशों और खोज परिणामों में आपके अवतार के बगल में दिखाई देता है। यह कुछ भी हो सकता है, 30 वर्णों तक — इमोजी, मिश्रित बड़े/छोटे अक्षर, रिक्त स्थान, जो भी आप चाहें। आप इसे जितनी बार चाहें उतनी बार बदल सकते हैं, बिना प्रतीक्षा समय के। अधिकांश शीर्ष क्रिएटर्स द्वारा उपयोग किया जाने वाला स्मार्ट पैटर्न: एक छोटा, एकल-शब्द हैंडल ("mia", "kaito", "lee") चुनें और प्रदर्शन नाम को सौंदर्यशास्त्र वहन करने दें — "mia ✧ soft grunge", "kaito | genshin builds", "LEE / dj sets"। इस तरह हैंडल खोजने योग्य लंगर है और प्रदर्शन नाम ब्रांड-योग्य परत है। इस साइट पर फ़ॉन्ट कनवर्टर प्रदर्शन नाम परत को अधिक अभिव्यंजक बनाने के लिए डिज़ाइन किया गया है: अपना प्रदर्शन नाम पेस्ट करें और इसे 11 यूनिकोड शैलियों में प्राप्त करें जो TikTok के प्रदर्शन नाम फ़ील्ड में काम करते हैं।</p>
         </div>
       </section>
+
+      <!-- Ad slot 2: FAQ section, after "Picking" group, before "How the availability check works" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>उपलब्धता जांच कैसे काम करती है</h2>

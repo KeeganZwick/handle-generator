@@ -204,7 +204,7 @@
     To rebuild after any change: see the rebuild note beside that
     script.
   -->
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc=' 'sha256-beKWZk8mrNoZgwKX1HLo8kd3g1sIJmMy+B+NV1xrspI=' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com; frame-ancestors 'none'">
 
   <!--
     Inline style at the very top of head. Runs before the platform's
@@ -522,6 +522,14 @@
       } catch (e) {}
     })();
   </script>
+
+  <!-- AdSense auto-ads: script is injected by /js/consent.js after the
+       user clicks the cookie-consent "Got it" button. Until then, the
+       <ins class="adsbygoogle"> slots in the body are inert (no script
+       has called (adsbygoogle = window.adsbygoogle || []).push({...})
+       on them, so AdSense won't render anything). This keeps EEA / UK
+       users' ad-personalisation data collection gated on consent. -->
+  <script>window.__handleAdSense = { client: 'ca-pub-3477009677814503' };</script>
 </head>
 <body data-route="home">
   <a href="#main" class="sr-only">Skip to content</a>
@@ -601,6 +609,16 @@
           </ul>
         </div>
       </section>
+
+      <!-- Ad slot 1: home, after "Why Handle" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Ideas de nombres de TikTok en tendencia para 2026</h2>
@@ -749,6 +767,16 @@
           <p>Un nombre de usuario de TikTok es el @handle que identifica tu cuenta — es nico en todo TikTok, es la forma en que la gente te encuentra y etiqueta, y aparece en la URL de tu perfil (tiktok.com/@tuidentificador). Solo se puede cambiar cada 30 das y solo contiene letras minsculas, nmeros, puntos y guiones bajos. Un nombre para mostrar de TikTok (o "name") es la etiqueta legible que aparece junto a tu avatar en comentarios, mensajes y resultados de bsqueda. Puede ser cualquier cosa de hasta 30 caracteres — emojis, mezcla de maysculas y minsculas, espacios, lo que quieras. Lo puedes cambiar tan a menudo como quieras, sin tiempo de espera. El patrn ingenioso que usan la mayora de los creadores top: elige un handle corto y de palabra simple ("mia", "kaito", "lee") y deja que tu nombre para mostrar lleve la esttica — "mia ✧ soft grunge", "kaito | genshin builds", "LEE / dj sets". De esa forma el handle es el ancla encontrable y el nombre para mostrar es la capa de marca. El conversor de fuentes en este sitio est diseado para hacer la capa del nombre para mostrar ms expresiva: pega tu nombre para mostrar, recíbelo de vuelta en 11 estilos Unicode que funcionan en el campo de nombre para mostrar de TikTok. El verificador gratuito de nombres TikTok que aparece en la pgina principal trabaja sobre la capa del @handle, no sobre el nombre para mostrar.</p>
         </div>
       </section>
+
+      <!-- Ad slot 2: FAQ section, after "Picking" group, before "How the availability check works" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Cómo funciona la verificación de disponibilidad</h2>

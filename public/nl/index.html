@@ -204,7 +204,7 @@
     To rebuild after any change: see the rebuild note beside that
     script.
   -->
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc=' 'sha256-beKWZk8mrNoZgwKX1HLo8kd3g1sIJmMy+B+NV1xrspI=' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com; frame-ancestors 'none'">
 
   <!--
     Inline style at the very top of head. Runs before the platform's
@@ -522,6 +522,14 @@
       } catch (e) {}
     })();
   </script>
+
+  <!-- AdSense auto-ads: script is injected by /js/consent.js after the
+       user clicks the cookie-consent "Got it" button. Until then, the
+       <ins class="adsbygoogle"> slots in the body are inert (no script
+       has called (adsbygoogle = window.adsbygoogle || []).push({...})
+       on them, so AdSense won't render anything). This keeps EEA / UK
+       users' ad-personalisation data collection gated on consent. -->
+  <script>window.__handleAdSense = { client: 'ca-pub-3477009677814503' };</script>
 </head>
 <body data-route="home">
   <a href="#main" class="sr-only">Skip to content</a>
@@ -601,6 +609,16 @@
           </ul>
         </div>
       </section>
+
+      <!-- Ad slot 1: home, after "Why Handle" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Trending TikTok gebruikersnaam-ideeën voor 2026</h2>
@@ -749,6 +767,16 @@
           <p>Een TikTok-gebruikersnaam is de @handle die je account identificeert — het is uniek over heel TikTok, het is hoe mensen je vinden en taggen, en het verschijnt in je profiel-URL (tiktok.com/@jouwHandle). Het kan maar elke 30 dagen worden gewijzigd en bevat alleen kleine letters, cijfers, punten en onderstrepingstekens. Een TikTok-weergavenaam (of "name") is het leesbare label dat naast je avatar verschijnt in opmerkingen, berichten en zoekresultaten. Het kan alles zijn tot 30 tekens — emoji, gemengde hoofdletters/kleine letters, spaties, wat je wilt. Je kunt het zo vaak wijzigen als je wilt, zonder wachttijd. Het slimme patroon dat de meeste topmakers gebruiken: kies een korte, één-woord handle ("mia", "kaito", "lee") en laat de weergavenaam de esthetiek dragen — "mia ✧ soft grunge", "kaito | genshin builds", "LEE / dj sets". Zo is de handle het vindbare anker en de weergavenaam de merkbare laag. De lettertype-converter op deze site is ontworpen om de weergavenaam-laag expressiever te maken: plak je weergavenaam en ontvang hem in 11 Unicode-stijlen die werken in het weergavenaam-veld van TikTok.</p>
         </div>
       </section>
+
+      <!-- Ad slot 2: FAQ section, after "Picking" group, before "How the availability check works" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>Hoe de beschikbaarheidscontrole werkt</h2>

@@ -822,3 +822,21 @@ html[dir="rtl"] h4 {
 html[dir="rtl"] .affiliation-note {
   text-align: right;
 }
+
+/* --- Ad slots ---------------------------------------------------------------
+   AdSense auto-ads inserts <ins class="adsbygoogle"> elements. The wrapping
+   <aside class="ad-slot"> centers the ad, gives it breathing room, and
+   has a clear "Advertisement" label for screen readers. The min-height
+   prevents the page from jumping when an ad loads (CLS = 0). */
+.ad-slot {
+  max-width: 100%;
+  margin: 28px auto;
+  padding: 0 20px;
+  text-align: center;
+  min-height: 100px; /* prevent CLS while ad loads */
+}
+.ad-slot ins.adsbygoogle {
+  display: inline-block;
+  width: 100%;
+  max-width: 728px; /* common responsive AdSense max width */
+}

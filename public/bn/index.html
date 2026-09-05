@@ -204,7 +204,7 @@
     To rebuild after any change: see the rebuild note beside that
     script.
   -->
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-Wg35w5sOmqeHhEeCIAzGQF6hFaPtqoaZZBdjdS9UERc=' 'sha256-beKWZk8mrNoZgwKX1HLo8kd3g1sIJmMy+B+NV1xrspI=' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.googletagservices.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.tiktok.com https://*.google.com https://*.doubleclick.net; frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com; frame-ancestors 'none'">
 
   <!--
     Inline style at the very top of head. Runs before the platform's
@@ -520,6 +520,14 @@
       } catch (e) {}
     })();
   </script>
+
+  <!-- AdSense auto-ads: script is injected by /js/consent.js after the
+       user clicks the cookie-consent "Got it" button. Until then, the
+       <ins class="adsbygoogle"> slots in the body are inert (no script
+       has called (adsbygoogle = window.adsbygoogle || []).push({...})
+       on them, so AdSense won't render anything). This keeps EEA / UK
+       users' ad-personalisation data collection gated on consent. -->
+  <script>window.__handleAdSense = { client: 'ca-pub-3477009677814503' };</script>
 </head>
 <body data-route="home">
   <a href="#main" class="sr-only">Skip to content</a>
@@ -599,6 +607,16 @@
           </ul>
         </div>
       </section>
+
+      <!-- Ad slot 1: home, after "Why Handle" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>২০২৬ এর জন্য ট্রেন্ডিং টিকটক ইউজারনেম আইডিয়া</h2>
@@ -747,6 +765,16 @@
           <p>একটি TikTok ব্যবহারকারী নাম হলো সেই @হ্যান্ডেল যা আপনার অ্যাকাউন্টকে চিহ্নিত করে — এটি সমগ্র TikTok জুড়ে অনন্য, এটি হলো সেই উপায় যার দ্বারা মানুষ আপনাকে খুঁজে পায় এবং ট্যাগ করে, এবং এটি আপনার প্রোফাইল URL-এ প্রদর্শিত হয় (tiktok.com/@আপনারহ্যান্ডেল)। এটি শুধুমাত্র প্রতি ৩০ দিনে পরিবর্তন করা যায় এবং এতে শুধু লোয়ারকেস অক্ষর, সংখ্যা, বিন্দু এবং আন্ডারস্কোর থাকে। একটি TikTok প্রদর্শন নাম (বা "name") হলো মানব-পাঠযোগ্য লেবেল যা মন্তব্য, বার্তা এবং অনুসন্ধান ফলাফলে আপনার অবতারের পাশে প্রদর্শিত হয়। এটি ৩০ অক্ষর পর্যন্ত যেকোনো কিছু হতে পারে — ইমোজি, মিশ্র বড়/ছোট অক্ষর, স্পেস, আপনি যা চান। আপনি এটি যতবার খুশি পরিবর্তন করতে পারেন, কোনো অপেক্ষার সময় নেই। বেশিরভাগ শীর্ষ ক্রিয়েটররা যে স্মার্ট প্যাটার্নটি ব্যবহার করে: একটি ছোট, একক-শব্দের হ্যান্ডেল ("mia", "kaito", "lee") বেছে নিন এবং প্রদর্শন নামটিকে নান্দনিকতা বহন করতে দিন — "mia ✧ soft grunge", "kaito | genshin builds", "LEE / dj sets"। এইভাবে হ্যান্ডেল হলো সন্ধানযোগ্য নোঙ্গর এবং প্রদর্শন নাম হলো ব্র্যান্ডযোগ্য স্তর। এই সাইটে ফন্ট কনভার্টারটি প্রদর্শন নামের স্তরকে আরও অভিব্যক্তিপূর্ণ করার জন্য ডিজাইন করা হয়েছে: আপনার প্রদর্শন নাম পেস্ট করুন এবং TikTok-এর প্রদর্শন নাম ক্ষেত্রে কাজ করে এমন ১১টি ইউনিকোড শৈলীতে এটি গ্রহণ করুন।</p>
         </div>
       </section>
+
+      <!-- Ad slot 2: FAQ section, after "Picking" group, before "How the availability check works" -->
+      <aside class="ad-slot" aria-label="Advertisement">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3477009677814503"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </aside>
 
       <section class="section">
         <h2>প্রাপ্যতা পরীক্ষা কিভাবে কাজ করে</h2>
