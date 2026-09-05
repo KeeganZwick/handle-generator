@@ -33,7 +33,10 @@ const JS_DIR = path.join(ROOT, 'public', 'js');
 
 function minifyCss() {
   if (!fs.existsSync(CSS_SRC)) {
+    console.error(`\n=== BUILD FAILURE ===`);
     console.error(`CSS source not found: ${CSS_SRC}`);
+    console.error(`This means the minify build step ran in a context where`);
+    console.error(`public/css/style.css is missing. Check the build working dir.`);
     process.exit(1);
   }
   const before = fs.statSync(CSS_SRC).size;
@@ -52,7 +55,10 @@ function minifyJs() {
     (f) => f.endsWith('.js') && !f.endsWith('.min.js')
   );
   if (entries.length === 0) {
-    console.error(`No .js files found in ${JS_DIR}`);
+    console.error(`\n=== BUILD FAILURE ===`);
+    console.error(`No .js source files found in ${JS_DIR}`);
+    console.error(`This means the minify build step ran in a context where`);
+    console.error(`public/js/*.js is missing. Check the build working dir.`);
     process.exit(1);
   }
   let totalBefore = 0;
@@ -76,6 +82,7 @@ function minifyJs() {
   console.log(
     `JS total: ${totalBefore} B → ${totalAfter} B (${totalPct}% smaller across ${entries.length} files)`
   );
+  console.log('=== minify complete: ' + entries.length + ' JS + 1 CSS regenerated ===');
 }
 
 const which = process.argv[2] || 'all';
