@@ -27,6 +27,8 @@ import re
 import sys
 import json
 import re
+import shutil
+import subprocess
 from pathlib import Path
 from body_translations import FAQ_ABOUT_BODIES
 from page_strings import SEO, PAGES as PAGE_TEMPLATES, _TRANSLATIONS as PAGES_TRANSLATIONS
@@ -1735,7 +1737,60 @@ def escape_attr(s):
     return str(s).replace('&', '&amp;').replace('"', '&quot;')
 
 
+def minify_assets():
+    """Regenerate the .min.* asset files (CSS + JS) by invoking
+    `npm run minify`. This is called at the top of every build so
+    that any change to public/css/style.css or public/js/*.js
+    automatically produces a fresh public/css/style.min.css and
+    public/js/*.min.js, and the served HTML keeps referencing the
+    right minified assets.
+
+    Best-effort: if npm is not available, the script is missing,
+    or minify fails, we log a warning and continue. The site still
+    works with unminified assets — they're just slower. The user
+    can fix the minify issue and re-run the build.
+    """
+    package_json = ROOT / 'package.json'
+    if not package_json.exists():
+        print('  [minify] skip: package.json not found, nothing to minify.')
+        return
+    if not shutil.which('npm'):
+        print('  [minify] skip: npm not on PATH. Install Node.js + npm,')
+        print('             then run `npm install` and `npm run minify`.')
+        print('             Build will continue with unminified assets.')
+        return
+    try:
+        print('  [minify] running `npm run minify`...')
+        result = subprocess.run(
+            ['npm', 'run', 'minify'],
+            cwd=str(ROOT),
+            capture_output=True,
+            text=True,
+            timeout=120,  # 2 min ceiling — minify normally takes 1-2 seconds
+        )
+        if result.returncode == 0:
+            # Echo the minify output (it's the "X → Y (Z% smaller)" lines)
+            for line in result.stdout.splitlines():
+                if line.strip():
+                    print('    ' + line)
+            print('  [minify] done.')
+        else:
+            print(f'  [minify] FAILED (exit {result.returncode}); continuing with whatever')
+            print('             minified files already exist in the repo.')
+            if result.stderr.strip():
+                print('    stderr: ' + result.stderr.strip().splitlines()[-1])
+    except subprocess.TimeoutExpired:
+        print('  [minify] timeout after 120s; continuing with existing minified files.')
+    except FileNotFoundError as e:
+        print(f'  [minify] skip: {e}')
+    except Exception as e:
+        print(f'  [minify] error: {e}; continuing.')
+
+
 def main():
+    print('Build starting...')
+    minify_assets()
+
     if not EN_PATH.exists():
         print(f'ERROR: English template not found at {EN_PATH}', file=sys.stderr)
         sys.exit(1)
