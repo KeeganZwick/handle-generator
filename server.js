@@ -70,7 +70,7 @@ const HOME_META = {
 };
 app.get('/', (req, res) => {
   res.set('Content-Type', 'text/html; charset=utf-8');
-  res.send(rewriteHreflang(injectMeta(loadIndexHtml(), HOME_META, res.locals.cspNonce), 'home'));
+  res.send(stripPerRouteTemplates(rewriteHreflang(injectMeta(loadIndexHtml(), HOME_META, res.locals.cspNonce), 'home')));
 });
 
 // --- Per-route HTML middleware ----------------------------------------------
@@ -83,7 +83,7 @@ app.get('/', (req, res) => {
 // per-route meta.
 //
 // Falls through to express.static for non-SPA paths (CSS, JS, images, etc.).
-const SPA_PATH = /^\/(?:([a-z]{2})\/)?(home|generator|faq|about|privacy|terms)\/?$/;
+const SPA_PATH = /^\/(?:([a-z]{2})\/)?(?:(home|generator|faq|about|privacy|terms))?\/?$/;
 app.use((req, res, next) => {
   if (req.method !== 'GET' && req.method !== 'HEAD') return next();
   const m = req.path.match(SPA_PATH);
@@ -129,6 +129,10 @@ app.use((req, res, next) => {
 
   // Rewrite hreflang to point to the current route
   html = rewriteHreflang(html, route);
+  // Strip the inert <template data-page-canonical> and
+  // <template data-page-hreflang> blocks. They were placeholders for
+  // a client-side router swap that we no longer do.
+  html = stripPerRouteTemplates(html);
 
   res.set('Content-Type', 'text/html; charset=utf-8');
   res.send(html);
@@ -755,10 +759,31 @@ function injectMeta(html, meta, nonce) {
 function escapeHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 function escapeAttr(s) { return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;'); }
 
-// Rewrite every <link rel="alternate" hreflang="X" href="..."> tag in the
-// HTML to point to the same route in each language. This makes the served
-// hreflang match the served canonical, which is what Google expects for
-// proper multilingual SEO. Preserves the dir="rtl" attribute for ar/ur.
+// Strip the inert <template data-page-canonical="..."> and
+// <template data-page-hreflang="..."> blocks from the served HTML.
+// These were placeholders for a client-side router swap that we no
+// longer do — the server now injects the right canonical and
+// hreflang per request. The templates are inert (browsers don't
+// parse link tags inside <template> elements) and were causing
+// confusion: rewriteHreflang was rewritting every template in
+// place, leaving 6 identical-content templates in the served
+// HTML. Removing them entirely is the cleanest fix.
+//
+// Matches:
+//   <template data-page-canonical="X">...</template>
+//   <template data-page-hreflang="X">...</template>
+function stripPerRouteTemplates(html) {
+  return html.replace(
+    /<template\s+data-page-(?:canonical|hreflang)="[^"]+">[\s\S]*?<\/template>\s*/g,
+    ''
+  );
+}
+
+// Rewrite every LIVE <link rel="alternate" hreflang="X" href="..."> tag
+// in the HTML to point to the same route in each language. This makes
+// the served hreflang match the served canonical, which is what Google
+// expects for proper multilingual SEO. Preserves the dir="rtl"
+// attribute for ar/ur.
 //
 // `route` is one of: 'home', 'generator', 'faq', 'about', 'privacy', 'terms'.
 function rewriteHreflang(html, route) {
@@ -793,7 +818,7 @@ app.get(SPA_ROUTE, (req, res) => {
     return res.sendFile(INDEX_HTML_PATH);
   }
   res.set('Content-Type', 'text/html; charset=utf-8');
-  res.send(rewriteHreflang(injectMeta(loadIndexHtml(), meta, res.locals.cspNonce), route));
+  res.send(stripPerRouteTemplates(rewriteHreflang(injectMeta(loadIndexHtml(), meta, res.locals.cspNonce), route)));
 });
 
 // --- Localized SPA routes (/xx/generator, /xx/faq, etc.) -------------------
@@ -825,7 +850,7 @@ app.get(LOCALE_SPA_ROUTE, (req, res) => {
     );
   }
   res.set('Content-Type', 'text/html; charset=utf-8');
-  res.send(rewriteHreflang(html, route));
+  res.send(stripPerRouteTemplates(rewriteHreflang(html, route)));
 });
 
 // --- Localized home pages (/xx/, /xx) ---------------------------------------
@@ -847,7 +872,7 @@ app.get(LOCALE_HOME_ROUTE, (req, res) => {
     );
   }
   res.set('Content-Type', 'text/html; charset=utf-8');
-  res.send(rewriteHreflang(html, 'home'));
+  res.send(stripPerRouteTemplates(rewriteHreflang(html, 'home')));
 });
 
 // --- 404 catch-all -----------------------------------------------------------
